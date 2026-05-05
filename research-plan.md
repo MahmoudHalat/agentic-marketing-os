@@ -24,8 +24,8 @@ This page is two documents: (1) the **v3 changelog** documenting what shipped fr
 |---|---|---|
 | **V1** Citation stat reconciliation | ✓ Closed | [Ahrefs Mar 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/) (38% AIO from top 10, n=863K SERPs) + [Ahrefs Aug 2025](https://ahrefs.com/blog/ai-search-overlap/) (~80% non-Google LLMs from outside top 100, n=15K queries). Mahmoud's `aeo-geo-playbook.md` 70% figure replaced. Methodology footnote added. |
 | **V2** McKinsey forecasts | ✓ Closed | Each forecast dated and linked: 10-15× velocity ([Apr 2026](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/reinventing-marketing-workflows-with-agentic-ai)); $750B US AI search ([Nov 2025](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/new-front-door-to-the-internet-winning-in-the-age-of-ai-search)); $3T-$5T agentic commerce range ([Oct 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-agentic-commerce-opportunity-how-ai-agents-are-ushering-in-a-new-era-for-consumers-and-merchants)). The "$7.6B/$47.1B/45.8% CAGR" reattributed to MarketsandMarkets (not McKinsey) with note that exact combination doesn't appear in a single release. |
-| **V3** Qualified case studies | ✓ Closed | Demandbase verified (2× pipeline, $80K savings). **Greenhouse corrected to 50%/91% (not 60%/130%)** — original v2 figures don't match current case study. Crunchbase verified (67K conversations, 3× meetings, 2× MQLs). |
-| **V4** AI SDR collapse data | ✓ Closed | 11x.ai sourced to [TechCrunch Mar 2025](https://techcrunch.com/2025/03/24/a16z-and-benchmark-backed-11x-has-been-claiming-customers-it-doesnt-have/) + [Sifted](https://sifted.eu/articles/11x-toxic-culture-ceo-working-nights-a16z) (≥70% customers closed/paused). **Artisan corrected to 3.9/5 on G2** (not 3.5/5; 22 verified reviews, polarized 72% 5★ / 13% 1★). **"Only 2% survive past first year" flagged as unverifiable** — closest verified line is Lemkin/SaaStr's "90% produce zero pipeline" (paraphrase). 50-70% UserGems churn estimate retained as industry-cited but flagged as not having published primary methodology. |
+| **V3** Qualified case studies | ✓ Closed | Demandbase verified (2× pipeline, $80K savings). **Greenhouse corrected to 50%/91% (not 60%/130%)**, original v2 figures don't match current case study. Crunchbase verified (67K conversations, 3× meetings, 2× MQLs). |
+| **V4** AI SDR collapse data | ✓ Closed | 11x.ai sourced to [TechCrunch Mar 2025](https://techcrunch.com/2025/03/24/a16z-and-benchmark-backed-11x-has-been-claiming-customers-it-doesnt-have/) + [Sifted](https://sifted.eu/articles/11x-toxic-culture-ceo-working-nights-a16z) (≥70% customers closed/paused). **Artisan corrected to 3.9/5 on G2** (not 3.5/5; 22 verified reviews, polarized 72% 5★ / 13% 1★). **"Only 2% survive past first year" flagged as unverifiable**, closest verified line is Lemkin/SaaStr's "90% produce zero pipeline" (paraphrase). 50-70% UserGems churn estimate retained as industry-cited but flagged as not having published primary methodology. |
 | **V5** Vendor M&A | ✓ Closed | **Drift sunset Mar 6, 2026** flagged across all files; 1Mind named exclusive successor. Bizible → Adobe Marketo Measure (rebranded Mar 2022). Clearbit → HubSpot Breeze Intelligence (Nov 2023 acquisition + Inbound 2024 rebrand; standalone API sunset). Chorus.ai → ZoomInfo Chorus (Jul 2021, $575M). |
 
 ## Per-domain depth [✓ all 8 + AgentOps shipped]
@@ -34,15 +34,15 @@ Each domain file passes the v3 quality bar (≥10 primary sources, ≥3 case stu
 
 | Domain | Anchor case shipped | Headline new content |
 |---|---|---|
-| **0 — AgentOps** | Klarna 700-FTE-equivalent / re-balance (LangChain) + Replit production-DB-deletion incident | Klarna, ServiceNow, Decagon AQS, Replit, Air Canada, DPD, McDonald's-IBM, Anthropic Managed Agents (8 case studies); LangSmith / AgentOps.io / Helicone / Langfuse comparison; SUPERWISE vs. IBM watsonx.governance; Brand Governance Agent Mermaid diagram + 4-playbook stack |
-| **1 — Sensing** | Anthropic + Clay (3× enrichment, canceled top legacy contract) | 6sense 2025 (94% / 77% / 95% Day One Shortlist); Vendr median ACV pricing; Forrester Wave Q1 2025 leaders; Clay+n8n architecture diagram; 6 named cases (Anthropic, OpenAI, Notion, Semgrep, LeanIX, Cobalt) |
-| **2 — Strategy** | Brand.ai (Lyft, Opendoor) — $5M/yr → fraction; one copywriter, 600 pieces | Dunford Mar 2026 quotes + Raskin verbatim; 5 named cases (Userlist, Influ2, Workday, Superhuman, Brand.ai); 8-agent Brand Governance Agent build (Animalz pattern); Wynter / SparkToro / PyMC sequencing; Klue / Crayon / custom Clay comparison |
-| **3 — Content** | Anthropic's own growth team — 30 min → 30 sec, 10× output | Jasper 2026 (91% adoption / governance up 3.4× YoY); McKinsey Apr 2026; 7 named cases; Jasper / Writer / Custom Claude TCO; LangGraph + Skills Mermaid diagram; customer-language capture workflow; AEO-first brief template; Handley + Rose verbatims (incl. "Slop is generated. Craft is built and made.") |
-| **4 — Distribution** | Refine Labs / Passetto — $50M HIRO / $14M ARR; 93% gap vs. software attribution | Walker + Welsh + Simmonds verbatims; 6 named cases (Vandenberghe 50% pipeline, Recall.ai 40K LinkedIn, Refine Labs, Genesys, Dell+EA, podcast guesting $680K); 1-3-5 atomization method; two-stack social management thesis; Cision Trajaan acquisition framed as PR↔AEO crossover |
-| **5 — AEO/GEO** | Vercel — <1% → 10% of new signups from ChatGPT in 6 months | Solis + Ray + King verbatims (incl. Ray's "AI Slop Loop"); 6 named cases (Ramp 7×, Rootly 10×, Grüns 23×, Popl 1,561% ROI, Vercel signups, Anthropic llms-full.txt pattern); Profound vs. AthenaHQ vs. Peec AI vs. Bluefish comparison; Bing AI Performance launch (Feb 2026); llms.txt deployment patterns (Anthropic / Vercel / Cloudflare) |
-| **6 — Demand** | SaaStr — 20 AI agents + 1.2 humans, 70K emails/mo, 15% of London revenue | Lemkin verbatims; 6 named cases (SaaStr, Broadvoice 40% pipeline, Salesloft Rhythm benchmarks, Ideals 452 meetings, FERMÀT 5d→<3d, Apollo $150M ARR); Outreach Aug 2025 + Salesloft Dec 2025 product launches; sender reputation auto-pause (May 2025 Google/Yahoo/MSFT thresholds); 7-element conversation handoff bundle; hybrid AI+human Mermaid diagram |
-| **7 — Customer Intel** | CVS Health × Simile — 2.9M consented responses, 100K+ agentic twins | Park 85% accuracy correction (was miscited 94%); Toubia "Funhouse Mirrors" critique (0.197 average twin-to-human correlation, 93.9% twin-SD-lower); 5 cases (CVS, EY×Evidenza 95%, Aaru NY primary, PandaDoc×Wynter, PyMC validation); Simile / Aaru / Ditto / Synthetic Users / Evidenza comparison; AI-interview-hybrid distinction (Listen Labs / Outset / Keplar are NOT synthetic) |
-| **8 — Measurement** | Refine Labs $50M HIRO + PODS Recast +181% Google Non-Brand | IAB/BWG 2026 (75% measurement-inadequacy stat); AIMx framework paper; 7 cases (PODS, Soft Surroundings 52% retargeting cut → +17% revenue, Refine Labs $50M, Lifesight retailer +32%, Lifesight $1B gaming, Jones Road geo-test, Semgrep +74%); Measured / Recast / Lifesight comparison; open-source Robyn / Meridian / PyMC-Marketing head-to-head; triangulation Mermaid diagram |
+| **0. AgentOps** | Klarna 700-FTE-equivalent / re-balance (LangChain) + Replit production-DB-deletion incident | Klarna, ServiceNow, Decagon AQS, Replit, Air Canada, DPD, McDonald's-IBM, Anthropic Managed Agents (8 case studies); LangSmith / AgentOps.io / Helicone / Langfuse comparison; SUPERWISE vs. IBM watsonx.governance; Brand Governance Agent Mermaid diagram + 4-playbook stack |
+| **1. Sensing** | Anthropic + Clay (3× enrichment, canceled top legacy contract) | 6sense 2025 (94% / 77% / 95% Day One Shortlist); Vendr median ACV pricing; Forrester Wave Q1 2025 leaders; Clay+n8n architecture diagram; 6 named cases (Anthropic, OpenAI, Notion, Semgrep, LeanIX, Cobalt) |
+| **2. Strategy** | Brand.ai (Lyft, Opendoor), $5M/yr → fraction; one copywriter, 600 pieces | Dunford Mar 2026 quotes + Raskin verbatim; 5 named cases (Userlist, Influ2, Workday, Superhuman, Brand.ai); 8-agent Brand Governance Agent build (Animalz pattern); Wynter / SparkToro / PyMC sequencing; Klue / Crayon / custom Clay comparison |
+| **3. Content** | Anthropic's own growth team, 30 min → 30 sec, 10× output | Jasper 2026 (91% adoption / governance up 3.4× YoY); McKinsey Apr 2026; 7 named cases; Jasper / Writer / Custom Claude TCO; LangGraph + Skills Mermaid diagram; customer-language capture workflow; AEO-first brief template; Handley + Rose verbatims (incl. "Slop is generated. Craft is built and made.") |
+| **4. Distribution** | Refine Labs / Passetto, $50M HIRO / $14M ARR; 93% gap vs. software attribution | Walker + Welsh + Simmonds verbatims; 6 named cases (Vandenberghe 50% pipeline, Recall.ai 40K LinkedIn, Refine Labs, Genesys, Dell+EA, podcast guesting $680K); 1-3-5 atomization method; two-stack social management thesis; Cision Trajaan acquisition framed as PR↔AEO crossover |
+| **5. AEO/GEO** | Vercel, <1% → 10% of new signups from ChatGPT in 6 months | Solis + Ray + King verbatims (incl. Ray's "AI Slop Loop"); 6 named cases (Ramp 7×, Rootly 10×, Grüns 23×, Popl 1,561% ROI, Vercel signups, Anthropic llms-full.txt pattern); Profound vs. AthenaHQ vs. Peec AI vs. Bluefish comparison; Bing AI Performance launch (Feb 2026); llms.txt deployment patterns (Anthropic / Vercel / Cloudflare) |
+| **6. Demand** | SaaStr, 20 AI agents + 1.2 humans, 70K emails/mo, 15% of London revenue | Lemkin verbatims; 6 named cases (SaaStr, Broadvoice 40% pipeline, Salesloft Rhythm benchmarks, Ideals 452 meetings, FERMÀT 5d→<3d, Apollo $150M ARR); Outreach Aug 2025 + Salesloft Dec 2025 product launches; sender reputation auto-pause (May 2025 Google/Yahoo/MSFT thresholds); 7-element conversation handoff bundle; hybrid AI+human Mermaid diagram |
+| **7. Customer Intel** | CVS Health × Simile, 2.9M consented responses, 100K+ agentic twins | Park 85% accuracy correction (was miscited 94%); Toubia "Funhouse Mirrors" critique (0.197 average twin-to-human correlation, 93.9% twin-SD-lower); 5 cases (CVS, EY×Evidenza 95%, Aaru NY primary, PandaDoc×Wynter, PyMC validation); Simile / Aaru / Ditto / Synthetic Users / Evidenza comparison; AI-interview-hybrid distinction (Listen Labs / Outset / Keplar are NOT synthetic) |
+| **8. Measurement** | Refine Labs $50M HIRO + PODS Recast +181% Google Non-Brand | IAB/BWG 2026 (75% measurement-inadequacy stat); AIMx framework paper; 7 cases (PODS, Soft Surroundings 52% retargeting cut → +17% revenue, Refine Labs $50M, Lifesight retailer +32%, Lifesight $1B gaming, Jones Road geo-test, Semgrep +74%); Measured / Recast / Lifesight comparison; open-source Robyn / Meridian / PyMC-Marketing head-to-head; triangulation Mermaid diagram |
 
 ## Site experience [✓ shipped]
 
@@ -82,7 +82,7 @@ These items were in the v2 → v3 plan but did **not** ship:
 |---|---|
 | **Mahmoud's own Space & Story SSR migration case** (Domain 5) | Requires Mahmoud's first-party data (before/after AI traffic numbers). Plan calls for it; only Mahmoud has the data. Slot exists in Domain 5 to add when Mahmoud provides numbers. |
 | **Per-archetype reference implementations (2-3 each × 6 archetypes)** | v3 ships 4 cross-archetype references at top of `archetypes.md` (anthropics/skills, deepagents content-builder-agent, crewAI-examples, Anthropic Building Effective Agents). v4 expands to per-archetype detail. |
-| **Anti-patterns per archetype** | ✓ Actually shipped — added to archetypes.md as a dedicated section. |
+| **Anti-patterns per archetype** | ✓ Actually shipped, added to archetypes.md as a dedicated section. |
 | **Archetype chaining patterns (multiple worked examples)** | v3 ships 1 example chain (account research → outreach). v4 adds 2-3 more (content production, measurement loop, brand governance). |
 | **One Wikipedia/Wikidata entity-presence case** (Domain 5) | Vercel + Anthropic llms-full.txt cases shipped (better-documented). Wikipedia case would be Anthropic itself but lacks public before/after numbers. |
 | **One agent-drift incident with detection + remediation** (Domain 0) | DPD + Replit incidents shipped (drift-related); explicit "drift detected → remediated → resolved" timeline case is rare in public reporting. v4 candidate if a public post-mortem lands. |
@@ -136,15 +136,15 @@ Public commitment: every quarter, mine the highest-signal new sources and update
 
 | Domain | What v4 adds |
 |---|---|
-| **0 — AgentOps** | Per-archetype reference implementations (2-3 per archetype × 6 archetypes); 2-3 more architecture diagrams (cost auto-pause, multi-agent observability dashboard, MCP server publishing pattern); first agent-drift post-mortem when one becomes public |
-| **1 — Sensing** | LLM-visibility intent tooling deep-dive as the category forms; 2-3 more biopharma cases (KOL graph, Veeva Link, Komodo Health) |
-| **2 — Strategy** | Brand Governance Agent regression-set methodology + violation-rate benchmark; pricing-as-positioning case in regulated industries |
-| **3 — Content** | Per-team productivity benchmarks at scale; brand-voice fidelity scoring methodology when one is published |
-| **4 — Distribution** | Founder-led marketing data when LinkedIn slop saturation is empirically measurable; podcast-guesting attribution methodology |
-| **5 — AEO/GEO** | Mahmoud's own Space & Story SSR migration case (when data is provided); Wikipedia/Wikidata entity-presence case with documented LLM-citation lift; Bing Webmaster Tools "AI Performance" usage patterns at scale |
-| **6 — Demand** | Second-wave AI SDR cases (post-2025 collapse) — what actually works; conversation-handoff impact at named enterprise B2B |
-| **7 — Customer Intel** | Continuous-calibration methodology (synthetic-to-live correlation tracking); first regulated-industry public failure case to clarify boundaries |
-| **8 — Measurement** | Real-time MMM agentic-decision case study with named brand; LLM-citation-attribution closed-loop |
+| **0. AgentOps** | Per-archetype reference implementations (2-3 per archetype × 6 archetypes); 2-3 more architecture diagrams (cost auto-pause, multi-agent observability dashboard, MCP server publishing pattern); first agent-drift post-mortem when one becomes public |
+| **1. Sensing** | LLM-visibility intent tooling deep-dive as the category forms; 2-3 more biopharma cases (KOL graph, Veeva Link, Komodo Health) |
+| **2. Strategy** | Brand Governance Agent regression-set methodology + violation-rate benchmark; pricing-as-positioning case in regulated industries |
+| **3. Content** | Per-team productivity benchmarks at scale; brand-voice fidelity scoring methodology when one is published |
+| **4. Distribution** | Founder-led marketing data when LinkedIn slop saturation is empirically measurable; podcast-guesting attribution methodology |
+| **5. AEO/GEO** | Mahmoud's own Space & Story SSR migration case (when data is provided); Wikipedia/Wikidata entity-presence case with documented LLM-citation lift; Bing Webmaster Tools "AI Performance" usage patterns at scale |
+| **6. Demand** | Second-wave AI SDR cases (post-2025 collapse), what actually works; conversation-handoff impact at named enterprise B2B |
+| **7. Customer Intel** | Continuous-calibration methodology (synthetic-to-live correlation tracking); first regulated-industry public failure case to clarify boundaries |
+| **8. Measurement** | Real-time MMM agentic-decision case study with named brand; LLM-citation-attribution closed-loop |
 
 ## v4.4. Archetype layer expansion
 
@@ -206,15 +206,15 @@ Each domain file must:
 
 | Domain | Mahmoud's skills to integrate |
 |---|---|
-| 1 — Sensing | `customer-research-playbook`, `competitor-research-playbook` |
-| 2 — Strategy | `product-marketing-context`, `pricing-strategy`, `copywriting`, `competitor-alternatives` |
-| 3 — Content | `mahmouds-seo-writer`, `copy-editing`, `lead-magnets`, `ad-creative` |
-| 4 — Distribution | `mahmouds-reddit-strategist`, `community-marketing`, `email-sequence`, `cold-email`, `directory-submissions`, `launch-strategy` |
-| 5 — AEO/GEO | `mahmouds-seo-guide-v3` (especially `aeo-geo-playbook.md`), `mahmouds-seo-writer` |
-| 6 — Demand | `cold-email`, `signup-flow-cro`, `form-cro`, `revops` |
-| 7 — Customer Intelligence | `customer-research-playbook` (heavy overlap) |
-| 8 — Measurement | `ab-test-setup`, `mahmouds-seo-guide-v3` (`analytics-measurement.md`) |
-| 0 — AgentOps | `claude-api`, `update-config` |
+| 1. Sensing | `customer-research-playbook`, `competitor-research-playbook` |
+| 2. Strategy | `product-marketing-context`, `pricing-strategy`, `copywriting`, `competitor-alternatives` |
+| 3. Content | `mahmouds-seo-writer`, `copy-editing`, `lead-magnets`, `ad-creative` |
+| 4. Distribution | `mahmouds-reddit-strategist`, `community-marketing`, `email-sequence`, `cold-email`, `directory-submissions`, `launch-strategy` |
+| 5. AEO/GEO | `mahmouds-seo-guide-v3` (especially `aeo-geo-playbook.md`), `mahmouds-seo-writer` |
+| 6. Demand | `cold-email`, `signup-flow-cro`, `form-cro`, `revops` |
+| 7. Customer Intelligence | `customer-research-playbook` (heavy overlap) |
+| 8. Measurement | `ab-test-setup`, `mahmouds-seo-guide-v3` (`analytics-measurement.md`) |
+| 0. AgentOps | `claude-api`, `update-config` |
 
 **Approach:** when a domain file has a tactic that's already in a Mahmoud skill, link out instead of restating. This keeps the OS doc strategic and the skills tactical.
 

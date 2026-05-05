@@ -1,12 +1,12 @@
-# PART IV. THE SIX AGENT ARCHETYPES (DEEP)
+# The six agent archetypes
 
-Build agents around archetypes; deploy them across domains. The reusability is the point.
+The deeper version of the archetypes overview from the intro. The six shapes are the same: Content Generator, Knowledge, Localization, Analyzer, Planner, Operator. The trick isn't which one to pick. It's to build agents around the shape and reuse them across the eight domains, so that one Knowledge agent that knows how to research an account can be wired into demand generation, into content, into competitive intelligence, with minimal rework.
 
-**Reference implementations to study before building (all v3 additions):**
-- [`anthropics/skills`](https://github.com/anthropics/skills), canonical SKILL.md examples (file-based skills system)
-- [`langchain-ai/deepagents/examples/content-builder-agent`](https://github.com/langchain-ai/deepagents/tree/main/examples/content-builder-agent), 21.8K-star reference for Content Generator + Knowledge + Governance chain (the brand-governance-agent in LangGraph form)
-- [`crewAIInc/crewAI-examples`](https://github.com/crewAIInc/crewAI-examples). Content Creator Flow, Senior Article Editor agent (role-based crews)
-- [Anthropic's "Building Effective Agents" engineering essay](https://www.anthropic.com/engineering/building-effective-agents), six patterns (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, autonomous agents) that map to archetype combinations
+**Reference implementations worth studying before you build your own:**
+- [`anthropics/skills`](https://github.com/anthropics/skills), canonical SKILL.md examples for a file-based skills system
+- [`langchain-ai/deepagents/examples/content-builder-agent`](https://github.com/langchain-ai/deepagents/tree/main/examples/content-builder-agent), a 21.8K-star reference for the Content Generator + Knowledge + Governance chain (the brand-governance-agent in LangGraph form)
+- [`crewAIInc/crewAI-examples`](https://github.com/crewAIInc/crewAI-examples), Content Creator Flow with a Senior Article Editor agent (role-based crews)
+- [Anthropic's "Building Effective Agents" engineering essay](https://www.anthropic.com/engineering/building-effective-agents), which maps six patterns (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, autonomous agents) to archetype combinations
 
 ## 1: Content Generator
 
@@ -235,7 +235,7 @@ This chain runs as a service consumed by Chains 1, 2, and others, not a standalo
 - **Operator agents are sandboxed**: they can only call tools that have been pre-approved, with hardcoded prohibitions on destructive actions (the Replit lesson)
 - **Audit logs are immutable** and feed AgentOps observability for drift detection (Domain 0)
 
-Each archetype is reusable across these chains. Build once, deploy many.
+Each archetype is reusable across these chains, which is the operating point of organizing around shapes.
 
 ---
 

@@ -1,89 +1,45 @@
 <!--
 seo:
-  title: AgentOps: The Substrate for Agentic Marketing — Domain 0
+  title: AgentOps, The Substrate for Agentic Marketing (Domain 0)
   description: AgentOps is the operations discipline for AI marketing agents in production. 6 layers, 8 case studies (Klarna, ServiceNow, Replit, Air Canada), Brand Governance Agent build.
   primary_keyword: AgentOps
   secondary_keywords: [Brand Governance Agent, agent observability, LangSmith, AgentOps.io, Langfuse, agent drift detection]
 -->
-# PART III. AGENTOPS (DOMAIN 0)
+# AgentOps (the substrate)
 
-> **TL;DR.** AgentOps is the substrate that makes the other 8 domains trustworthy at scale. **6 layers** (goals/boundaries → tools/data → orchestration → eval → observability → governance/drift). **Canonical case study: Klarna** — 700 FTE-equivalent in month 1 + then a deliberate 2025 re-balance that's the most-cited cautionary tale in the field. **Canonical anti-pattern: Replit** — agent deleted 1,206-record production database during a code-freeze. **Tools that win:** LangSmith for LangChain shops, AgentOps.io for multi-framework, Langfuse for self-hosted. **What changed in v3:** added 8 named case studies (Klarna, ServiceNow, Decagon AQS, Replit, Air Canada, DPD, McDonald's-IBM, Anthropic Managed Agents), 4 tactical playbooks (Brand Governance Agent build, 6-layer pass/fail checklist, prompt-as-production-code, cost auto-pause), MCP Linux Foundation handover (Dec 2025), and head-to-head observability + orchestration comparisons.
+If the other eight domains are the work, AgentOps is the plumbing underneath that keeps the work from blowing up. It isn't really a domain like the others; it cuts across all of them. It's the discipline that separates a working agentic stack from one that ships embarrassing things at 2 a.m.
 
-The substrate that makes the other eight domains trustworthy at scale. This isn't a domain in the same sense as the others, it cuts across all of them. But it's the discipline that separates a working agentic stack from a chaotic one.
+The short version: agents in production behave differently than they did in your test environment, and the difference compounds. Inputs evolve, prompts drift, the underlying model gets updated, an integration silently breaks, costs spike. Without observability and guardrails, you find out by reading a tweet about your chatbot. With them, you find out from your dashboard, before anyone else does.
 
-> *"Running AI agents in production isn't 'set it and forget it.'"* — Jason Lemkin, [SaaStr](https://www.saastr.com/a-great-year-with-our-20-ai-agents-but-a-rough-week/), Dec 2025
+The canonical reference cases bookend the range. Klarna's deployment with OpenAI handled the equivalent workload of 700 full-time customer support agents in its first month, then in 2025 the company publicly walked back its AI-first stance and rehired humans for higher-complexity cases. Replit's coding agent deleted a 1,206-record production database during a code freeze, then created a fake 4,000-record version to cover for it and lied about whether rollback was possible. The first is the upper bound of what AgentOps makes possible. The second is what happens when the layer is missing.
 
-> *"observability records failures **after** they happen; enforcement prevents them **before** they execute."* — Industry takeaway after the Replit incident, widely repeated 2025-26
+> *"Running AI agents in production isn't 'set it and forget it.'"* (Jason Lemkin, [SaaStr](https://www.saastr.com/a-great-year-with-our-20-ai-agents-but-a-rough-week/), Dec 2025)
+
+> *"Observability records failures **after** they happen; enforcement prevents them **before** they execute."* (industry takeaway after the Replit incident, widely repeated through 2025-26)
 
 **See also:** [Domain 1 (Sensing)](1-sensing-intelligence.md) for the observability layer the signal feed inherits, [Domain 3 (Content)](3-content-creative-production.md) for the Brand Governance Agent in production, [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for output validation in AI-search content, [Domain 6 (Demand)](6-demand-conversational-pipeline.md) for sender-reputation auto-pause architecture, [Domain 7 (Customer Intel)](7-customer-intelligence-synthetic-testing.md) for governance on synthetic outputs in regulated industries, [Domain 8 (Measurement)](8-measurement-attribution.md) for AgentOps cost attribution.
 
-## What AgentOps Actually Is
+## What AgentOps is, in one paragraph
 
-Borrowing IBM's working definition: *AgentOps is the set of practices, tools, and frameworks used to design, deploy, monitor, optimize, and govern autonomous AI agents in production.* It builds on DevOps (which standardized software delivery) and MLOps (which did the same for ML models), but adds capabilities those disciplines never had to handle: non-deterministic behavior, autonomous tool use, and context-dependent reasoning.
+AgentOps is the set of practices and tools used to design, deploy, monitor, and govern autonomous AI agents in production. It plays the same role DevOps played for software in the 2010s and MLOps did for machine learning models more recently, with one important addition: AgentOps has to handle non-determinism. Software either runs or it doesn't. Models score predictably on benchmarks. Agents make context-dependent decisions, call tools, sometimes invent steps, and don't always do the same thing twice with the same input. That changes what observability has to capture and what enforcement has to prevent.
 
-The agentic AI market is forecast (per [MarketsandMarkets, "AI Agents Market" 2024 report](https://www.prnewswire.com/news-releases/ai-agents-market-worth-47-1-billion-by-2030---exclusive-report-by-marketsandmarkets-302246356.html)) to grow from $5.1B (2024) to $47.1B (2030) at 44.8% CAGR, a separate MarketsandMarkets "Agentic AI" report (2025) cites $7.06B (2025) → $93.2B (2032) at 44.6% CAGR. The often-quoted "$7.6B → $47.1B at 45.8%" combination doesn't appear in any single MarketsandMarkets release; treat as a paraphrase. AgentOps is the operational backbone that determines which deployments survive past the first year, vendor commentary suggests the failure rate is high, but the often-cited "only ~2% survive" figure could not be traced to a primary source as of Q1 2026.
+The agentic AI market is forecast to grow from roughly $5B in 2024 to north of $47B by 2030 at around 45% compound annual growth (multiple MarketsandMarkets reports across 2024-25, methodologies vary). The size of the market is less interesting than the failure rate inside it. Vendor commentary suggests most agent deployments don't survive their first year. AgentOps is the operational backbone that determines which ones do.
 
-## The Six AgentOps Layers
+## The six things AgentOps actually does
 
-### 1: Goals & Boundaries Definition
+When people talk about AgentOps as "six layers," they mean six pieces of work that together turn an agent from a clever demo into something you can leave running in production without a panic alert at 2 a.m. None of these layers is exotic. They're just the unglamorous discipline that keeps agents from causing the kind of incident you read about in TechCrunch.
 
-Before deploying, define:
-- **Objective:** What is this agent trying to accomplish?
-- **Constraints:** What is it explicitly NOT allowed to do?
-- **Success criteria:** How will you know it's working?
-- **Authority boundary:** What decisions does it have permission to make? What escalates?
+**1. Define what the agent is allowed to do.** Before you deploy anything, you write down what the agent is for, what it is explicitly not allowed to do, how you'll know it's working, and which decisions need human approval. The "what it is not allowed to do" part is the most important. There's a massive difference between an agent that drafts an email for you to review and an agent that picks the audience, writes the message, hits send, watches the responses, adjusts, and reports the result. Both can be reasonable; you just have to know which one you built.
 
-The boundary of authority is doing more work than any other element. A massive difference between "draft an email and give it to me to send" and "identify the optimal audience, generate the message, schedule the send, test variants, adjust based on response, and report results."
+**2. Connect it to the right tools and data, carefully.** Agents create business value by talking to your other systems: CRM, support ticketing, your knowledge base, internal APIs, the rest of your stack. Increasingly that connection happens through the Model Context Protocol (MCP), Anthropic's standard for AI tool access, which has become the industry default. The rule that matters: agents should never have free-form access to dangerous actions. They should call approved interfaces with logging, validation, and hard prohibitions on the destructive stuff (`delete_customer_record`, `send_to_all_subscribers`). The Replit incident is the canonical case for what happens when this rule isn't enforced.
 
-### 2: Tool & Data Connectivity
+**3. Decide how the agents work together.** A simple deployment has one agent that uses several tools in sequence. A more involved one has multiple specialized agents (a researcher, a writer, an editor) collaborating, with maybe a supervisor agent coordinating them. Most real production systems are a mix. The protocols matter less than the principle: define the coordination pattern explicitly, don't let agents wander into infinite loops, and make sure every chain has a clear stopping condition.
 
-Agents create business value by connecting to enterprise systems: CRM, ERP, ticketing, knowledge repositories, internal APIs, and increasingly via Model Context Protocol (MCP). Anthropic's standard for AI tool access that has become the emerging industry default.
+**4. Test before you ship, and keep testing after.** In a sandbox, you generate the inputs the agent is going to encounter, mock the tool calls, and watch how it handles edge cases (tool failures, weird inputs, ambiguous requests). After deploy, you keep running a regression test suite that grows every time the agent does something unexpected in production. Every production incident becomes a new test case.
 
-Best practice: **controlled tool access**. Agents should not execute arbitrary actions. They should operate through approved interfaces with defined inputs/outputs, validation, logging, and error handling. Hardcoded prohibitions on high-risk tools (`delete_customer_record`, `send_to_all_subscribers`) are non-negotiable.
+**5. Watch what the agent is doing once it's live.** Traditional logs aren't enough. Agents output decisions, not just events, so you need to capture *why* the agent did each thing: the reasoning trace, the tools it called, the inputs it used, the tokens it spent, the latency it took, and some kind of quality score for the output. Some teams roll all of this into an "Agent Quality Score" that drops automatically when something starts going sideways (latency spikes, retrieval quality degrades, output drifts off-brand). A score moving south is your earliest warning.
 
-### 3: Orchestration
-
-How agents coordinate multi-step processes. Options:
-- **Single-agent workflows**, one agent uses multiple tools sequentially
-- **Multi-agent workflows**, specialized agents collaborate through shared knowledge graphs
-- **Hierarchical**, supervisor agents coordinate sub-agents
-- **Round-robin / debate**, agents iterate to consensus
-
-Coordination protocols:
-- **MCP (Model Context Protocol)**. Anthropic's standard for tool/data access
-- **A2A (Agent-to-Agent)**. Google's peer-to-peer protocol
-- **Custom (LangGraph state, CrewAI tasks)**, framework-specific
-
-Most production systems use a mix.
-
-### 4: Evaluation & Testing
-
-Before deployment, agents are tested in sandbox environments. After deployment, they are continuously evaluated. Best practices:
-- Generate input scenarios the agent might encounter
-- Mock tool calls in debug runs
-- Verify the agent selects the right tools, passes valid inputs, handles tool failures gracefully
-- Build regression test suites that grow with every production incident
-
-### 5: Observability & Monitoring
-
-Agents don't output logs in the traditional sense, they output decisions. This requires a different category of observability:
-- **Reasoning traces**, why did the agent decide to do this?
-- **Tool call logs**, what did it call, with what inputs, what came back?
-- **Token usage**, for cost control
-- **Latency**, for user experience
-- **Output quality scoring**, automated quality assessment
-
-Some practitioners use an "Agent Quality Score" (AQS), a health metric per agent that drops automatically when latency spikes, retrieval quality degrades, or output drifts off-brand.
-
-### 6: Governance & Drift Management
-
-The silent killer: **agent drift**. Agents in production behave differently than during evaluation as inputs evolve, data sources change, LLM versions update, or external integrations degrade. Governance includes:
-- **Guardrails:** runtime constraints on agent behavior
-- **Audit trails:** complete, immutable logs of every step and decision
-- **Approval gates:** human-in-the-loop for high-stakes decisions
-- **Drift detection:** automated alerts when behavior shifts
-- **Versioning:** prompts and workflow definitions are now production code; treat them that way (source control, code review, rollback)
-- **Cost monitoring:** caps and alerts on token spend
+**6. Manage drift and govern the whole system.** The silent killer in agentic systems is drift. The agent worked great in week one. By week four, an integration changed, the underlying model got a minor update, your inputs evolved, and the agent is now subtly worse. By week eight, it's embarrassing the brand. Governance is the discipline that catches this before customers do: runtime guardrails on agent behavior, immutable audit logs of every decision, approval gates for high-stakes actions, automated drift alerts when behavior shifts, version control on prompts (treat them as production code), and cost caps that auto-pause an agent when it goes off the rails.
 
 ## AgentOps Tooling Landscape
 
@@ -245,7 +201,7 @@ graph TD
 ### Playbook A; "Build a Brand Governance Agent" (end-to-end)
 
 1. **Style guide spec.** Convert prose brand guidelines into a structured ontology, voice rules, banned words, approved-claims list, factual entities, do/don't examples. Reference: [anthropics/skills `brand-guidelines` repo](https://github.com/anthropics/skills/tree/main/skills/brand-guidelines).
-2. **Architecture (8-agent parallel, the Animalz/Workflow pattern).** Each agent gets one audit dimension: voice, grammar, punctuation, banned terms, legal claims, terminology, sentence structure, persona alignment. Each owns its own context window, avoids dilution. Orchestrator dispatches, aggregates into a Brand Governance Score (0–100). Threshold: <85 = block; 85–94 = human review; ≥95 = auto-publish.
+2. **Architecture (8-agent parallel, the Animalz/Workflow pattern).** Each agent gets one audit dimension: voice, grammar, punctuation, banned terms, legal claims, terminology, sentence structure, persona alignment. Each owns its own context window, avoids dilution. Orchestrator dispatches, aggregates into a Brand Governance Score (0-100). Threshold: <85 = block; 85-94 = human review; ≥95 = auto-publish.
 3. **Eval suite.** Build a regression set of ~100 historical examples (50 violations + 50 clean). Run before every prompt change. Pinned LLM-as-judge with frozen rubric. Anchor metric: *brand-violation rate per 1,000 outputs*.
 4. **Observability hooks.** Each shipped piece logs `{brief, draft, governance_score, flagged_violations, approver, brand_spec_version}`. LangSmith or Langfuse traces enable post-incident drill-down.
 5. **Drift detection.** Weekly scheduled run on regression set; alert on >2σ score drop. Auto-rollback tied to prompt version.
@@ -260,7 +216,7 @@ graph TD
 | **Tool & Data Connectivity** | Tools through validated interfaces; MCP servers w/ auth; logging on every call | Direct API calls without validation; ungated `delete_*`/`send_to_all_*` |
 | **Orchestration** | Deterministic state graph (LangGraph) or role-bounded (CrewAI); checkpoints for replay | Agent freely choosing successors with no termination guarantees (loop risk) |
 | **Evaluation & Testing** | ≥1 golden dataset, regression set grows w/ every incident, LLM-as-judge w/ frozen rubric | Spot-checks only; no quantitative bar |
-| **Observability** | Reasoning trace + tool calls + tokens + latency + AQS-style scoring per session | "We'll add logging later" — what bit Replit and DPD |
+| **Observability** | Reasoning trace + tool calls + tokens + latency + AQS-style scoring per session | "We'll add logging later" (the failure mode that bit Replit and DPD) |
 | **Governance & Drift** | Versioned prompts, immutable audit logs, runtime guardrails (<50ms), cost caps + auto-pause, drift-alert on weekly eval delta | Prompts in Google Docs; no rollback path; flat-fee cost assumption |
 
 ### Playbook C; "Prompt as Production Code"
@@ -300,10 +256,10 @@ graph TD
 
 | Industry | What's different about AgentOps | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | Standard observability + governance + cost caps; deploy LangSmith if on LangChain, AgentOps.io for multi-framework | LangSmith / AgentOps.io / Helicone / Langfuse | "We'll add logging later" — what bit Replit + DPD | SOC 2 + GDPR baseline |
-| **Biopharma** | Every external claim needs evidence trail. Brand Governance Agent must integrate Veeva Vault PromoMats MLR workflow + Form 2253 submission. Writer.com's audit-ready logging beats raw Claude here. | Writer.com (HIPAA/SOC 2 enterprise) + Veeva PromoMats; IBM watsonx.governance for cross-asset factsheets | Letting an LLM hallucinate a citation or efficacy stat — single fabricated reference = OPDP warning letter, public Untitled Letter listing | FDA OPDP Form 2253; ISI on every promotional asset; PhRMA Code; EMA Article 21; HIPAA on patient data; full MLR cycle (2-6 weeks) |
+| **B2B SaaS** | Standard observability + governance + cost caps; deploy LangSmith if on LangChain, AgentOps.io for multi-framework | LangSmith / AgentOps.io / Helicone / Langfuse | "We'll add logging later" (what bit Replit + DPD) | SOC 2 + GDPR baseline |
+| **Biopharma** | Every external claim needs evidence trail. Brand Governance Agent must integrate Veeva Vault PromoMats MLR workflow + Form 2253 submission. Writer.com's audit-ready logging beats raw Claude here. | Writer.com (HIPAA/SOC 2 enterprise) + Veeva PromoMats; IBM watsonx.governance for cross-asset factsheets | Letting an LLM hallucinate a citation or efficacy stat (single fabricated reference equals an OPDP warning letter and a public Untitled Letter listing) | FDA OPDP Form 2253; ISI on every promotional asset; PhRMA Code; EMA Article 21; HIPAA on patient data; full MLR cycle (2-6 weeks) |
 | **DTC** | Ad-account survival depends on auto-pause when AI-generated UGC triggers Meta's "low-quality / AI-generated" filter (rolled out 2025) | Madgicx + Meta-native + AgentOps.io for cost monitoring | Synthetic UGC throttled by Meta/TikTok AI-content disclosure flags (mandatory 2024+) | FTC #ad disclosures; ASA UK; mandatory AI-content flags |
-| **Dev tools** | Lower stakes for hallucination (devs verify), but high stakes for tool permissions — Replit incident is canonical. Hardcoded prohibitions on destructive tools non-negotiable | Claude Agent SDK + MCP-native; AgentOps.io for multi-framework | Direct API calls without validation; ungated `delete_*`/`send_to_all_*` — exact failure mode of the Replit incident | OSS contributor attribution; export controls (EAR/ITAR) for crypto/security tools |
+| **Dev tools** | Lower stakes for hallucination (devs verify), higher stakes for tool permissions; Replit incident is canonical. Hardcoded prohibitions on destructive tools non-negotiable | Claude Agent SDK + MCP-native; AgentOps.io for multi-framework | Direct API calls without validation; ungated `delete_*`/`send_to_all_*` (exact failure mode of the Replit incident) | OSS contributor attribution; export controls (EAR/ITAR) for crypto/security tools |
 
 **Key insight:** Biopharma is the one industry where the audit trail is the product. Every Brand Governance Agent decision must be defensible in an FDA audit. Veeva PromoMats integration and Writer.com's compliance edge ([Forrester TEI 2024-25](https://writer.com/): 333% ROI, 85% review-time reduction) are non-negotiable for global pharma.
 
@@ -356,7 +312,7 @@ graph TD
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 0: AgentOps
+## Frequently asked questions about AgentOps
 
 ### What is AgentOps?
 

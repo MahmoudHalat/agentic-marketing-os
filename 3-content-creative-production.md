@@ -1,101 +1,72 @@
 <!--
 seo:
-  title: Agentic Content Production Pipeline: From Brief to Citation — Domain 3
-  description: End-to-end agentic content pipeline (LangGraph + Claude Skills). Jasper vs Writer vs Custom Claude TCO, 7 named cases (Anthropic 30 min→30 sec, Brand.ai, SAP $23M).
+  title: Agentic Content Production Pipeline, From Brief to Citation (Domain 3)
+  description: End-to-end agentic content pipeline (LangGraph + Claude Skills). Jasper vs Writer vs Custom Claude TCO, 7 named cases (Anthropic 30 min to 30 sec, Brand.ai, SAP $23M).
   primary_keyword: agentic content production
   secondary_keywords: [AI content pipeline, Jasper vs Writer, LangGraph content, Brand Governance Agent, AEO content brief]
 -->
 ## Domain 3: Content & Creative Production
 
-> **TL;DR.** Highest-velocity, highest-brand-risk domain. **Anchor stat: 91% AI adoption (Jasper 2026); ROI confidence dropped from 49% → 41%; governance blockers up 3.4× YoY** — the new bottleneck is governance, not generation. **Tools that win:** Jasper / Writer.com / Custom Claude + Skills + LangGraph (depending on team size). **Canonical case: Anthropic's own growth marketing team** — ad creation 30 min → 30 sec, 10× creative output, one-person team output exceeds typical full marketing departments. **What changed in v3:** added Jasper 2026 + McKinsey Apr 2026 reports, 7 named cases (Anthropic, Brand.ai/Lyft/Opendoor, WalkMe, 2X, Pilot Company, SAP $23M Digital Chop Shop, B2B SaaS GEO 3×), Jasper-vs-Writer-vs-Custom-Claude TCO table, end-to-end LangGraph pipeline architecture, customer-language capture workflow, AEO-first content brief template.
+The highest-velocity and highest-brand-risk domain. This is the daily output of the function: long-form pieces (whitepapers, technical blogs, research reports, ebooks), short-form (social posts, ad creative, email copy, landing pages), multimedia (video scripts, podcast briefs, webinar outlines, slide decks), sales enablement (one-pagers, battlecards, pitch decks, ROI calculators), and visual and design assets.
 
-> *"Slop is generated. Craft is built and made."* — Ann Handley, [*What's In/What's Out in 2025*](https://www.marketingprofs.com/articles/2025/52534/whats-in-whats-out-in-2025-marketers-version) (MarketingProfs)
+Agents do most of the production. Humans set the strategy, refine the taste, and own the brand-integrity calls. The Brand Governance Agent from Domain 2 is the rate-limiter on quality.
 
-> *"Content operations is everyone following their own playbook. Content orchestration is everyone following the same playbook."* — Robert Rose, [*Content Orchestration: The 2026 Marketing Shift*](https://contentmarketinginstitute.com/strategy-planning/content-orchestration-vs-operations) (CMI), Nov 17, 2025
+> *"Slop is generated. Craft is built and made."* (Ann Handley, [*What's In/What's Out in 2025*](https://www.marketingprofs.com/articles/2025/52534/whats-in-whats-out-in-2025-marketers-version), MarketingProfs)
 
-> *"AI has become a justification to not replace people who leave."* — Robert Rose, [*The Ghost Workforce*](https://www.imnewswatch.com/2026/04/07/the-ghost-workforce-how-ai-is-reshaping-content-and-marketing-roles-in-2026/), Apr 7, 2026
+> *"Content operations is everyone following their own playbook. Content orchestration is everyone following the same playbook."* (Robert Rose, [*Content Orchestration: The 2026 Marketing Shift*](https://contentmarketinginstitute.com/strategy-planning/content-orchestration-vs-operations), CMI, Nov 17, 2025)
 
-**See also:** [Domain 0 (AgentOps)](0-agentops.md) for the Brand Governance Agent that gates every output, [Domain 2 (Strategy)](2-strategy-positioning.md) for brand voice spec the pipeline consumes, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for atomization-at-scale (1 webinar → 19 artifacts), [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for AEO-first content briefs that earn LLM citations, [Domain 8 (Measurement)](8-measurement-attribution.md) for pipeline-per-piece measurement.
+> *"AI has become a justification to not replace people who leave."* (Robert Rose, [*The Ghost Workforce*](https://www.imnewswatch.com/2026/04/07/the-ghost-workforce-how-ai-is-reshaping-content-and-marketing-roles-in-2026/), Apr 7, 2026)
 
-### Definition and Scope
+**See also:** [Domain 0 (AgentOps)](0-agentops.md) for the Brand Governance Agent that gates every output, [Domain 2 (Strategy)](2-strategy-positioning.md) for the brand voice spec the pipeline consumes, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for atomization at scale (one webinar into nineteen artifacts), [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for AEO-first content briefs that earn LLM citations, [Domain 8 (Measurement)](8-measurement-attribution.md) for pipeline-per-piece measurement.
 
-The highest-velocity, highest-brand-risk domain. Long-form (whitepapers, technical blogs, research reports, ebooks), short-form (social posts, ad creative, email copy, landing pages), multimedia (video scripts, podcast briefs, webinar outlines, slide decks), sales enablement (one-pagers, battlecards, pitch decks, ROI calculators), visual and design assets.
+### Why this matters now
 
-Agents can do most of the production work. Humans set strategy, refine taste, and own brand integrity decisions. The Brand Governance Agent (from Domain 2) is the rate-limiter on quality.
+Two things changed at the same time, which is what makes this domain volatile.
 
-### Why It Matters Now
+The first is velocity. McKinsey's [April 2026 report on agentic marketing workflows](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/reinventing-marketing-workflows-with-agentic-ai) shows content cycles running up to four times faster with end-to-end agentic workflows, and projects agentic AI will power up to two-thirds of current marketing activities with roughly 15× faster campaign creation. [Jasper's State of AI in Marketing 2026 survey](https://www.jasper.ai/blog/state-of-ai-marketing-2026) (n=1,400) found AI adoption at 91%, up from 63%, and 95% planning to increase AI spend.
 
-[McKinsey's "Reinventing marketing workflows with agentic AI" (Apr 2026)](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/reinventing-marketing-workflows-with-agentic-ai) shows content cycles up to **4× faster** with end-to-end agentic workflows, and projects agentic AI will power up to **two-thirds of current marketing activities** with **15× faster campaign creation**. [Jasper's "State of AI in Marketing 2026" (n=1,400)](https://www.jasper.ai/blog/state-of-ai-marketing-2026) found AI adoption at **91%** (up from 63%); 95% plan to increase AI spend; **ROI confidence dropped from 49% → 41%**; **governance blockers rose 3.4× YoY** as the new bottleneck; only 19% plan to hire content engineers despite scale being the top priority. The leadership-execution gap is stark: 61% CMO ROI confidence vs. 12% individual contributor.
+The second is that the wheels come off more often. ROI confidence in the same Jasper survey dropped from 49% to 41%. Governance blockers rose 3.4× year-over-year, becoming the new bottleneck. Only 19% of teams plan to hire content engineers despite scale being the top stated priority. The leadership-execution gap is stark: 61% of CMOs are confident in AI ROI versus 12% of individual contributors.
 
-But this is also where the wheels come off most often. [Neil Patel / NP Digital's five-month study (replicated by Samwell.ai 2025)](https://neilpatel.com/blog/ai-vs-human-content/) is the source of the often-cited claim that fully human-written content generates **5.44× more organic traffic than unedited AI content**. [Hybrid AI+human content achieves 94% brand consistency](https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/) (vs. 87% pure AI, 73% pure human); 62% of high-performing teams use hybrid; hybrid content ranks 34% higher than pure AI; hybrid is 40–60% faster + 30–50% cheaper than conventional. **39% of content workflows now enforce "no AI content out without human review."** The lesson: AI velocity without human taste produces content that doesn't perform.
+The performance numbers tell the same story. A five-month study by Neil Patel's NP Digital (replicated by Samwell.ai in 2025) found fully human-written content generates 5.44× more organic traffic than unedited AI content. [Semrush's research](https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/) shows hybrid AI plus human content reaches 94% brand consistency versus 87% for pure AI and 73% for pure human, ranks 34% higher than pure AI, and is 40 to 60% faster and 30 to 50% cheaper than conventional production. 62% of high-performing teams use the hybrid approach. 39% of content workflows now enforce "no AI content goes out without human review."
 
-The other structural shift: as we cover in Domain 5, the audience for content has expanded. You're now writing for both humans AND for LLMs that will train on, retrieve, and cite your content. Production has to satisfy both readers.
+The lesson is simple: AI velocity without human taste produces content that doesn't perform.
 
-### Sub-Domains
+There's a second structural shift, covered in detail in Domain 5: the audience for content has expanded. You're now writing for both humans and for the LLMs that will train on, retrieve, and cite your content. Production has to satisfy both readers.
 
-**3.1 Long-Form Content**
-- Pillar pages, technical blog posts, research reports
-- Whitepapers, ebooks, guides
-- Case studies, customer stories
-- Industry analysis and category-defining essays
+### Six kinds of work that live inside content
 
-**3.2 Short-Form Content**
-- Social posts (LinkedIn, X, Threads, Bluesky)
-- Email copy (nurture, promotional, lifecycle)
-- Ad copy (search, social, display, programmatic)
-- Landing page copy and CTAs
-- Microcopy (UI text, error messages, transactional emails)
+The work breaks into six rough piles. Most teams underinvest in the last two.
 
-**3.3 Multimedia Production**
-- Video scripts (long-form, shorts, ads)
-- Podcast briefs and show notes
-- Webinar outlines and slide decks
-- Conference talk preparation
-- Audio scripts for advertising
+**Long-form content** is the slow, durable stuff. Pillar pages, technical blog posts, research reports, whitepapers, ebooks, case studies, industry essays. The pieces that compound over years and that AI search systems are most likely to cite.
 
-**3.4 Sales Enablement**
-- One-pagers, battlecards
-- Pitch decks (per-vertical, per-stage)
-- ROI calculators and TCO models
-- Demo scripts
-- Email sequences for AEs (post-meeting follow-up, deal acceleration)
+**Short-form content** is the daily output. LinkedIn posts, ads, email copy, landing page text, the small UI strings ("microcopy") inside the product itself.
 
-**3.5 Visual & Design**
-- Image generation (illustration, photo composites, social cards)
-- Layout and brand-compliant templates
-- Video editing (cuts, captions, motion graphics)
-- Brand-asset libraries
+**Multimedia** is video scripts, podcast briefs, webinar outlines, slide decks, conference talks, ads. Higher production cost per piece, higher attention return.
 
-**3.6 Repurposing & Content Operations**
-- Long-form → short-form atomization (a webinar becomes 8 LinkedIn posts + 1 blog + 5 emails)
-- Cross-platform adaptation (LinkedIn voice ≠ X voice ≠ TikTok voice)
-- Content audits and refreshes
-- SEO/AEO optimization passes (see Domain 5)
+**Sales enablement** is the material your sales team uses to close deals: one-pagers, battlecards, vertical-specific pitch decks, ROI calculators, demo scripts, post-meeting email sequences. Often invisible to marketing leadership and often the highest-leverage thing the function produces.
 
-### Best Practices in 2026
+**Visual and design** is the output of an art department: illustrations, social cards, photo composites, video edits, motion graphics, the templates that make everything look like one company.
 
-**Run every output through the Brand Governance Agent before shipping.** This is non-negotiable. The agent should be fine-tuned on:
-- Existing high-performing content samples
-- The complete style guide (tone, vocabulary, sentence structure)
-- The ontological dictionary (terms you own, terms to avoid)
-- Examples of mistakes you've corrected before
+**Repurposing and content operations** is the engine that takes one piece and turns it into many. A webinar that becomes eight LinkedIn posts, a blog, and five emails. A research report that becomes a podcast appearance, a Twitter thread, a sales deck, and an analyst briefing. With agents, this is now nearly free, which means most teams' real bottleneck is taste, not production.
 
-The Governance Agent's job is to score outputs against brand spec, flag violations, and either auto-correct or escalate. Without it, you'll ship 1000 pieces a month and 600 of them will sound like generic SaaS marketing.
+### What works in 2026
 
-**Use multi-model orchestration, not a single model.** Different models have different strengths. Claude is strongest for technical and academic writing; GPT-4/5 for general flexibility; Gemini for multimodal. Tools like Jasper internally route across models. Custom stacks should do the same.
+**Run every output through a Brand Governance Agent before it ships.** This is non-negotiable in any agentic content stack. The agent is trained on your highest-performing existing content, your full style guide, your dictionary of preferred and banned terms, and examples of mistakes you've corrected before. Its job is to score every output against the brand spec, flag the violations, and either auto-correct them or push the piece into a human review queue. Without this gate, you ship 1,000 pieces a month and 600 of them sound like generic SaaS marketing wrote them, which is what's happening at most teams already.
 
-**Treat content as a distribution problem, not a creation problem.** Most content failure isn't "we didn't write enough." It's "we wrote in formats and on topics that don't compound." Atomize: one webinar should produce 15+ artifacts across formats. The marginal cost of repurposing with agents is near-zero; the marginal cost of writing a net-new pillar is high.
+**Route between models instead of picking one.** Different models have different strengths. Claude tends to be strongest for long-form and technical writing. GPT works well for general flexibility and ad copy. Gemini handles multimodal cleanly. Platforms like Jasper route between models internally, and custom stacks should do the same.
 
-**Build a "research-first" content workflow.** Teams using AI-response research (i.e., starting from how AI platforms answer the question, then producing content that fills the answer's information voids) reportedly see 3x higher citation rates than those using traditional keyword research alone. This is content engineering for the AEO/GEO era, see Domain 5.
+**Treat content as a distribution problem, not a creation problem.** Most content failures aren't "we didn't write enough." They're "we wrote in formats and on topics that don't compound." Atomize aggressively: one webinar should produce fifteen-plus artifacts across formats. The marginal cost of repurposing with agents is close to zero; the marginal cost of writing a brand-new pillar piece is real.
 
-**Capture customer language verbatim.** The single most underused asset in content is the language buyers actually use. Mine support tickets, sales calls, NPS comments, and reviews for verbatim phrases. Feed those into the content pipeline. Generic AI content sounds like a marketer wrote it; great content sounds like a customer.
+**Start from how AI search answers the question.** Teams using "research-first" workflows, where they look at how ChatGPT, Claude, and Perplexity currently answer the target question, find the gaps in those answers, and then write content that fills the gaps, reportedly see roughly three times the citation rate of teams using traditional keyword research alone. This is content engineering for the AI search era; see Domain 5 for the full picture.
 
-**Don't optimize for length; optimize for completeness.** AI search systems prefer content that answers a question fully and clearly, not content that hits a word count. Short, definitive, well-structured beats long-and-meandering.
+**Capture customer language verbatim and feed it into the pipeline.** The single most underused asset in any content team is the language your customers already use. Mine your support tickets, sales call transcripts, NPS comments, and reviews for verbatim phrases. Generic AI content sounds like a marketer wrote it. Good content sounds like the customer wrote it.
+
+**Optimize for completeness, not length.** AI search systems prefer content that answers a question fully and clearly. They don't reward hitting a word count. Short and definitive beats long and meandering.
 
 ### Tools & Platforms
 
 **Marketing-Specific AI Content Platforms**
-- **Jasper**: $49–$69+/user/mo + custom enterprise. Brand voice training (Jasper IQ), multi-model routing, governance, agent workflows. Best for marketing teams of 3–10. Customers include Wayfair, Boeing, L'Oreal, Cox Media, HarperCollins.
+- **Jasper**: $49-$69+/user/mo + custom enterprise. Brand voice training (Jasper IQ), multi-model routing, governance, agent workflows. Best for marketing teams of 3-10. Customers include Wayfair, Boeing, L'Oreal, Cox Media, HarperCollins.
 - **Writer.com**. Enterprise governance-first; style guide enforcement, terminology management, audit-ready. Best for regulated industries.
 - **Copy.ai**. Workflow-focused, multi-step content generation
 - **Marketing Mary**. Long-form blog automation pipeline
@@ -138,10 +109,10 @@ The Governance Agent's job is to score outputs against brand spec, flag violatio
 
 | Dimension | Jasper | Writer.com | Custom Claude (Skills + MCP) |
 |---|---|---|---|
-| Entry | $39–$59/seat/mo (annual) | $18–$29/seat/mo (Team, annual) | API: $3/M input, $15/M output (Sonnet 4.5); $15/$75 (Opus). No seat tax. |
-| Enterprise | $1K–$2K/mo starting; $200–$500/seat/mo at 12-mo commit; large contracts ~$44K avg. **Up 46% YoY** | Mid-market $75K–$250K; enterprise $500K+ | Variable; one Claude Pro seat + Skills repo for lean teams |
+| Entry | $39-$59/seat/mo (annual) | $18-$29/seat/mo (Team, annual) | API: $3/M input, $15/M output (Sonnet 4.5); $15/$75 (Opus). No seat tax. |
+| Enterprise | $1K-$2K/mo starting; $200-$500/seat/mo at 12-mo commit; large contracts ~$44K avg. **Up 46% YoY** | Mid-market $75K-$250K; enterprise $500K+ | Variable; one Claude Pro seat + Skills repo for lean teams |
 | Brand governance | Brand Voice (auto-style enforcement), IQ models | **Strongest:** terminology mgmt, audit trails, automated compliance ([Forrester TEI 2024-25](https://writer.com/): 333% ROI, $12.02M NPV, 85% review-time reduction, payback <6 months) | Skills + AGENTS.md style guide + custom evals; needs build |
-| Best for | 3–10-person marketing teams that want a UI | Regulated industries (finance, pharma, healthcare); audit-ready compliance | Engineering-adjacent marketing teams; lean teams; founders |
+| Best for | 3-10-person marketing teams that want a UI | Regulated industries (finance, pharma, healthcare); audit-ready compliance | Engineering-adjacent marketing teams; lean teams; founders |
 | Public customers | Wayfair, Boeing, L'Oréal, Cox Media, HarperCollins, [WalkMe](https://www.jasper.ai/case-studies/walkme), [2X](https://www.jasper.ai/case-studies/2x), [Pilot Company](https://www.jasper.ai/case-studies/pilot-company) | Qualcomm (2,400 hrs/mo saved), Vizient (4× ROI), Salesforce (20% productivity lift) | [Anthropic itself](https://claude.com/blog/how-anthropic-uses-claude-marketing); [Brand.ai (Lyft, Opendoor)](https://claude.com/customers/brand-ai) |
 
 **Orchestration framework decision rule:** LangGraph for scale + observability; CrewAI for clean role orchestration; n8n for connector-heavy glue; Claude Skills for individuals/lean teams.
@@ -154,7 +125,7 @@ The Governance Agent's job is to score outputs against brand spec, flag violatio
 | **Brand.ai (serving Lyft + Opendoor)** | Dual retrieval system on Claude (one for brand insights, one for conversation context); processes entire brand guidelines in one context window | Enterprise brand-compliance costs **$5M/yr → small fraction**; **one copywriter manages 600 pieces of content**; brand-guideline creation **24 months → days**; agency onboarding **months → days** | [Anthropic customer story](https://claude.com/customers/brand-ai) |
 | **WalkMe (B2B SaaS, Jasper)** | Brand Voice + Jasper Chat + Campaigns + Google Docs extension | **3× more content** across LinkedIn / Google / paid / blog / email; 3,000+ hrs saved across sales + marketing; 2× ROI; **2.5× improvement in outbound reply rates** | [Jasper case](https://www.jasper.ai/case-studies/walkme) |
 | **2X (B2B agency, 600 employees)** | Brand Voice + custom templates managing multiple client voices simultaneously | 50% faster SEO blogs, 40% faster whitepapers, 2,613 hours saved | [Jasper case](https://www.jasper.ai/case-studies/2x) |
-| **Pilot Company (750+ travel centers)** | Trained Jasper on each sub-brand's voice; one workflow distilled 30-page docs into 1-page briefs, then repurposed | 3–5 hrs/wk saved per team member; 15% increase in Jira story-point output (content design team) | [Jasper case](https://www.jasper.ai/case-studies/pilot-company) |
+| **Pilot Company (750+ travel centers)** | Trained Jasper on each sub-brand's voice; one workflow distilled 30-page docs into 1-page briefs, then repurposed | 3-5 hrs/wk saved per team member; 15% increase in Jira story-point output (content design team) | [Jasper case](https://www.jasper.ai/case-studies/pilot-company) |
 | **SAP "Digital Chop Shop"** | Atomized one whitepaper into 650 derivative pieces across 25+ verticals | **$23M new pipeline** (most-cited benchmark for atomization-at-scale claims) | [Stratabeat](https://stratabeat.com/content-atomization/) |
 | **B2B SaaS, $25M ARR (anonymous)** | "CITABLE" framework + daily content production cadence | Citation rate **8% → 24% in 90 days**: 47 AI-referred leads converting at **2.8×** the rate of organic search → ~€180K projected pipeline | [Discovered Labs](https://discoveredlabs.com/blog/case-study-how-a-b2b-saas-used-a-geo-agency-to-3x-citation-rates-in-90-days) |
 
@@ -230,9 +201,9 @@ This is the *operating model*, the writing tactics that turn captured language i
 - Existing citation: yes/no per platform
 
 **Structure (answer-block-first):**
-- Hook: 40–60-word definitive answer at top (LLMs scrape this preferentially)
+- Hook: 40-60-word definitive answer at top (LLMs scrape this preferentially)
 - Question included verbatim in H1, title tag, meta description
-- Body: extends the hook with one definitive sub-answer per H2 (each itself a 40–60-word block)
+- Body: extends the hook with one definitive sub-answer per H2 (each itself a 40-60-word block)
 - Source-cite every stat with named org + year. LLMs preferentially cite content that itself cites
 - FAQ schema + tables for tabular data ([Onely + Frase data](https://aiproductivity.ai/blog/best-seo-content-tools-2026/): structured = 3× more citations than paragraph-only)
 
@@ -256,7 +227,7 @@ The OS doc owns the *operating model layer*; Mahmoud's existing skills own the *
 - Customer-language capture workflow + vector store
 - Repurposing playbook (1 webinar → 15 artifacts; SAP "Digital Chop Shop" benchmark)
 - Cross-platform measurement (citation rate via Profound, brand-compliance rate, pipeline-per-piece)
-- Content Engineer role definition (Jasper's #1 role to hire 2026; salary band $120K–$220K)
+- Content Engineer role definition (Jasper's #1 role to hire 2026; salary band $120K-$220K)
 - Cost models / TCO of Jasper vs. Writer vs. custom
 
 **Other Mahmoud skills to link from this domain:**
@@ -281,10 +252,10 @@ The OS doc owns the *operating model layer*; Mahmoud's existing skills own the *
 
 | Industry | ICP / motion difference | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | Long-form thought leadership + atomized LinkedIn posts; founder voice; case studies with named customers | Jasper or Claude Projects + LangGraph + AGENTS.md style guide (Anthropic/Brand.ai pattern) | AI velocity without taste — 100 mediocre LinkedIn posts/week of generic SaaS content with no founder voice | Customer logo permissions; case-study legal review |
-| **Biopharma** | Content = MSL slide decks, KOL-co-authored white papers, peer-reviewed publications, congress posters, MA-cleared HCP detail aids. Patient content is a separate workstream | **Veeva Vault PromoMats (mandatory)**, Writer.com (HIPAA/SOC 2 enterprise governance), AICEL/Indegene for medical writing automation | Letting an LLM hallucinate a citation or efficacy stat — single fabricated reference = OPDP warning letter, public Untitled Letter listing | MLR cycle (typically 2-6 weeks); ISI on every promotional asset; FDA Form 2253 within 30 days; EMA Article 21; Sunshine Act for HCP-targeted content |
+| **B2B SaaS** | Long-form thought leadership + atomized LinkedIn posts; founder voice; case studies with named customers | Jasper or Claude Projects + LangGraph + AGENTS.md style guide (Anthropic/Brand.ai pattern) | AI velocity without taste, where teams produce 100 mediocre LinkedIn posts/week of generic SaaS content with no founder voice | Customer logo permissions; case-study legal review |
+| **Biopharma** | Content = MSL slide decks, KOL-co-authored white papers, peer-reviewed publications, congress posters, MA-cleared HCP detail aids. Patient content is a separate workstream | **Veeva Vault PromoMats (mandatory)**, Writer.com (HIPAA/SOC 2 enterprise governance), AICEL/Indegene for medical writing automation | Letting an LLM hallucinate a citation or efficacy stat (single fabricated reference equals an OPDP warning letter and a public Untitled Letter listing) | MLR cycle (typically 2-6 weeks); ISI on every promotional asset; FDA Form 2253 within 30 days; EMA Article 21; Sunshine Act for HCP-targeted content |
 | **DTC** | Volume play: 100s of UGC-style ad variants/week, hero video monthly, email lifecycle daily. Creator content >> studio content for paid social | Pencil/Brave + Smartly.io for creative iteration; Foreplay for swipe files; Arcads/HeyGen for synthetic UGC; Klaviyo for lifecycle | Synthetic UGC that triggers Meta's "low-quality / AI-generated" policy filter (rolled out 2025) and gets ad accounts throttled | FTC #ad / material connection disclosures; ASA (UK); Meta/TikTok AI-content disclosure flags (mandatory 2024+) |
-| **Dev tools** | Docs, tutorials, changelogs, conference talks, blog posts that show real code. Anthropic + Vercel + Mintlify pattern: docs-as-marketing | Mintlify for docs; Markdown-native publishing; Loom + asciinema for demos; YouTube tutorials > TikTok | Marketing copy that overpromises what the API does — devs paste your headline into Cursor, it fails, they post on Hacker News | OSS contributor attribution; export controls (EAR/ITAR) for crypto/security tools |
+| **Dev tools** | Docs, tutorials, changelogs, conference talks, blog posts that show working code. Anthropic + Vercel + Mintlify pattern: docs-as-marketing | Mintlify for docs; Markdown-native publishing; Loom + asciinema for demos; YouTube tutorials beat TikTok | Marketing copy that overpromises what the API does, so devs paste your headline into Cursor, it fails, and they post on Hacker News | OSS contributor attribution; export controls (EAR/ITAR) for crypto/security tools |
 
 **Key insight:** Biopharma is the one industry where Writer.com's audit-trail compliance edge ([Forrester TEI](https://writer.com/) 333% ROI) genuinely beats Claude Projects + custom skills, every output must be defensible in an FDA audit, and Writer gives you the document trail. Veeva PromoMats is non-negotiable infrastructure regardless of LLM choice.
 
@@ -357,7 +328,7 @@ The OS doc owns the *operating model layer*; Mahmoud's existing skills own the *
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 3: Content & Creative Production
+## Frequently asked questions about content and creative production
 
 ### What is an agentic content pipeline?
 
@@ -373,5 +344,5 @@ Daily n8n pipeline pulling from Gong (sales calls, filtered to customer-only spe
 
 ### Does AI content rank in 2026?
 
-Hybrid AI+human content does best: 94% brand consistency (vs. 87% pure AI, 73% pure human), ranks 34% higher than pure AI, ships 40-60% faster at 30-50% lower cost. Pure AI content underperforms — Neil Patel / NP Digital's five-month study found fully-human content generates 5.44× more organic traffic than unedited AI content. The pattern: AI velocity without human taste produces content that doesn't perform. 39% of content workflows now enforce 'no AI content out without human review.'
+Hybrid AI+human content does best: 94% brand consistency (vs. 87% pure AI, 73% pure human), ranks 34% higher than pure AI, ships 40-60% faster at 30-50% lower cost. Pure AI content underperforms; Neil Patel / NP Digital's five-month study found fully-human content generates 5.44× more organic traffic than unedited AI content. The pattern: AI velocity without human taste produces content that doesn't perform. 39% of content workflows now enforce 'no AI content out without human review.'
 

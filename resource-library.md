@@ -2,7 +2,7 @@
 
 A consolidated list of the highest-signal resources for becoming an SME in agentic marketing. Organized by type and depth. **Last curation pass: Apr 2026.**
 
-> **v3 curation note:** This library was pruned for stale entries (Drift removed from active recommendations — sunset Mar 6, 2026; Bizible renamed to Adobe Marketo Measure; Clearbit renamed to HubSpot Breeze Intelligence). New 2025-2026 sources added across AI/agents, AEO/GEO, measurement, and synthetic testing categories. Forward refresh quarterly per the [research-plan.md](research-plan.md) v4 cadence.
+> **v3 curation note:** This library was pruned for stale entries (Drift removed from active recommendations after its Mar 6, 2026 sunset; Bizible renamed to Adobe Marketo Measure; Clearbit renamed to HubSpot Breeze Intelligence). New 2025-2026 sources added across AI/agents, AEO/GEO, measurement, and synthetic testing categories. Forward refresh quarterly per the [research-plan.md](research-plan.md) v4 cadence.
 
 ## v3 essential reads (start here)
 
@@ -148,7 +148,7 @@ If you only have 10 hours, these are the highest-signal resources across the fra
 - [Toubia et al. (2025) "Digital Twins are Funhouse Mirrors"](https://arxiv.org/abs/2509.19088), state-of-the-art synthetic-research critique (twin-to-human correlation 0.197)
 - [AIMx framework paper (Future Business Journal, 2026)](https://link.springer.com/article/10.1186/s43093-026-00823-8), integrating MMM + MTA + incrementality with AI
 - [McKinsey "Seizing the Agentic AI Advantage" (Mar 2025)](https://www.mckinsey.com/capabilities/quantumblack/our-insights/seizing-the-agentic-ai-advantage), the gen AI paradox
-- [McKinsey "Reinventing marketing workflows with agentic AI" (Apr 2026)](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/reinventing-marketing-workflows-with-agentic-ai), 10–15× campaign velocity
+- [McKinsey "Reinventing marketing workflows with agentic AI" (Apr 2026)](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/reinventing-marketing-workflows-with-agentic-ai), 10-15× campaign velocity
 - *Co-Intelligence* (Ethan Mollick)
 - *AI 2041* (Kai-Fu Lee)
 - *The Worlds I See* (Fei-Fei Li)

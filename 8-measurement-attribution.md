@@ -1,121 +1,67 @@
 <!--
 seo:
-  title: Triangulated Marketing Measurement: MMM + Incrementality + MTA — Domain 8
-  description: Without measurement, the rest is theater. Refine Labs $50M HIRO from SRA, PODS Recast +181%, Soft Surroundings 52% retargeting cut → +17% revenue, open-source MMM (Robyn / Meridian).
+  title: Triangulated Marketing Measurement, MMM + Incrementality + MTA (Domain 8)
+  description: Without measurement, the rest is theater. Refine Labs $50M HIRO from SRA, PODS Recast +181%, Soft Surroundings 52% retargeting cut to +17% revenue, open-source MMM (Robyn / Meridian).
   primary_keyword: marketing measurement triangulation
   secondary_keywords: [marketing mix modeling, incrementality testing, self-reported attribution, Meta Robyn, Google Meridian, AIMx framework]
 -->
 ## Domain 8: Measurement, Attribution & Closed-Loop Learning
 
-> **TL;DR.** The mirror — without it the rest is theater. **Anchor stat: 75% of marketers say measurement isn't delivering speed/accuracy/trust** ([IAB/BWG 2026](https://www.iab.com/insights/2026-state-of-data-report/)). **Triangulate or die: MMM (strategic) + incrementality (causal) + MTA (in-flight tactical).** **Anchor case: Refine Labs / Passetto** — 12-month SRA implementation: $50M HIRO pipeline, $14M closed-won ARR. Software attribution alone would have credited LinkedIn $977k — **93% gap**. **Tools that win:** Measured / Recast / Lifesight for MMM; Incrmntal / Haus for incrementality; HockeyStack / Dreamdata for B2B revenue attribution. **What changed in v3:** added 7 named cases (PODS Recast +181%, Soft Surroundings +17%, Refine Labs $50M, Lifesight retailer +32%, Lifesight $1B gaming app, Jones Road geo-test, Semgrep +74%), MMM platform comparison, open-source MMM head-to-head (Robyn / Meridian / PyMC-Marketing), 3 tactical playbooks, AIMx framework paper citation.
+The mirror. Without this domain, the rest is theater. The work is multi-touch attribution, channel ROI and customer acquisition cost, content performance, pipeline health, conversion benchmarks, brand metrics, and the experimentation infrastructure (A/B tests, holdouts, geo-tests, incrementality testing) that lets you tell what's working from what isn't. The closed-loop part is the most important: insights here feed back into Domains 1 through 7, so the rest of the OS gets smarter over time.
 
-> *"If you have $100 to invest in smart decisions, invest $10 in brilliant human analytical strategists, invest $90 in AI activation."* — Avinash Kaushik (now CSO, Human Made Machine), [*Bye, Bye Human-Powered Marketing Analytics*](https://www.kaushik.net/avinash/bye-human-powered-marketing-analytics-hello-ai-powered-analytics/), 2024 — the AI-era update to the original 10/90 rule
+> *"If you have $100 to invest in smart decisions, invest $10 in brilliant human analytical strategists, invest $90 in AI activation."* (Avinash Kaushik, now CSO at Human Made Machine, [*Bye, Bye Human-Powered Marketing Analytics*](https://www.kaushik.net/avinash/bye-human-powered-marketing-analytics-hello-ai-powered-analytics/), 2024, the AI-era update to his original 10/90 rule)
 
-> *"The most accurate way to get attribution is simply by asking them!"* — Chris Walker (CEO, Passetto), [LinkedIn](https://www.linkedin.com/posts/chriswalker171_attribution-revenue-b2b-activity-7021126918821347328-R5CQ), Jan 2023
+> *"The most accurate way to get attribution is simply by asking them!"* (Chris Walker, CEO, Passetto, [LinkedIn](https://www.linkedin.com/posts/chriswalker171_attribution-revenue-b2b-activity-7021126918821347328-R5CQ), Jan 2023)
 
-**See also:** Mahmoud's [`ab-test-setup`](skill) for experimentation tactics, [`mahmouds-seo-guide-v3` `analytics-measurement.md`](skill) for AI-search-specific measurement, [Domain 1 (Sensing)](1-sensing-intelligence.md) for signal-to-meeting conversion as the upstream metric, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for SRA reconciliation methodology, [Domain 6 (Demand)](6-demand-conversational-pipeline.md) for sourced-pipeline measurement, [Domain 7 (Customer Intel)](7-customer-intelligence-synthetic-testing.md) for synthetic-to-live correlation as a continuous KPI, [Domain 0 (AgentOps)](0-agentops.md) for AgentOps cost attribution, [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for AI-search KPIs (citation rate, share of voice, AI referral conversion).
+**See also:** Mahmoud's [`ab-test-setup`](skill) for experimentation tactics, [`mahmouds-seo-guide-v3` `analytics-measurement.md`](skill) for AI-search-specific measurement, [Domain 1 (Sensing)](1-sensing-intelligence.md) for signal-to-meeting conversion as the upstream metric, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for self-reported attribution methodology, [Domain 6 (Demand)](6-demand-conversational-pipeline.md) for sourced-pipeline measurement, [Domain 7 (Customer Intel)](7-customer-intelligence-synthetic-testing.md) for synthetic-to-live correlation as a continuous KPI, [Domain 0 (AgentOps)](0-agentops.md) for AgentOps cost attribution, [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for AI-search KPIs (citation rate, share of voice, AI referral conversion).
 
-### Definition and Scope
+### Why this matters now
 
-The mirror: Without this domain, the rest is theater. Owns: multi-touch attribution; channel ROI and CAC; content performance; pipeline health and conversion benchmarks; brand metrics; experimentation infrastructure (A/B, holdouts, geo-tests, incrementality); and the closed-loop learning that feeds insights back into Domains 1–7.
+Marketing measurement is in a quiet crisis. The IAB's 2026 State of Data Report surveyed more than 400 senior planning and analytics decision-makers, and 75% of them said their current measurement approaches fall short on speed, accuracy, or trust. Only 41% of marketers can confidently prove AI ROI, down from 49% the year before (Jasper, 2026). The IAB's Project Eidos puts industry waste from inconsistent measurement definitions at roughly $9B per year. Meanwhile B2B buyers spend only 17% of their buying time talking to vendors; the other 83% happens in places conventional analytics can't see.
 
-### Why It Matters Now
+Three structural shifts caused this and shape what works in 2026.
 
-The measurement crisis is real:
-- **75% of marketers** say their measurement approaches fall short on speed, accuracy, or trust ([IAB / BWG "State of Data 2026: AI-Powered Measurement Transformation,"](https://www.iab.com/insights/2026-state-of-data-report/) Feb 2, 2026, survey of 400+ senior brand/agency planning + analytics decision-makers).
-- AI projected to unlock **$26.3B in media-investment value + $6.2B productivity gains** (IAB 2026); 50%+ of buy-side already scaling AI in measurement, 70%+ planning by 2027.
-- **77% say gaming is underrepresented** in MMM, 50% commerce media, 48% creator economy (IAB 2026).
-- Only 41% of marketers can confidently prove AI ROI, down from 49% the year before ([Jasper "State of AI in Marketing 2026"](https://www.jasper.ai/blog/state-of-ai-marketing-2026)).
-- *Note:* the often-cited "only 10% of B2B journeys captured by digital attribution (LinkedIn)" claim could not be traced to a primary source with that exact phrasing. The verifiable adjacent stats are above (IAB 75% inadequacy + IAB Project Eidos's [$9B/year industry waste from inconsistent definitions](https://www.iab.com/news/iab-announces-project-eidos/)).
-- B2B buyers spend only 17% of their total buying time meeting with vendors (Gartner), the other 83% is in dark channels.
+**The death of user-level attribution.** Apple's App Tracking Transparency, third-party cookie deprecation, and tightening privacy regulations have gutted the click-based attribution model that dominated 2010 to 2020. Multi-touch attribution (MTA), the model that says "this lead clicked these five ads in this order, here's how to credit them," is getting less accurate every quarter. The data it depended on is just gone.
 
-Three structural shifts:
+**The rise of triangulated measurement.** No single method tells the full story now. The teams that have a working measurement function combine three approaches: marketing mix modeling (MMM) as the strategic backbone, incrementality testing for causal validation, and attribution for in-flight tactical signals. The 2026 academic articulation of this is the AIMx framework paper, but the idea is older: integration is the unlock, not picking the right single method.
 
-**1. The death of user-level attribution.** iOS App Tracking Transparency, third-party cookie deprecation, and tightening privacy regulations have gutted the click-based attribution model that dominated 2010-2020 marketing. Multi-touch attribution (MTA) is becoming less accurate by the quarter.
+**AI inside the measurement layer itself.** Half of US brand and agency marketers have adopted AI/ML for automated reporting. 60.9% list "AI that can summarize what the data means in English" as their top requested feature in next-gen MMM (eMarketer/Skewb, Oct 2025). Avinash Kaushik's classic 10/90 rule (10% on tools, 90% on smart people) has been updated for the AI era to "$10 in brilliant analytical strategists, $90 in AI activation." The smart-person budget shrinks; the AI execution budget grows.
 
-**2. The rise of triangulated measurement.** Modern measurement combines MMM (strategic backbone) + incrementality testing (causal validation) + attribution (in-flight directional signals). No single method tells the full story. The [AIMx framework paper (Future Business Journal, 2026)](https://link.springer.com/article/10.1186/s43093-026-00823-8) is the canonical academic articulation: AI-Integrated Marketing Analytics combines MMM + MTA + incrementality testing within an AI-driven feedback loop. Integration (not method choice) is the unlock.
+### What measurement actually involves
 
-**3. AI in the measurement layer.** Half of US brand and agency marketers have adopted AI/ML for automated reporting. **60.9% prioritize generative insight summaries** as their top AI enhancement for next-gen MMM ([eMarketer / Skewb survey, Oct 2025](https://www.emarketer.com/content/marketers-want-ai-explain-their-data--not-just-crunch); **46.9% plan to invest in MMM in next 12 months**). The future is real-time, predictive, and integrated with the agentic stack itself. Avinash Kaushik (now CSO at Human Made Machine) has reframed his classic 10/90 rule: ["$10 in brilliant analytical strategists, $90 in AI activation."](https://www.kaushik.net/avinash/bye-human-powered-marketing-analytics-hello-ai-powered-analytics/)
+Eight clusters of work sit inside this domain. Most teams are doing two or three of them well and the rest poorly.
 
-### Sub-Domains
+**Marketing mix modeling (MMM)** is the strategic backbone. It uses spend, exposure, and outcome data across all your channels to figure out the incremental contribution of each one, the saturation curve, and the diminishing returns. Privacy-native because it doesn't depend on user-level tracking. The output is "we should move $200K from retargeting to YouTube ads."
 
-**8.1 Marketing Mix Modeling (MMM)**
-- Strategic budget allocation across channels
-- Incremental contribution by channel
-- Saturation curves and diminishing returns
-- Scenario simulation for budget shifts
-- Privacy-native (works without user-level data)
+**Incrementality testing** is the causal layer. The gold standard is a randomized holdout (you withhold a channel from a representative slice of the audience and see if outcomes drop). Geo-based experiments (treat one set of cities, control another) work for offline channels. Platform-native lift tests (Google, Meta) are easier to run but less rigorous. The output is "this channel actually caused this much of the lift, not just correlated with it."
 
-**8.2 Incrementality Testing**
-- Randomized holdout tests (gold standard)
-- Geo-based experiments (treat / control markets)
-- Synthetic control groups
-- Platform-native lift tests (Google, Meta, etc.)
-- Causal AI-based always-on incrementality
+**Multi-touch attribution (MTA), the version that still works.** Pure cookie-based MTA is dying, but the discipline survives in narrower forms: first-party identity resolution, server-side tracking (cookie-independent), CRM-based touch tracking, and self-reported attribution (the "how did you hear about us?" field on your demo form). Useful for in-flight tactical optimization, not for proving channel ROI.
 
-**8.3 Multi-Touch Attribution (MTA), what survives**
-- First-party identity resolution
-- Self-reported attribution ("How did you hear about us?")
-- Server-side tracking (cookie-independent)
-- CRM-based touch tracking
-- Limited but useful for in-flight tactical optimization
+**Pipeline and revenue analytics** is the unsexy operating layer: pipeline coverage and velocity, stage-to-stage conversion rates, win/loss analysis, cohort retention and expansion, customer lifetime value. The numbers your CFO actually cares about.
 
-**8.4 Pipeline & Revenue Analytics**
-- Pipeline coverage and velocity
-- Stage-to-stage conversion rates
-- Win/loss analysis
-- Cohort retention and expansion
-- Customer lifetime value modeling
+**Brand metrics** is share of voice (organic, paid, AI), brand search volume, direct traffic, sentiment analysis, and dedicated brand-tracking studies. Slow-moving but durable, and increasingly important as AI search reshuffles direct discovery.
 
-**8.5 Brand Metrics**
-- Share of voice (organic, paid, AI)
-- Brand search volume
-- Direct traffic
-- Sentiment analysis
-- Brand-tracking studies (qualitative complement)
+**Content and channel performance** is content-influenced pipeline (not just page views), channel ROI and customer acquisition cost by segment, content half-life and refresh cycles, and engagement quality (dwell time, scroll depth, return visits). The level of detail that lets you say "this format works for this segment, this one doesn't."
 
-**8.6 Content & Channel Performance**
-- Content-influenced pipeline (not just page views)
-- Channel ROI and CAC by segment
-- Content half-life and refresh cycles
-- Engagement quality (dwell time, scroll depth, return visits)
+**Experimentation infrastructure** is the system for running A/B and multivariate tests, geo-tests for offline channels, holdouts, statistical power analysis. The plumbing that lets you actually answer your own questions instead of arguing about them in slack.
 
-**8.7 Experimentation Infrastructure**
-- A/B and multivariate testing
-- Holdout discipline
-- Geo-tests for offline channels
-- Cross-channel experiment design
-- Statistical rigor and power analysis
+**Reporting and decision velocity** is the speed layer: real-time dashboards, AI-generated insight summaries, anomaly detection, decision-support agents that recommend budget shifts and flag underperforming creative. The piece that turns measurement into action instead of leaving it as a deck nobody reads.
 
-**8.8 Reporting & Decision Velocity**
-- Real-time dashboards
-- Generative insight summaries
-- Anomaly detection
-- Decision-support agents (recommend budget shifts, flag underperforming creative)
+### What works in 2026
 
-### Best Practices in 2026
+**Triangulate. Don't pick one method.** The brands that have measurement under control use MMM as the strategic backbone, validate the largest channels with incrementality tests, and use attribution for in-flight directional signal. Each method answers a different question. MTA tells you what touched the customer. Incrementality tells you what caused the lift. MMM tells you what the channel mix should be.
 
-**Triangulate. Don't pick one method.** The brands winning use MMM as the strategic backbone, validated by incrementality tests on largest channels, with attribution providing directional signal for in-flight optimization. Each method answers a different question:
-- **MTA:** what touched the customer? (tactical)
-- **Incrementality:** what caused the lift? (causal)
-- **MMM:** what should the channel mix be? (strategic)
+**Demand causal validation in your MMM.** Modern MMM platforms include incrementality testing as a core feature. If a vendor pitches MMM without mentioning causal validation, they're behind the times.
 
-**Demand causal validation in MMM.** Modern MMM platforms integrate incrementality testing as a core feature. If a vendor talks about MMM without mentioning causal validation, they're behind the times.
+**Move from weekly to daily updates.** 2025 MMM was weekly and retrospective. 2026 MMM is real-time, predictive, and feeding insights directly into the agents running your campaigns. If your MMM still updates monthly, you're flying blind on a quarterly basis.
 
-**Move from weekly to daily/real-time updates.** 2025 MMM was weekly and retrospective. 2026 MMM is real-time, predictive, and integrated with autonomous marketing agents. If your MMM updates monthly, you're flying blind on a quarterly basis.
+**Capture self-reported attribution at every conversion point.** A free-text "how did you hear about us?" field on demo forms is the cheapest, highest-leverage attribution upgrade you can make. Pair it with sales discovery questions and reconcile against your software attribution. The Refine Labs case from Domain 4 shows how big the gap can be: a 93% blind spot on LinkedIn pipeline.
 
-**Capture self-reported attribution at every conversion point.** A free-text "How did you hear about us?" field on demo forms is the cheapest, highest-leverage attribution upgrade you can make. Pair with sales discovery questions.
+**Run incrementality tests on your top three channels.** Without causal validation, you're optimizing based on correlation, which is how you end up over-investing in retargeting that wasn't actually driving incremental revenue. Soft Surroundings cut retargeting 52% after incrementality tests revealed they were over-served, reallocated to Facebook prospecting, and saw revenue go up 17% month-over-month.
 
-**Run incrementality tests on your top-3 channels at minimum.** Without causal validation, you're optimizing based on correlation. The "40% incremental / 7% lift from 10% reallocation" line frequently attributed to Measured appears to be a *methodology illustration* (10% control vs. 14% test = 40% relative lift), not a single published case, read carefully. The strongest verifiable case: **[Soft Surroundings](https://www.measured.com/blog/what-is-incrementality-guide-to-understanding-and-measuring-incrementality/)** cut retargeting **52%** after incrementality tests revealed over-served frequency caps; reallocated to Facebook prospecting → **+17% revenue MoM, +12% YoY**.
+**Embed measurement into your agent workflows.** Modern measurement platforms expose APIs that feed insights directly into AI marketing agents. The agent shouldn't be optimizing against platform-reported ROAS; it should be optimizing against validated, incrementality-grounded performance.
 
-**Embed measurement into agent workflows.** Modern measurement platforms expose APIs that feed insights directly to AI marketing agents. The agent doesn't just optimize on platform-reported metrics; it optimizes on validated, incrementality-grounded performance.
-
-**Don't ignore the dark social problem.** When 83% of buying time happens in untracked channels, traditional analytics is structurally incomplete. Layer in:
-- Sales discovery: "Where did you hear about us?"
-- Open-text form fields
-- Tools like SparkToro, Wynter for passive brand awareness in closed ecosystems
-- Brand-tracking surveys
-- Direct traffic and branded search as proxy signals
+**Account for the dark social problem.** When 83% of buying time happens in places you can't track, traditional analytics is structurally incomplete. Layer in sales discovery questions, open-text form fields, brand-tracking surveys, passive awareness tools like SparkToro and Wynter, and direct/branded-search traffic as proxy signals. None of these are perfect; together they're better than the dashboard alone.
 
 ### Tools & Platforms
 
@@ -172,10 +118,10 @@ Three structural shifts:
 |---|---|---|---|
 | **PODS** (logistics, B2B-relevant) | Switched from legacy 2x/year MMM to Recast (weekly updates) | After go-dark test confirmed underinvestment: **+181% Google Non-Brand Search spend**; let other MMM/MTA contracts expire | [Recast case](https://getrecast.com/pods-case-study/) |
 | **Soft Surroundings** (DTC, retargeting) | Cut retargeting **52%** after Measured incrementality test revealed over-served frequency caps; reallocated to Facebook prospecting | **+17% revenue MoM, +12% YoY** | [Measured](https://www.measured.com/blog/what-is-incrementality-guide-to-understanding-and-measuring-incrementality/) |
-| **Refine Labs** (own consultancy, self-reported attribution since Jul 2021) | Implemented hybrid attribution: software attribution + open-text "How did you hear about us?" | **24-month outcome: $50M HIRO pipeline, $14M closed-won ARR.** Software attribution alone would have credited LinkedIn with $977k closed-won — a **93% gap** | [Refine Labs hybrid attribution](https://www.refinelabs.com/article/hybrid-attribution-framework) |
+| **Refine Labs** (own consultancy, self-reported attribution since Jul 2021) | Implemented hybrid attribution: software attribution + open-text "How did you hear about us?" | **24-month outcome: $50M HIRO pipeline, $14M closed-won ARR.** Software attribution alone would have credited LinkedIn with $977k closed-won, a **93% gap** | [Refine Labs hybrid attribution](https://www.refinelabs.com/article/hybrid-attribution-framework) |
 | **Lifesight Omni-Channel Retailer** ($4.5M monthly spend) | Custom causal MMM integrating online + in-store + display + social | **+32% incremental revenue, lower iCPA, higher in-store conversion** by shifting from discount-driven to full-price acquisition | [Lifesight case](https://lifesight.io/case-study/incremental-revenue-omni-channel-retailer/) |
-| **Lifesight $1B Gaming App** (post-iOS14 ATT) | Custom MMM identified saturation in bottom-funnel; reallocated to top-funnel brand | **+8% incremental revenue, +10% in-game purchases, –6% CAC at flat budget** | [Lifesight case](https://lifesight.io/resources/case-study-gaming-mobile-app-grows-8-percent-incremental-revenue/) |
-| **Jones Road Beauty** (NYC OOH) | Haus Fixed Geo Test against synthetic control DMAs | **+9% lift in New Orders, 0% lift in Repeat Orders** — proved OOH's role for acquisition but not retention; informed channel role rather than budget cut | [Haus case](https://www.haus.io/case-study/jones-road-beauty-uses-a-fixed-geo-test-to-measure-their-big-apple-ooh-campaign) |
+| **Lifesight $1B Gaming App** (post-iOS14 ATT) | Custom MMM identified saturation in bottom-funnel; reallocated to top-funnel brand | **+8% incremental revenue, +10% in-game purchases, -6% CAC at flat budget** | [Lifesight case](https://lifesight.io/resources/case-study-gaming-mobile-app-grows-8-percent-incremental-revenue/) |
+| **Jones Road Beauty** (NYC OOH) | Haus Fixed Geo Test against synthetic control DMAs | **+9% lift in New Orders, 0% lift in Repeat Orders**, which proved OOH's role for acquisition but not retention; informed channel role rather than budget cut | [Haus case](https://www.haus.io/case-study/jones-road-beauty-uses-a-fixed-geo-test-to-measure-their-big-apple-ooh-campaign) |
 | **Semgrep** (B2B, attribution by community signal proxy) | Common Room: shifted outbound from cold-ICP-match to warm-signal-match | **+74% pipeline in a single quarter** | [Common Room](https://www.commonroom.io/customers/semgrep-warm-outbound-grow-pipeline/) |
 
 ### Tools & Platforms (Q1 2026 deep-dive)
@@ -186,7 +132,7 @@ Three structural shifts:
 |---|---|---|---|---|
 | **[Measured](https://www.measured.com/)** | Causal MMM auto-calibrated by built-in incrementality tests; AI-powered triangulation; manages $35B+ in media | Weekly+ | Custom; mid-market & up | Mid-to-large omnichannel brands w/ analyst resources |
 | **[Recast](https://getrecast.com/)** | Fully Bayesian hierarchical time-series, HMC/Stan, time-varying coefficients (Gaussian Process priors), 40K+ params (claim) | Weekly | ~$35K avg ACV; up to $75K | Data-savvy teams; brands needing transparency + scenario planning |
-| **[Lifesight](https://lifesight.io/)** | Causal MMM + incrementality + attribution unified; agentic interpretation (MIA — Budget Optimizer / Experiment Engine / Anomaly Radar / CFO Bridge agents) | Daily / real-time | Starter $5K/mo SMB; Enterprise custom | Teams wanting "unified measurement OS" + AI agent layer |
+| **[Lifesight](https://lifesight.io/)** | Causal MMM + incrementality + attribution unified; agentic interpretation (MIA, with Budget Optimizer / Experiment Engine / Anomaly Radar / CFO Bridge agents) | Daily / real-time | Starter $5K/mo SMB; Enterprise custom | Teams wanting "unified measurement OS" + AI agent layer |
 | **Adobe Mix Modeler** | MMM + MTA + experimentation in one UI; bidirectional calibration | Real-time | Adobe Experience Cloud | Adobe-stack enterprises |
 
 #### Open-source MMM, head-to-head
@@ -308,10 +254,10 @@ The decision rule: all three coexist. Test results feed MMM as Bayesian priors. 
 
 | Industry | ICP / motion difference | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | Triangulate MMM + incrementality + MTA; self-reported attribution closes 90%+ dark-social gap (Refine Labs $50M HIRO over 24 mo). Sourced pipeline = North Star | HockeyStack (mid-market) or Dreamdata for B2B attribution; Adobe Marketo Measure for enterprise; Recast/Lifesight for MMM | Last-touch attribution as truth — credits the LinkedIn ad that closed an opp built by 6 months of podcast + community | None |
-| **Biopharma** | "Conversion" = prescription written, formulary win, KOL endorsement, congress mention. MMM combines Rx data (IQVIA/Komodo claims) + media + MSL touches; long lag (3-12 mo) | **IQVIA Channel Dynamics MMM**; **Veeva Crossix (claims + media match-back, the canonical pharma MMM)**: Aktana for next-best-action attribution; Komodo Health for patient-journey closed loop | Attributing Rx lift to a single touch in a 12-month MLR-cleared multi-channel program — wrong methodology; pharma MMM with claims match-back is the only defensible answer | HIPAA on de-identified claims data (Crossix/IQVIA models built around this); Sunshine Act tracking inside attribution stack; FDA Form 2253 records as data trail; GDPR for EU patient-flow data |
-| **DTC** | iOS ATT killed user-level; MMM + geo-tests (Haus, Northbeam) + first-party identity (Klaviyo, Shopify) is the 2026 stack. CAC/LTV by cohort is the operating loop | Northbeam + Triple Whale daily; Haus geo-tests quarterly; Recast or Meta Robyn for MMM; Looker Studio for ops | Trusting Meta's reported ROAS — over-reports 2-4× post-ATT. Soft Surroundings cut retargeting 52% with revenue *up* 17% | iOS ATT, GDPR/CCPA, server-side Conversions API setup; data clean room compliance (Habu, AWS Clean Rooms) |
-| **Dev tools** | "Conversion" = signup, activation event, paid upgrade, expansion to team plan. Self-reported "How did you hear?" + GitHub stars correlated to ARR + community contribution → pipeline | Amplitude/Mixpanel + Common Room for community-to-pipeline; HockeyStack; PostHog for self-hosted; Stripe + Orbit metric for OSS attribution | Optimizing for stars/signups instead of activation — a star is not a customer; activation is | OSS license compliance in any closed-loop reporting on contributor data; CCPA on dev profiles |
+| **B2B SaaS** | Triangulate MMM + incrementality + MTA; self-reported attribution closes 90%+ dark-social gap (Refine Labs $50M HIRO over 24 mo). Sourced pipeline = North Star | HockeyStack (mid-market) or Dreamdata for B2B attribution; Adobe Marketo Measure for enterprise; Recast/Lifesight for MMM | Last-touch attribution as truth, which credits the LinkedIn ad that closed an opp built by 6 months of podcast + community | None |
+| **Biopharma** | "Conversion" = prescription written, formulary win, KOL endorsement, congress mention. MMM combines Rx data (IQVIA/Komodo claims) + media + MSL touches; long lag (3-12 mo) | **IQVIA Channel Dynamics MMM**; **Veeva Crossix (claims + media match-back, the canonical pharma MMM)**: Aktana for next-best-action attribution; Komodo Health for patient-journey closed loop | Attributing Rx lift to a single touch in a 12-month MLR-cleared multi-channel program is the wrong methodology; pharma MMM with claims match-back is the only defensible answer | HIPAA on de-identified claims data (Crossix/IQVIA models built around this); Sunshine Act tracking inside attribution stack; FDA Form 2253 records as data trail; GDPR for EU patient-flow data |
+| **DTC** | iOS ATT killed user-level; MMM + geo-tests (Haus, Northbeam) + first-party identity (Klaviyo, Shopify) is the 2026 stack. CAC/LTV by cohort is the operating loop | Northbeam + Triple Whale daily; Haus geo-tests quarterly; Recast or Meta Robyn for MMM; Looker Studio for ops | Trusting Meta's reported ROAS, which over-reports 2-4× post-ATT. Soft Surroundings cut retargeting 52% with revenue *up* 17% | iOS ATT, GDPR/CCPA, server-side Conversions API setup; data clean room compliance (Habu, AWS Clean Rooms) |
+| **Dev tools** | "Conversion" = signup, activation event, paid upgrade, expansion to team plan. Self-reported "How did you hear?" + GitHub stars correlated to ARR + community contribution as pipeline | Amplitude/Mixpanel + Common Room for community-to-pipeline; HockeyStack; PostHog for self-hosted; Stripe + Orbit metric for OSS attribution | Optimizing for stars/signups instead of activation, since a star is not a customer; activation is | OSS license compliance in any closed-loop reporting on contributor data; CCPA on dev profiles |
 
 **Key insight:** Biopharma measurement uniquely depends on **claims-match-back data** (Veeva Crossix, IQVIA), you correlate de-identified Rx volume against media exposure. This is the ONE B2B vertical where MMM + privacy-safe patient-flow data is the canonical stack; B2B SaaS triangulation playbooks (HockeyStack/Dreamdata + self-reported) don't apply because the conversion is a prescription, not a deal.
 
@@ -391,7 +337,7 @@ The decision rule: all three coexist. Test results feed MMM as Bayesian priors. 
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 8: Measurement & Attribution
+## Frequently asked questions about measurement and attribution
 
 ### What is triangulated measurement?
 
@@ -403,9 +349,9 @@ Measured for mid-to-large omnichannel brands managing $35B+ in media (causal MMM
 
 ### How do I implement self-reported attribution?
 
-Single open-text 'How did you hear about us?' field on demo / contact-sales / consultation forms only — never on newsletter signup. Run open-text for the first 30-100 responses to surface buyer language; then convert to grouped dropdown with 'Other' escape valve. Sales discovery layering: AE/SDR call template asks 'where had you heard about us?' and 'who first mentioned us?' Tag responses in CRM. Compare side-by-side weekly: software attribution vs. self-reported. The gap is your dark-social signal. Refine Labs published a 90% gap on $21.5MM ARR; expect 60-95% in most B2B SaaS.
+Single open-text 'How did you hear about us?' field on demo / contact-sales / consultation forms only, never on newsletter signup. Run open-text for the first 30-100 responses to surface buyer language; then convert to grouped dropdown with 'Other' escape valve. Sales discovery layering: AE/SDR call template asks 'where had you heard about us?' and 'who first mentioned us?' Tag responses in CRM. Compare side-by-side weekly: software attribution vs. self-reported. The gap is your dark-social signal. Refine Labs published a 90% gap on $21.5MM ARR; expect 60-95% in most B2B SaaS.
 
 ### Is MMM dead for B2B?
 
-No — MMM is *more* important post-iOS ATT and third-party cookie deprecation, because it's privacy-native and works without user-level data. The question is no longer 'should we do MMM' but 'how often does it update?' 2025 MMM was weekly and retrospective; 2026 MMM is real-time, predictive, and integrated with autonomous marketing agents. PODS switched from legacy 2x/year MMM to Recast weekly updates and increased Google Non-Brand Search spend 181% after a go-dark test confirmed underinvestment.
+No. MMM is *more* important post-iOS ATT and third-party cookie deprecation, because it's privacy-native and works without user-level data. The question is no longer 'should we do MMM' but 'how often does it update?' 2025 MMM was weekly and retrospective; 2026 MMM is real-time, predictive, and integrated with autonomous marketing agents. PODS switched from legacy 2x/year MMM to Recast weekly updates and increased Google Non-Brand Search spend 181% after a go-dark test confirmed underinvestment.
 

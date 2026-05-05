@@ -1,92 +1,71 @@
 <!--
 seo:
-  title: B2B Distribution & Dark Social: Self-Reported Attribution — Domain 4
+  title: B2B Distribution & Dark Social, Self-Reported Attribution (Domain 4)
   description: Where content meets audience including the 83% in dark social. Refine Labs $50M HIRO from SRA, Justin Welsh 1-3-5 atomization, Cision Trajaan AEO/GEO Brand Report.
   primary_keyword: B2B dark social attribution
   secondary_keywords: [self-reported attribution, founder-led marketing, 1-3-5 atomization, Cision Trajaan, two-stack social management]
 -->
 ## Domain 4: Distribution & Channel Operations
 
-> **TL;DR.** Where content meets audience — including the **83% of B2B buying time that happens in dark social** (derived from Gartner's 17% vendor-meeting figure). **Anchor case: Refine Labs / Passetto** — 12-month SRA implementation: $50M HIRO pipeline, $14M closed-won ARR. Software attribution alone would have credited LinkedIn $977k — a **93% gap**. **Tools that win:** dual stack — Sprout/Hootsuite for company page + Taplio/AuthoredUp for individual exec profiles; Cision Trajaan AEO/GEO Brand Report. **What changed in v3:** added 6 named cases (Chili Piper/Vandenberghe 50% pipeline, Recall.ai 40K LinkedIn audience, Refine Labs $50M HIRO, Genesys advocacy, Dell+EA scale, cybersecurity podcast guesting $680K), Justin Welsh 1-3-5 atomization method, Cision Trajaan acquisition, two-stack social management thesis, founder LinkedIn rhythm playbook.
+Distribution is the part of marketing where you take what you've made and put it in front of people. There are roughly four ways to do that, and almost everything in this domain is some combination of them.
 
-> *"What buyers tell us about where they're discovering us is completely different from what attribution software is measuring."* — Chris Walker (CEO, Passetto), [LinkedIn](https://www.linkedin.com/posts/chriswalker171_attribution-revenue-b2b-activity-7021126918821347328-R5CQ), Jan 2023
+**Owned channels** are the ones you control: your website, your blog, your email list, a community you host (Slack, Discord, Circle, whatever). Cheap to use, but you have to bring the audience yourself.
 
-> *"we aren't rewarded by the hours we spend, we're rewarded by the results we produce."* — Justin Welsh, [*The 1-3-5 Method*](https://www.justinwelsh.me/newsletter/how-1-piece-of-content-becomes-16-the-1-3-5-method), Jul 27, 2024
+**Earned channels** are the ones where someone else's audience covers you. A journalist writes about you, an analyst at Forrester or Gartner mentions you in a report, a podcast hosts you, another company's blog quotes you. You don't pay for the placement; you earned it because what you built was worth covering.
 
-> *"Distribution is no longer optional."* — Ross Simmonds, [*Create Once. Distribute Forever.*](https://rosssimmonds.com/blog/create-once-distribute-forever-book/)
+**Paid channels** are exactly what they sound like. Google Ads, LinkedIn ads, Facebook ads, programmatic display, sponsored newsletters, ABM ads (which just means paying to show your ads only to a specific list of companies you want to sell to).
 
-**See also:** [Domain 3 (Content)](3-content-creative-production.md) for what gets atomized, [Domain 5 (AEO/GEO)](5-ai-search-answer-visibility.md) for Cision Trajaan as PR↔AEO crossover tool, [Domain 6 (Demand)](6-demand-conversational-pipeline.md) for the conversion engine that catches inbound, [Domain 8 (Measurement)](8-measurement-attribution.md) for triangulated attribution that closes the dark-social gap, [Domain 1 (Sensing)](1-sensing-intelligence.md) for community signal capture.
+**Organic social** is its own thing because algorithms reward consistency and personality more than spend. LinkedIn is the dominant B2B platform now. X, Threads, and Bluesky still matter for some categories. YouTube is huge if you can make video.
 
-### Definition and Scope
+Most of the actual execution work, scheduling posts, A/B testing creative, shifting budget when one channel pulls ahead, generating message variants, can now be done by agents. The part agents can't do is the relationships. You can't agent your way into a Forrester briefing or onto a podcast where the host genuinely likes you. So in distribution, the human work is mostly relationship work, and the agent work is everything else.
 
-Where content meets audience: Owned channels (website, blog, email, community), earned channels (PR, analyst relations, podcast bookings, guest content), paid channels (search, social, programmatic, retargeting, ABM ads), organic social, and the operational machinery that makes all of it work, scheduling, A/B testing, budget reallocation, channel mix optimization.
+> *"What buyers tell us about where they're discovering us is completely different from what attribution software is measuring."* (Chris Walker, CEO, Passetto)
 
-Agents handle the vast majority of execution: scheduling, testing, optimization, budget shifting, creative iteration. Humans handle relationships, analysts, journalists, partners, key customers, because relationships do not agent well.
+> *"We aren't rewarded by the hours we spend, we're rewarded by the results we produce."* (Justin Welsh, *The 1-3-5 Method*, Jul 2024)
 
-### Why It Matters Now
+> *"Distribution is no longer optional."* (Ross Simmonds, *Create Once. Distribute Forever.*)
 
-The traditional B2B distribution playbook, gated content + email nurture + paid search + retargeting, is in a slow-motion collapse. Buyer behavior has shifted: B2B buyers now spend only 17% of their total buying time meeting with vendors. The other 83% happens in dark social. Slack communities, podcasts, DMs, peer recommendations, content shared in private channels, where traditional analytics has near-zero visibility.
+**See also:** [Domain 3 (Content)](3-content-creative-production.md) for what's actually being distributed, [Domain 5 (AI Search)](5-ai-search-answer-visibility.md) for getting cited inside ChatGPT and Perplexity, [Domain 6 (Demand)](6-demand-conversational-pipeline.md) for the conversion engine that catches inbound traffic, [Domain 8 (Measurement)](8-measurement-attribution.md) for figuring out what actually drove the pipeline, [Domain 1 (Sensing)](1-sensing-intelligence.md) for picking up community signals.
 
-Meanwhile, agentic systems are transforming media execution. McKinsey: "AI agents [are] autonomously optimizing campaigns across major digital channels, continuously evaluating performance, adjusting bids and budgets, pairing creative with audiences, and generating new message variants. These agents operate in real time, managing thousands of microadjustments that previously required constant manual oversight."
+### Why this matters now
 
-The structural shift: distribution is no longer about pushing content into channels and measuring clicks. It's about being present where buyers actually decide, most of which is unmeasurable through conventional analytics, and using agents to optimize the measurable parts in real-time.
+The B2B distribution playbook of the last decade (gate your content behind a form, send those leads through an email nurture, retarget them with ads, hope sales picks up the phone fast enough) is in slow-motion collapse. Two things broke it.
 
-### Sub-Domains
+The first is buyer behavior. Gartner's research shows B2B buyers now spend only 17% of their total buying time meeting with vendors. The other 83% happens somewhere your analytics can't see, in Slack communities, podcast conversations, DMs between peers, content shared inside private channels. People call this "dark social," and the name is fitting because it really is dark to most attribution tools. By the time a buyer fills out your demo form, they've already mostly made up their mind based on conversations you weren't part of.
 
-**4.1 Owned Channels**
-- Website (CMS, page-level optimization, conversion paths)
-- Blog and content hub
-- Email (nurture, promotional, lifecycle, transactional)
-- Community (Slack, Discord, Circle, custom)
-- Customer hub / portal
+The second is what AI agents can do to the parts that *are* measurable. McKinsey describes a world where agents continuously evaluate campaign performance, adjust bids and budgets, pair creative with audiences, and generate new message variants in real time, managing thousands of microadjustments that used to require human oversight. So on the visible side of distribution, leverage went up by roughly an order of magnitude. On the invisible side, traditional measurement quietly broke. That's the shift this domain has to navigate.
 
-**4.2 Earned Media**
-- PR pitching and journalist relations
-- Analyst relations (Forrester, Gartner, IDC briefings + reports)
-- Podcast bookings (guest appearances)
-- Industry awards and rankings
-- Conference speaking and sponsorships
-- Customer advocacy and reviews
+The honest summary: distribution stopped being about pushing content into channels and counting clicks. It is now about being present in the rooms where buyers actually decide (most of which you can't measure) and running the measurable parts at machine speed.
 
-**4.3 Paid Acquisition**
-- Search (Google Ads, Bing/Microsoft Ads)
-- Social (LinkedIn, Meta, TikTok, X, programmatic)
-- Display and programmatic (DV360, The Trade Desk, etc.)
-- Sponsored content (industry newsletters, podcasts)
-- ABM advertising (account-targeted display + LinkedIn)
-- Retargeting (across all channels)
-- Partner / co-marketing campaigns
+### What the work breaks down into
 
-**4.4 Organic Social & Creator-Led**
-- LinkedIn (the #1 B2B channel, 2026)
-- X / Threads / Bluesky
-- YouTube (shorts and long-form)
-- TikTok (increasingly relevant for B2B)
-- Niche communities (industry Slacks, Reddit, Discord)
-- Employee advocacy programs
-- Founder-led / executive-led posting
+Five clusters of activity sit inside this domain. They overlap in practice, but it helps to keep them separate when you're deciding where to spend.
 
-**4.5 Channel Operations & Optimization**
-- A/B and multivariate testing
-- Budget reallocation across channels
-- Creative iteration cycles
-- Audience segmentation and lookalikes
-- Channel mix modeling (input from Domain 8)
-- Scheduling and frequency capping
+**Owned channels** is the daily care of the website, the blog, the email program, and any community you run (Slack, Discord, Circle, custom). The website used to drive top-of-funnel discovery. Now it's mostly converting people who already decided.
 
-### Best Practices in 2026
+**Earned media** is the slow, unglamorous work of analyst briefings, journalist relationships, getting onto good podcasts, applying for industry awards, getting customers to advocate publicly. Agents can't do this work. It's also where the most durable trust gets built.
 
-**Build for dark social, measure what you can.** As Chris Walker has been arguing for years (now via Passetto), most B2B buying happens in channels you can't track. The right response is: produce content that travels (LinkedIn posts, podcast appearances, peer-shareable assets) and use self-reported attribution ("How did you hear about us?") to capture what analytics misses. Forrester research suggests MMM can reveal that 20%+ of pipeline credited to paid search is actually driven by brand channels.
+**Paid acquisition** is search ads, social ads, programmatic display, sponsored newsletters, ABM ads. The execution layer here is where agents now reliably beat humans at scale. Set the boundaries, give the agents the dials, and they'll iterate faster than any team can.
 
-**Run founder-led / executive-led distribution.** B2B has moved from brand-led to person-led. CEO and exec posting on LinkedIn drives more pipeline per dollar than most paid programs. Refine Labs pioneered the "leverage employees' social media profiles" playbook. Train executives, give them content support, let them post in their voice.
+**Organic social and creator-led** is the founder, the executives, and key employees posting in their own voice on LinkedIn (and increasingly elsewhere). This now drives more B2B pipeline per dollar than most paid programs. The catch is that it has to be in their actual voice. Agentic LinkedIn posting at scale produces obvious AI slop that damages the brand.
 
-**Use agents for paid optimization, not for organic taste.** Agentic optimization of bid management, creative testing, audience segmentation, and budget reallocation outperforms human management at scale. But agentic posting on LinkedIn at scale produces obvious AI slop that damages the brand. Different layers, different rules.
+**Channel operations** is the engine room: A/B testing, budget reallocation across channels, creative iteration, audience segmentation, scheduling, frequency capping. Most agent-friendly work in the whole domain.
 
-**Atomize once, distribute many times.** A 60-minute podcast episode should produce: 1 long-form blog post (3,000 words), 8 LinkedIn posts (different angles), 2 X threads, 4 short-form videos, 1 newsletter issue, 5 email nurture beats, 2 sales-enablement quotes, 1 customer-story angle. The marginal cost of distribution is now near-zero with agentic workflows. The marginal value of content compounds across channels.
+### What works in 2026
 
-**Treat the website as a destination, not a brochure.** With AEO/GEO eating the top of the funnel (Domain 5), your website's job has shifted from "drive top-of-funnel discovery" to "convert pre-decided buyers." Optimize for clarity, depth, demo CTAs, and self-serve education, not for SEO keyword stuffing.
+A handful of moves separate the teams getting pipeline from the teams running expensive activity that doesn't convert.
 
-**Invest in analyst relations and PR even (especially) in an agentic world.** Briefings with Forrester, Gartner, IDC, and tier-one journalists are unglamorous, slow work that compounds. Agents cannot do this work. It's also what generates the third-party citations that LLMs rely on for AEO/GEO visibility (Domain 5).
+**Build for dark social, measure what you can.** Most B2B buying happens where your analytics can't see, so produce content that travels (LinkedIn posts, podcast appearances, peer-shareable assets) and use self-reported attribution to capture what dashboards miss. The simplest version is a single open-text field on your demo form: *"How did you hear about us?"* When Refine Labs (now Passetto) ran this for two years, they found that their software attribution had been crediting LinkedIn $977k in pipeline when the real number was over $14M, a 93% gap. Forrester separately suggests at least 20% of pipeline credited to paid search is actually driven by brand channels.
+
+**Run founder-led and executive-led distribution.** B2B has shifted from brand-led to person-led. The CEO posting on LinkedIn in their own voice often drives more pipeline per dollar than the rest of the program combined. Train your executives, give them content support, and let them sound like themselves. Don't make them read like a press release.
+
+**Use agents for paid optimization, not for organic taste.** Agentic optimization of bid management, creative testing, and budget reallocation outperforms human management at scale. Agentic posting on LinkedIn at scale produces slop that everyone can identify. Different layers, different rules.
+
+**Atomize once, distribute many times.** A 60-minute podcast episode should produce roughly: one 3,000-word blog post, eight LinkedIn posts at different angles, two X threads, four short-form videos, one newsletter issue, five email beats, two sales-enablement quotes, one customer-story angle. The cost of repurposing with agents is near zero. The value compounds across channels.
+
+**Treat the website as the closer, not the discoverer.** With AI search and dark social eating the top of the funnel, your website's job is to convert pre-decided buyers, not to surface you to new ones. Optimize for clarity, depth, demo CTAs, and self-serve education. Stop keyword-stuffing.
+
+**Invest in PR and analyst relations even (especially) in an agentic world.** Briefings with Forrester, Gartner, IDC, and tier-one journalists are slow work that compounds. Agents cannot do this work. And it's exactly the third-party coverage that LLMs rely on when deciding which vendors to mention in their answers.
 
 ### Tools & Platforms
 
@@ -148,9 +127,9 @@ The structural shift: distribution is no longer about pushing content into chann
 |---|---|---|---|
 | **Chili Piper / Alina Vandenberghe** | Co-founder/co-CEO posts unfiltered LinkedIn content (heavily accented English, Romanian upbringing stories, radical transparency) | **50% of open pipeline** from her personal brand | [Mark MacLeod interview](https://markmacleod.me/chili-pipers-alina-vandenberghe-on-generating-50-pipeline-through-personal-branding-building-a-remote-first-culture-and-more/) |
 | **Recall.ai / Amanda Zhu** | Founder content documenting infrastructure-company building | **40,000+ LinkedIn audience in 8 months**; inbound pipeline from HubSpot, Datadog | Public LinkedIn |
-| **Refine Labs / Passetto** | Self-reported attribution since July 2021; software + open-text "How did you hear about us?" | 24-month: **$50M HIRO pipeline, $14M closed-won ARR**. Software alone would have credited LinkedIn $977k — a **93% gap** | [Refine Labs](https://www.refinelabs.com/article/hybrid-attribution-framework) |
+| **Refine Labs / Passetto** | Self-reported attribution since July 2021; software + open-text "How did you hear about us?" | 24-month: **$50M HIRO pipeline, $14M closed-won ARR**. Software alone would have credited LinkedIn $977k, a **93% gap** | [Refine Labs](https://www.refinelabs.com/article/hybrid-attribution-framework) |
 | **Genesys (EveryoneSocial)** | Employee advocacy program | **2× pipeline lift, higher deal sizes, improved win rates** | [EveryoneSocial](https://everyonesocial.com/) |
-| **Dell + EA (EveryoneSocial scale)** | Dell — 10,000+ employees sharing; EA — 1,000+ active users, **1.1M follower reach, 6,600 monthly engagements** | Validates advocacy *scales* | [EveryoneSocial](https://everyonesocial.com/) |
+| **Dell + EA (EveryoneSocial scale)** | Dell with 10,000+ employees sharing; EA with 1,000+ active users, **1.1M follower reach, 6,600 monthly engagements** | Validates advocacy *scales* | [EveryoneSocial](https://everyonesocial.com/) |
 | **Cybersecurity firm (Fame podcast booking)** | Strategic guest booking play | **$680K attributed pipeline in 4 months**: 40% from guest relationships themselves | [Fame](https://www.fame.so/post/measuring-b2b-podcast-roi-and-pipeline) |
 
 ### Tools & Platforms: Updated 2026 deep-dive
@@ -161,9 +140,9 @@ The structural shift: distribution is no longer about pushing content into chann
 |---|---|---|---|
 | **Buffer** | $6/mo | Solo founders, micro-teams, simple scheduling | Weak; lacks LinkedIn-native features |
 | **Hootsuite** | $99/mo (Pro), $249/mo (Team), $739/mo (Business) | Multi-channel teams w/ one console | Adequate but feels legacy |
-| **Sprout Social** | $199–249/seat/mo | Enterprise teams w/ listening + analytics + advocacy | Strong, especially with Bambu (now Sprout Social Advocacy) |
+| **Sprout Social** | $199-249/seat/mo | Enterprise teams w/ listening + analytics + advocacy | Strong, especially with Bambu (now Sprout Social Advocacy) |
 | **Taplio** | $39/mo Starter, $52 Standard, $65+ AI gen, $149 Pro | LinkedIn-only, founder/personal-brand operators | Best-in-class for founder-led playbooks |
-| **AuthoredUp** | $19.95/mo individual ($16.63 annual) | LinkedIn quality + formatting, no AI gen | Best for "human voice, polished" — no AI slop risk |
+| **AuthoredUp** | $19.95/mo individual ($16.63 annual) | LinkedIn quality + formatting, no AI gen | Best for "human voice, polished" with no AI slop risk |
 
 **Recommendation:** B2B teams in 2026 run **two stacks**. Sprout/Hootsuite for company-page + listening, Taplio/AuthoredUp for individual founder/exec profiles. Don't unify.
 
@@ -171,8 +150,8 @@ The structural shift: distribution is no longer about pushing content into chann
 
 | Tool | Pricing | Best for |
 |---|---|---|
-| **Madgicx** | $39–99/mo + $49/mo Tracking Pro | $25K–$100K/mo Meta spend; mid-market self-serve |
-| **Smartly.io** | Custom enterprise; ~$4–5K/mo minimum, ~$90K/yr median | $100K+/mo spend; enterprise creative ops; multi-platform |
+| **Madgicx** | $39-99/mo + $49/mo Tracking Pro | $25K-$100K/mo Meta spend; mid-market self-serve |
+| **Smartly.io** | Custom enterprise; ~$4-5K/mo minimum, ~$90K/yr median | $100K+/mo spend; enterprise creative ops; multi-platform |
 | **Pencil (now Brave)** | $14/mo Basic (50 generations) → custom enterprise | Mid-market AI creative gen with brand kit |
 
 #### PR + AEO/GEO crossover (the big 2026 shift)
@@ -183,36 +162,36 @@ The structural shift: distribution is no longer about pushing content into chann
 
 #### Playbook A. Self-reported attribution at every conversion point
 
-**Form-field implementation.** Place open-text "How did you hear about us?" *only* on high-intent forms, demo requests, contact-sales, consultation bookings. Never on newsletter or content downloads. Run open-text for the first 30–100 responses to surface buyer language; *then* convert to grouped dropdown with "Other" escape valve.
+**Form-field implementation.** Place open-text "How did you hear about us?" *only* on high-intent forms, demo requests, contact-sales, consultation bookings. Never on newsletter or content downloads. Run open-text for the first 30-100 responses to surface buyer language; *then* convert to grouped dropdown with "Other" escape valve.
 
 **Sales discovery integration.** AE/SDR call template adds: (1) "Before this call, where had you heard about us?" (2) "Who on your team first mentioned us?" (3) "What made you book the call now?" Rep enters answers to a CRM custom field (Salesforce: `lead_source_self_reported__c`).
 
-**Dashboard reconciliation.** Side-by-side comparison: software attribution vs. self-reported. Treat the gap as the dark-social signal. Refine Labs' published gap was 90% on $21.5MM ARR; expect 60–95% in most B2B SaaS.
+**Dashboard reconciliation.** Side-by-side comparison: software attribution vs. self-reported. Treat the gap as the dark-social signal. Refine Labs' published gap was 90% on $21.5MM ARR; expect 60-95% in most B2B SaaS.
 
 **Cross-link:** Mahmoud's [`revops`](skill) for CRM/RevOps plumbing; [`signup-flow-cro`](skill) for form UX.
 
 #### Playbook B. Atomization (Justin Welsh's 1-3-5 method, B2B-adapted)
 
 **Input asset (1):** A 60-minute podcast / webinar / customer interview.
-**Mid-form derivatives (3):** Pull the three strongest concepts. For each → one 1,500–2,500-word blog post, OR a long LinkedIn carousel (8–12 slides), OR a one-pager.
+**Mid-form derivatives (3):** Pull the three strongest concepts. For each → one 1,500-2,500-word blog post, OR a long LinkedIn carousel (8-12 slides), OR a one-pager.
 **Short-form derivatives (5 per concept × 3 = 15):**
 - 2 short text LinkedIn posts (one quote-pull + one strong-opinion riff)
 - 1 short-form video (60 sec, vertical, captioned, branded lower-third)
-- 1 carousel (5–10 slides)
+- 1 carousel (5-10 slides)
 - 1 poll or question post
 
-**Total artifacts from one 60-min podcast: 1 + 3 + 15 = 19**, plus YouTube full upload, audiogram, 5–10 sales-enablement quote cards.
+**Total artifacts from one 60-min podcast: 1 + 3 + 15 = 19**, plus YouTube full upload, audiogram, 5-10 sales-enablement quote cards.
 **Pipeline ownership:** Gong/Riverside transcript → Claude (atomizer skill) → human edit → scheduling tool. Cross-link Mahmoud's [`mahmouds-seo-writer`](skill) for the long-form blog and [`ad-creative`](skill) for quote-card production.
 
 #### Playbook C. Founder LinkedIn rhythm (cadence + content + ghost-writing boundaries)
 
-**Cadence (validated by Welsh + AuthoredUp's 2025 algorithm data):** 3–5 posts/week. Posting *every day* with low-effort content is now penalized.
+**Cadence (validated by Welsh + AuthoredUp's 2025 algorithm data):** 3-5 posts/week. Posting *every day* with low-effort content is now penalized.
 - 1 personal narrative / contrarian take (highest reach)
 - 1 customer-insight or data post
 - 1 contrarian observation against industry consensus
-- 1–2 "playing the hits" remixes of past winners
+- 1-2 "playing the hits" remixes of past winners
 
-**Pillars-and-pyramid framework:** Founder defines 3–5 pillars. Inside each pillar, capture 5–10 strong opinions. Matrix is `pillar × format` (story / listicle / teardown / observation / contrarian / past-vs-present / future prediction).
+**Pillars-and-pyramid framework:** Founder defines 3-5 pillars. Inside each pillar, capture 5-10 strong opinions. Matrix is `pillar × format` (story / listicle / teardown / observation / contrarian / past-vs-present / future prediction).
 
 **Ghost-writing boundaries (non-negotiables):**
 - *Ideas must originate from the founder.* Ghost extracts (interview-style); they don't invent.
@@ -236,10 +215,10 @@ The OS doc keeps Domain 4 *strategic* and links out for tactics:
 
 | Industry | ICP / motion difference | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | LinkedIn org + founder + employee advocacy; podcast guesting; analyst briefings; ABM display. Dark social = 83% (Walker) | Sprout + Taplio dual-stack; Cision for AEO/PR; LinkedIn ABM; Muck Rack | Treating LinkedIn as the only channel — missing podcast + analyst + community where committee buyers hide | CASL/GDPR consent on email lists |
-| **Biopharma** | Channels are scientific congresses (ASCO, ASH, AHA, JPM Healthcare), peer-reviewed journals, MSL-driven HCP detailing, closed-loop digital (Veeva CRM), restricted DTC. **No paid social to HCPs in many countries** | **Veeva CRM + Engage + iRep**: Doximity (HCP-only social, 80% US physician reach); Sermo; PR Newswire pharma desk; ZoomRx/Reltio for HCP digital targeting | Running open paid social on HCP topics — violates platform pharma policies (Meta, LinkedIn restrict) and Sunshine Act tracking gaps create audit exposure | OPDP Form 2253 within 30 days; Sunshine Act on every HCP touch ($10+ value); GDPR consent for EU HCP databases; HIPAA on patient-facing channel; FDA crackdown on DTC ads (Sept 2025 enforcement wave) |
-| **DTC** | Paid social (Meta, TikTok) is 60-80% of acquisition; SMS/email lifecycle is 30-40% of revenue; influencer + UGC drives top-funnel. Attribution windows shrunk to 1-day click | Meta/TikTok native + Smartly.io; Klaviyo + Postscript; ShopMy/Aspire for influencers; Triple Whale + Northbeam | Over-rotating to retargeting (Soft Surroundings cut 52% w/ revenue lift) — and ignoring incrementality on prospecting | FTC endorsement disclosures (#ad); California AB 587; CAN-SPAM/CASL; iOS ATT compliance |
-| **Dev tools** | Distribution = Hacker News, r/programming + niche subs, Lobsters, dev-twitter, GitHub trending, conference talks, YouTube tutorials, llms.txt for AI agents | DevRel headcount; Reddit-strategist tactics; sponsored newsletters (TLDR, Bytes, JS Weekly); Product Hunt; AI directories | Buying paid ads on LinkedIn/Google for devs — they have AdBlock and contempt. Spend goes on community + DevRel + docs | OSS license compatibility on bundled deps; CLA on contributions; trademark on project name |
+| **B2B SaaS** | LinkedIn org + founder + employee advocacy; podcast guesting; analyst briefings; ABM display. Dark social ~83% (Walker) | Sprout + Taplio dual-stack; Cision for AEO/PR; LinkedIn ABM; Muck Rack | Treating LinkedIn as the only channel, which misses podcasts, analysts, and communities where committee buyers hide | CASL/GDPR consent on email lists |
+| **Biopharma** | Channels are scientific congresses (ASCO, ASH, AHA, JPM Healthcare), peer-reviewed journals, MSL-driven HCP detailing, closed-loop digital (Veeva CRM), restricted DTC. **No paid social to HCPs in many countries** | **Veeva CRM + Engage + iRep**: Doximity (HCP-only social, 80% US physician reach); Sermo; PR Newswire pharma desk; ZoomRx/Reltio for HCP digital targeting | Running open paid social on HCP topics, which violates platform pharma policies (Meta, LinkedIn restrict) and Sunshine Act tracking gaps create audit exposure | OPDP Form 2253 within 30 days; Sunshine Act on every HCP touch ($10+ value); GDPR consent for EU HCP databases; HIPAA on patient-facing channel; FDA crackdown on DTC ads (Sept 2025 enforcement wave) |
+| **DTC** | Paid social (Meta, TikTok) is 60-80% of acquisition; SMS/email lifecycle is 30-40% of revenue; influencer + UGC drives top-funnel. Attribution windows shrunk to 1-day click | Meta/TikTok native + Smartly.io; Klaviyo + Postscript; ShopMy/Aspire for influencers; Triple Whale + Northbeam | Over-rotating to retargeting (Soft Surroundings cut 52% with a revenue lift) and ignoring incrementality on prospecting | FTC endorsement disclosures (#ad); California AB 587; CAN-SPAM/CASL; iOS ATT compliance |
+| **Dev tools** | Distribution = Hacker News, r/programming + niche subs, Lobsters, dev-twitter, GitHub trending, conference talks, YouTube tutorials, llms.txt for AI agents | DevRel headcount; Reddit-strategist tactics; sponsored newsletters (TLDR, Bytes, JS Weekly); Product Hunt; AI directories | Buying paid ads on LinkedIn/Google for devs, who have AdBlock and contempt. Spend goes on community + DevRel + docs | OSS license compatibility on bundled deps; CLA on contributions; trademark on project name |
 
 **Key insight:** Biopharma distribution operates inside a closed ecosystem (Veeva + Doximity + congress + journals) that most B2B playbooks don't touch. BenchSci-style scientific SaaS distributes at AACR/ASCO + via journal sponsored content + via MSL co-selling, not via LinkedIn paid.
 
@@ -306,11 +285,11 @@ The OS doc keeps Domain 4 *strategic* and links out for tactics:
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 4: Distribution & Channel Operations
+## Frequently asked questions about distribution and channels
 
 ### What is dark social and how do I measure it?
 
-Dark social is the 83% of B2B buying time that happens in untrackable channels: Slack communities, podcasts, DMs, peer recommendations, content shared in private channels (derived from Gartner's 17% vendor-meeting figure). The fix is self-reported attribution (SRA): an open-text 'How did you hear about us?' field on demo and contact-sales forms. Refine Labs / Passetto's 12-month SRA implementation surfaced $50M HIRO pipeline / $14M closed-won ARR — software attribution alone would have credited LinkedIn $977k, a 93% gap.
+Dark social is the 83% of B2B buying time that happens in untrackable channels: Slack communities, podcasts, DMs, peer recommendations, content shared in private channels (derived from Gartner's 17% vendor-meeting figure). The fix is self-reported attribution (SRA): an open-text 'How did you hear about us?' field on demo and contact-sales forms. Refine Labs / Passetto's 12-month SRA implementation surfaced $50M HIRO pipeline / $14M closed-won ARR; software attribution alone would have credited LinkedIn $977k, a 93% gap.
 
 ### What is the 1-3-5 atomization method?
 
@@ -318,9 +297,9 @@ Justin Welsh's framework for turning one piece of long-form content into 19+ der
 
 ### Should I run one social management stack or two?
 
-Two. Sprout Social or Hootsuite for company-page posting + listening + analytics. Taplio or AuthoredUp for individual founder/exec profiles. Don't unify — company-page tools are weak on LinkedIn-native founder features, and founder-tools are weak on multi-channel listening. Recommendation as of 2026: Sprout + Taplio is the default B2B SaaS stack.
+Two. Sprout Social or Hootsuite for company-page posting + listening + analytics. Taplio or AuthoredUp for individual founder/exec profiles. Don't unify; company-page tools are weak on LinkedIn-native founder features, and founder-tools are weak on multi-channel listening. Recommendation as of 2026: Sprout + Taplio is the default B2B SaaS stack.
 
 ### How does Cision Trajaan change PR for AEO/GEO?
 
-Cision acquired Trajaan in December 2025, integrating real-time LLM citation monitoring across Brandwatch, CisionOne, and PR Newswire. Press releases now function as 'training data for LLMs' with measurement: share of voice in LLM answers, source domains, live model responses. PR Newswire launched the AEO & GEO Brand Report in April 2026 — the first wire-service product designed to shape how AI models reference brands. PR is now a Domain 4 + Domain 5 crossover tool.
+Cision acquired Trajaan in December 2025, integrating real-time LLM citation monitoring across Brandwatch, CisionOne, and PR Newswire. Press releases now function as 'training data for LLMs' with measurement: share of voice in LLM answers, source domains, live model responses. PR Newswire launched the AEO & GEO Brand Report in April 2026, the first wire-service product designed to shape how AI models reference brands. PR is now a Domain 4 + Domain 5 crossover tool.
 

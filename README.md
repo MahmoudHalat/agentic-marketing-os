@@ -1,28 +1,30 @@
-# Agentic Marketing Operating System
+# The Marketing OS
 
-> An open framework for AI-native marketing teams. Three planes, eight domains, six agent archetypes, and an AgentOps substrate — built on **280+ primary citations** and **42 named case studies** (Anthropic, Vercel, SaaStr, Refine Labs, CVS Health, Brand.ai, and more).
+> A working framework for running marketing in 2026, when one operator does most of the work with help from a fleet of AI agents. Walks through the work in three layers (what humans decide, what agents execute, the plumbing that keeps the rest from blowing up), the eight workstreams where the actual output happens, and the six shapes of agent you end up building around.
 
-Author: **[Mahmoud Halat](https://mahmoudhalat.com)** · Toronto · v3 shipped April 2026
+By **[Mahmoud Halat](https://mahmoudhalat.com)** in Toronto. v3 shipped April 2026.
 
-[**Explore the interactive viewer →**](https://mahmoudhalat.com/marketing-os) · [Open the 32-cell maturity matrix](https://mahmoudhalat.com/marketing-os/maturity)
+[**Read it on the web →**](https://mahmoudhalat.com/marketing-os) · [Open the maturity matrix](https://mahmoudhalat.com/marketing-os/maturity)
 
 ---
 
 ## What this is
 
-A working SME reference for running a marketing function with an agent fleet. The eight domains are the surface area; AgentOps is the substrate beneath all of them. Six agent archetypes do the work; humans set policy and own the exceptions.
+Marketing has roughly the same shape it always did. Positioning, content, distribution, lead generation, measurement, the rest. What changed is who does the doing. Most of the daily output now runs on AI agents, which means a single operator can produce more than a six-person team produced in 2022. That moves the bottleneck. It used to be production. Now it's judgment, taste, and the discipline to delete 80% of what the agents make.
 
-Every claim traces to a primary source with a date. Every case study names a brand and reports a number. No vibes-driven prose, no aspirational fluff.
+This is the working framework I use for that work. It's split across thirteen files. One intro. Eight domain files for the workstreams. One file (AgentOps) for the cross-cutting plumbing that makes the rest trustworthy at scale. A deeper file on the six agent shapes you'll build around. A resource library and a research plan.
 
-## Read the framework
+Every statistic in here has a name and a date next to it. Every case study names a brand and reports a number. If something couldn't be verified, it's flagged.
+
+## Read it
 
 **Start here**
 
-- [Intro — how the OS works](./agentic-marketing-os-v2.md)
-- [AgentOps — the substrate beneath everything](./0-agentops.md)
-- [Six agent archetypes](./archetypes.md)
+- [Intro: how the OS works](./agentic-marketing-os-v2.md)
+- [AgentOps: the plumbing underneath](./0-agentops.md)
+- [The six agent shapes](./archetypes.md)
 
-**The eight domains**
+**The eight workstreams**
 
 1. [Sensing & Intelligence](./1-sensing-intelligence.md)
 2. [Strategy & Positioning](./2-strategy-positioning.md)
@@ -36,33 +38,33 @@ Every claim traces to a primary source with a date. Every case study names a bra
 **Reference**
 
 - [Resource library](./resource-library.md)
-- [Research plan + v4 roadmap](./research-plan.md)
+- [Research plan and v4 roadmap](./research-plan.md)
 
 ## The interactive companion
 
-The 32-cell maturity matrix and the readable web viewer live at **[mahmoudhalat.com/marketing-os](https://mahmoudhalat.com/marketing-os)**. Pick a domain. See its 4-stage progression — Crawl, Walk, Run, Fly — with the named case study at each stage, the real tools, the next move to advance, and the canonical pitfall.
+The 32-cell maturity matrix and the readable web viewer live at **[mahmoudhalat.com/marketing-os](https://mahmoudhalat.com/marketing-os)**. Pick any of the eight domains. The matrix shows four levels of capability (Crawl, Walk, Run, Fly), with the named teams that have done it at each level, the tools they use, the next move to advance, and the pitfall that catches most people at that stage.
 
 ## How to use it
 
-- **Operator?** Use it as the playbook for a Team-of-One marketing function. Read the substrate first, then the domain you need.
-- **Leader?** Use it to assess your team's maturity, name the gap, and plan the move.
-- **Hiring?** Use it to write a JD that describes the *operating model*, not just the role.
-- **Building agents?** Use the archetypes as a reference architecture. The substrate (AgentOps) tells you what to build *underneath* them.
+- **If you're running a marketing function:** treat it as the playbook. Read the plumbing first, then the domain you're stuck on. Self-assess on the matrix once a quarter.
+- **If you're leading the function from a step up:** use it to assess where the team actually is, name the gap, plan the move.
+- **If you're hiring:** use it to write a job description that describes the operating model, not just the role.
+- **If you're building marketing agents:** use the six agent shapes as a reference architecture. AgentOps tells you what to build underneath them.
 
 ## License
 
-[**CC-BY 4.0**](./LICENSE) — fork it, adapt it, ship it commercially. Just credit the source: *Mahmoud Halat — Agentic Marketing Operating System v3 (April 2026)* with a link back to [mahmoudhalat.com/marketing-os](https://mahmoudhalat.com/marketing-os).
+[**CC-BY 4.0**](./LICENSE). Take it, fork it, ship it commercially. Just keep the byline: *Mahmoud Halat, The Marketing OS v3 (April 2026)*, with a link back to [mahmoudhalat.com/marketing-os](https://mahmoudhalat.com/marketing-os).
 
-## Cadence
+## How it gets updated
 
-Quarterly stat-refresh. Frontiers + v4 plan are tracked openly in [research-plan.md](./research-plan.md). Issues and PRs welcome — name the source, name the number.
+Stat refresh every quarter. The frontiers section moves fastest because the field moves fastest there. The full v4 plan is in [research-plan.md](./research-plan.md). Issues and PRs are welcome; if you bring a fix, name the source and the number.
 
 ## About the author
 
-Mahmoud Halat — full-stack AI operator in Toronto. Employee #2 at Verto Health (4 → 80, 10M+ patient journeys, tripled ARR two years running). Patent co-author. **$100K Lovable Shipped Season 1 grand prize** winner out of 5,800 global builders. Co-founder at [XYspace.dev](https://xyspace.dev) and [Space & Story](https://spaceandstory.co).
+Mahmoud Halat. Full-stack AI operator in Toronto. Spent the last decade at Verto Health as employee #2 and helped take the team from four people to eighty, with more than ten million patient journeys and a hundred-plus deployments along the way (including the platform that ended up administering roughly a quarter of Canada's daily COVID vaccine doses at peak). Patent co-author on the AI orchestration architecture underneath it. Won the **$100K Lovable Shipped Season 1 grand prize** against 5,800 builders in 2025. Co-founder at [XYspace.dev](https://xyspace.dev) and [Space & Story](https://spaceandstory.co).
 
-Currently open to senior AI/marketing roles at Series B–C AI-native scale-ups, or fractional engagements with founders shipping AI products.
+Currently open to senior AI/marketing roles at Series B-C AI-native scale-ups, or fractional engagements with founders shipping AI products.
 
 - 🌐 [mahmoudhalat.com](https://mahmoudhalat.com)
 - 💼 [LinkedIn](https://linkedin.com/in/mahmoud-halat)
-- ✉️  mahmoud@spaceandstory.co
+- ✉️ mahmoud@spaceandstory.co

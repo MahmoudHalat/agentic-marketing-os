@@ -1,90 +1,57 @@
 <!--
 seo:
-  title: Synthetic Testing & Digital Twins for Marketing Research — Domain 7
+  title: Synthetic Testing & Digital Twins for Marketing Research (Domain 7)
   description: Pre-launch validation, audience simulation, digital twins. CVS 100K agentic twins, Park 2024 (85% accuracy), Toubia Funhouse Mirrors critique, Wynter / Simile / PyMC Labs comparison.
   primary_keyword: synthetic market research
   secondary_keywords: [digital twins, synthetic personas, Wynter B2B, Simile, PyMC Labs, Park generative agents]
 -->
 ## Domain 7: Customer Intelligence & Synthetic Testing
 
-> **TL;DR.** Pre-launch validation, audience simulation, message testing — the newest standalone domain. **Anchor stat: 85% accuracy on the General Social Survey (Park et al. 2024) — NOT 94%** (the 94% is a widespread miscitation). **Critical counter-data: average twin-to-human correlation 0.197 in the Columbia "Funhouse Mirrors" mega-study (Toubia et al. 2025)** — synthetic narrows what to test, never decides. **Tools that win:** Wynter for live B2B (~$799+/mo), PyMC Labs for Bayesian rigor, Custom Claude Project for first-party-data personas, Simile / Aaru / Evidenza for enterprise. **Canonical case: CVS Health × Simile** — 2.9M consented responses → 100K+ "agentic twins" with explicit "doesn't replace real-world research" governance. **What changed in v3:** corrected the 85% (not 94%) Park stat, added Funhouse Mirrors critique with 0.197 correlation, added 5 named cases (CVS, EY×Evidenza 95%, Aaru NY primary, PandaDoc×Wynter, PyMC validation), pure-play vs. embedded vs. B2B-specific tooling comparison.
+The newest standalone domain in the OS. The work is pre-launch validation, audience simulation, message testing, and customer behavior modeling, most of which wasn't possible at this scale or speed before generative AI. The domain owns synthetic personas (AI-generated audience profiles for concept testing), digital twins (continuously evolving models of actual customers), synthetic panels (large-scale simulated audiences for survey-style research), message testing pre-launch, packaging and pricing simulation, and the validation infrastructure that decides what you ship versus what dies in a draft folder.
 
-> *"It's the struggling moment where they can't do something that causes them to take the leap."* — Bob Moesta, [Inside Intercom podcast](https://www.intercom.com/blog/podcasts/bob-moesta-on-unpacking-customer-motivations-with-jobs-to-be-done/), May 17, 2018
+> *"It's the struggling moment where they can't do something that causes them to take the leap."* (Bob Moesta, [Inside Intercom podcast](https://www.intercom.com/blog/podcasts/bob-moesta-on-unpacking-customer-motivations-with-jobs-to-be-done/), May 17, 2018)
 
-> *"People buy things to help them make progress."* — Bob Moesta, same Intercom interview
+> *"People buy things to help them make progress."* (Bob Moesta, same Intercom interview)
 
-**See also:** Mahmoud's [`customer-research-playbook`](skill) for interview craft and JTBD methodology, Mahmoud's [`competitor-research-playbook`](skill) for synthetic competitor-persona patterns, [Domain 1 (Sensing)](1-sensing-intelligence.md) for sales-call mining as Domain 7 fuel, [Domain 2 (Strategy)](2-strategy-positioning.md) for synthetic + Wynter sequencing on positioning shifts, [Domain 3 (Content)](3-content-creative-production.md) for customer-language vector store, [Domain 8 (Measurement)](8-measurement-attribution.md) for synthetic-to-live correlation as continuous KPI, [Domain 0 (AgentOps)](0-agentops.md) for governance on synthetic outputs in regulated industries.
+**See also:** Mahmoud's [`customer-research-playbook`](skill) for interview craft and JTBD methodology, Mahmoud's [`competitor-research-playbook`](skill) for synthetic competitor-persona patterns, [Domain 1 (Sensing)](1-sensing-intelligence.md) for sales-call mining as Domain 7 fuel, [Domain 2 (Strategy)](2-strategy-positioning.md) for synthetic and Wynter sequencing on positioning shifts, [Domain 3 (Content)](3-content-creative-production.md) for the customer-language vector store, [Domain 8 (Measurement)](8-measurement-attribution.md) for synthetic-to-live correlation as a continuous KPI, [Domain 0 (AgentOps)](0-agentops.md) for governance on synthetic outputs in regulated industries.
 
-### Definition and Scope
+### Why this matters now
 
-Pre-launch validation, audience simulation, message testing, customer behavior modeling. The newest standalone domain, qualitatively new work that wasn't possible at this scale or speed before generative AI.
+McKinsey estimates agentic AI could support up to two-thirds of current marketing activities, synthetic audience testing included. The category has attracted more than $1B in disclosed venture capital across 2023 to 2026, with confirmed major rounds at Simile ([$100M Series A, Feb 2026, Index Ventures + Bain Capital + A* + angels Fei-Fei Li and Andrej Karpathy](https://www.indexventures.com/perspectives/life-the-universe-and-simile-leading-similes-series-a/)), [Aaru (~$50M+ Series A at a $1B headline valuation, Dec 2025, Redpoint](https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/), though Aaru's ARR is still under $10M), Listen Labs ($69M in 2025), Outset ($17M Series A from 8VC), and Keplar ($3.4M from Kleiner Perkins in 2025).
 
-Owns: synthetic personas (AI-generated audience profiles for concept testing), digital twins of customers (continuously evolving models), synthetic panels (large-scale simulated audiences for survey-style research), message testing pre-launch, packaging and pricing simulation, and the validation infrastructure that determines what you ship vs. what dies in a draft folder.
+The capability is real. Park et al.'s 2024 paper, ["Generative Agent Simulations of 1,000 People"](https://arxiv.org/abs/2411.10109), ran two-hour AI interviews on 1,052 participants and found the agents replicated the participants' General Social Survey responses 85% as accurately as the same participants replicated their own answers two weeks later. The combined interview-plus-survey agents reached 86%, versus demographic-only agents at 74%. They reduced racial and ideological bias by 36 to 62%. (The "94% accuracy" number you'll see cited everywhere is a miscitation; the actual Park figure is 85%.) [Toubia et al.'s 2025 Twin-2K-500 reference dataset](https://arxiv.org/abs/2505.17479) covers 2,058 US participants across 500-plus questions in four waves and is the cleanest validation set the field has.
 
-### Why It Matters Now
+The cautions are also real. The same Toubia team published the [Funhouse Mirrors paper in 2025](https://arxiv.org/abs/2509.19088) showing average twin-to-human correlation of 0.197, which is roughly the correlation between height and intelligence. Twin standard deviation was lower than human in 93.9% of cases. The canonical critique from outside academia is Conjointly's ["Synthetic Respondents Are the Homeopathy of Market Research"](https://conjointly.com/blog/synthetic-respondents-are-the-homeopathy-of-market-research/), which documented income variance from $111,348 to $272,014 from prompt rephrasing alone. [Nielsen Norman Group's stance](https://www.nngroup.com/articles/synthetic-users/) is the most-cited UX-research line on this: "synthetic users help with hypothesis generation, not validation."
 
-McKinsey estimates agentic AI could support up to two-thirds of current marketing activities, including synthetic audience testing. The technology has attracted **over $1B in disclosed venture capital across 2023–2026**, with confirmed major rounds: [Simile $100M Series A (Feb 2026, Index Ventures + Bain Capital + A* + angels Fei-Fei Li and Andrej Karpathy)](https://www.indexventures.com/perspectives/life-the-universe-and-simile-leading-similes-series-a/); [Aaru ~$50M+ Series A at $1B headline (Dec 2025, Redpoint)](https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/), though Aaru's ARR is still <$10M; Listen Labs $69M (2025), Outset $17M Series A (8VC), Keplar $3.4M (Kleiner Perkins, 2025).
+The honest middle is that synthetic testing is a useful pre-test layer for narrowing concepts before live validation. It is not a substitute for talking to actual customers.
 
-Real evidence of capability:
-- [Park et al. (2024) "Generative Agent Simulations of 1,000 People"](https://arxiv.org/abs/2411.10109): n=1,052 participants; two-hour AI interviews; agents replicated participants' GSS responses **85%** as accurately as participants replicated their own answers two weeks later. Combined interview + survey agents reached **86%** vs. demographic-only at **74%**. Reduced racial/ideological bias by 36–62%. *(The frequently cited "94% accuracy" figure is a miscitation, the Park paper number is 85%.)*
-- [Toubia et al. (2025) "Twin-2K-500"](https://arxiv.org/abs/2505.17479), 2,058 US participants, 500+ questions across 4 waves; reference dataset for digital-twin validation.
-- [Toubia et al. (2025) "Digital Twins are Funhouse Mirrors: Five Systematic Distortions"](https://arxiv.org/abs/2509.19088) (Columbia, Wharton), current state-of-the-art critique. Average twin-to-human correlation **0.197** (≈ height vs. intelligence). Twin standard deviation lower than human in **93.9%** of cases.
-- Booking.com used Qualtrics Edge Audiences to drill down on hard-to-reach subgroups in Travel Trends study without expanding human panel. Qualtrics positions this as "around 50% cost reductions vs. human-only panels." Treat as vendor-told, directional.
+### Six pieces of work in this domain
 
-But the field is real and the cautions are real. The canonical critique: [Conjointly / Nik Samoylov; "Synthetic Respondents Are the Homeopathy of Market Research"](https://conjointly.com/blog/synthetic-respondents-are-the-homeopathy-of-market-research/), income variance $111,348 → $272,014 from prompt rephrasing alone. [NN/G (Nielsen Norman Group)](https://www.nngroup.com/articles/synthetic-users/) is the most-cited UX-research authority's stance: "synthetic users help with hypothesis generation, not validation." The truth is in the middle: synthetic is a useful pre-test layer for narrowing concepts before live validation. **Not a substitute for talking to real customers.**
+**Synthetic persona generation** is building AI personas from your own first-party data: CRM records, survey responses, customer interview transcripts. You give the model enough real material that it can construct profiles representative of the buyers you actually have, then you can ask those personas questions and watch how they react under different conditions. Built on imagination alone (no real data, just an LLM) the personas reflect the LLM's training-data bias, typically younger, more educated, and more liberal than your actual customers.
 
-### Sub-Domains
+**Concept and message testing** is using those personas, or simulated panels, to pre-test things before you spend real money. Does this headline land? Is this value prop sharper than the alternative? Will this price point feel reasonable or insulting? Will this packaging confuse buyers? Cheap to do at scale. Useful as a filter. Not a substitute for live testing.
 
-**7.1 Synthetic Persona Generation**
-- Building AI personas from first-party data (CRM, surveys, customer interviews)
-- Demographic and psychographic modeling
-- Behavioral profile construction
-- Scenario testing (how does a persona react under different conditions?)
+**Digital twin modeling** is the more ambitious version: continuously updating models of individual customers, used for personalization at scale, behavioral prediction, and simulating customer experience changes before you make them. CVS Health is the most-cited consumer example, with 100,000+ "agentic twins" built on 2.9 million consented responses across 200+ behavioral scenarios. Their own announcement is explicit that simulations don't replace real-world research.
 
-**7.2 Concept & Message Testing**
-- Pre-launch concept validation
-- Headline / value-prop A/B testing against synthetic audiences
-- Pricing point sensitivity
-- Packaging and bundling concepts
-- Ad creative pre-testing
+**Synthetic panels and survey-style research** are large simulated audiences (n=1,000 to 5,000-plus) that look demographically like a target market segment. Useful when real recruiting is hard or expensive: niche audiences, regulated populations, markets that would take weeks to assemble in person.
 
-**7.3 Digital Twin Modeling**
-- Continuously evolving models trained on individual customer data
-- Personalization at scale
-- Behavioral prediction
-- Customer experience simulation
+**Validation infrastructure** is the unglamorous but essential layer: calibrating synthetic predictions against real customer behavior, detecting and correcting bias, documenting your methodology so other people can trust it, and routing high-stakes decisions to live research instead of relying on the synthetic output. Without this layer, the rest reads as homeopathy.
 
-**7.4 Synthetic Panels & Survey-Style Research**
-- Large-scale simulated audiences (n=1,000–5,000+)
-- Demographic-representative sampling
-- Market-segment analysis
-- Niche audience exploration (where real recruiting is hard)
+**Customer voice capture** overlaps with Domain 1 but lives here too. Interview transcript synthesis, review mining for verbatim language, sales call analysis, support-ticket pattern recognition. The work of pulling actual customer speech out of the data you already have and feeding it back into your messaging.
 
-**7.5 Validation Infrastructure**
-- Calibration against real customer data
-- Bias detection and correction
-- Methodology documentation (transparency requirements)
-- Hand-off to live research for high-stakes decisions
+### What works in 2026
 
-**7.6 Customer Voice Capture**
-- Interview transcript synthesis
-- Review mining for verbatim language
-- Sales call analysis (Domain 1 overlap)
-- Support ticket pattern recognition
+**Use synthetic audiences as a front-end filter, not a finish line.** They're good at producing testable hypotheses (narrowing twenty concepts to three before you spend on live testing). They're not validated truth. The strongest teams run synthetic and live in sequence, not as substitutes for each other.
 
-### Best Practices in 2026
+**Build your personas on real first-party data.** Garbage in, garbage out, aggressively. Reliable persona generation starts with customer interviews, CRM patterns, support logs, social listening, and behavioral data you actually own. Personas built only from public data and an LLM's training drift toward the demographics LLMs over-represent.
 
-**Use synthetic audiences as a front-end filter, not a finish line.** They are excellent at producing testable hypotheses, useful for narrowing 20 concepts to 3 before live testing. They are not validated truth. The strongest teams use synthetic + live in sequence, not as substitutes.
+**Don't rely on synthetic output for consequential decisions in regulated sectors.** In healthcare, finance, anything involving minors, anything with regulator exposure, synthetic persona output should never be the sole basis for messaging or product decisions. Human review, legal review, and live research remain non-negotiable.
 
-**Build personas on real data, not imagination.** "Garbage in, garbage out" applies aggressively. Reliable persona generation starts with first-party data: customer interviews, CRM patterns, support logs, social listening, behavioral data. Personas built only from public data (and an LLM's training) reflect the LLM's bias, typically toward younger, more educated, more liberal demographics.
+**Calibrate continuously.** A synthetic persona is a model, and models drift. Compare your synthetic predictions to actual customer behavior on every campaign and product launch, then adjust. This is the line between rigorous applied research and a confidence-boosting illusion.
 
-**Validate before consequential use.** For regulated sectors (healthcare, finance, products involving minors), synthetic persona output should never be the sole basis for messaging or product decisions. Human review, legal review, and live research remain critical.
+**Document the inputs.** When someone on your team says "the persona predicts strong adoption," they should also be able to explain *why*, based on what inputs, and with what known limitations. Transparency is what earns the trust to use this work in real decisions.
 
-**Calibrate continuously.** A synthetic persona is a model. Models drift. Compare synthetic predictions to real customer behavior on every campaign or product launch, then adjust. This is the difference between "homeopathy" and rigorous applied research.
-
-**Document the inputs.** When a team says "the persona predicts strong adoption," they should also explain why, based on what inputs, and with what limitations. Transparency is essential for trust.
-
-**Use synthetic for breadth; use live for depth.** Synthetic panels are unmatched for testing many variations quickly (50 ad creatives in a day). Live research remains unmatched for understanding the why behind reactions, cultural nuance, and tacit knowledge.
+**Use synthetic for breadth, live for depth.** Synthetic panels are unmatched for quick volume testing, fifty ad creatives in a day, twenty pricing variations across segments. Live research is unmatched for understanding *why* people react the way they do, the cultural nuance, the tacit knowledge that synthetic just doesn't have access to.
 
 ### Tools & Platforms
 
@@ -109,7 +76,7 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 - **Conjointly**, pricing and feature research
 
 **B2B-Specific**
-- **Wynter**, message testing with verified B2B audience pools (~$299–$1,000+/mo)
+- **Wynter**, message testing with verified B2B audience pools (~$299-$1,000+/mo)
 - **PyMC Labs**. Bayesian-modeled synthetic consumers; Fortune 500 deployments
 
 **Custom Builds**
@@ -130,11 +97,11 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 
 | Case | What they did | Result | Notes |
 |---|---|---|---|
-| **CVS Health × Simile** | Built generative agents on **2.9M consented responses from 400,000+ participants across 200+ behavioral scenarios**. Operates **100,000+ "agentic twins"** | Use case: medication adherence drivers — twins surfaced trust/confidence/convenience as primary; barriers as confusion/refill anxiety/prior frustration | Critical caveat from CVS's own announcement: *"simulations don't replace real-world research"* — they prioritize what to test. Governance monitors tone, fairness, safety. Strongest consumer-healthcare example |
-| **EY × Evidenza** | C-suite executive research; "Synthetic CMO" feature with Sharp/Ritson/Binet/Field clones | EY CMO Toni Clayton-Hine reported **95% correlation** with EY's actual Global Brand Survey of C-suite execs. Confirmed clients: BlackRock, Microsoft, JP Morgan, Salesforce, Dentsu, ServiceNow | Self-reported correlations not externally audited; pricing ~$50K–$100K/yr |
-| **Aaru — 2024 NY Democratic primary** | ~5,000 AI agents predicting election | Within **<400 votes** of actual at ~1/10 the cost of traditional polls | Strongest *prediction-validation* in public record; weakest is one-off election results don't prove repeatable methodology (Nate Silver's team published critical "AI polls are fake polls" piece) |
-| **Park 1,000 People + NN/G three-study evaluation (calibration)** | Where synthetic & real agreed: directional preferences, demographic patterns, personality dimensions (Big Five 0.80) | Where they diverged: behavioral data (online courses — synthetic claimed completion when real users hadn't), drone delivery (synthetic favorable, real users impractical), dog-food purchase intent (synthetic SD lower than human; magnitude off) | Twin-to-human correlation averaged **0.197** in Columbia mega-study |
-| **PandaDoc × Wynter** (the anti-synthetic control) | 50-person verified B2B marketing panel on PandaDoc messaging | Found "on-brand docs" was confusing/generic for the ICP — *live human* responses caught what synthetic might have missed | 12–48 hour turnaround |
+| **CVS Health × Simile** | Built generative agents on **2.9M consented responses from 400,000+ participants across 200+ behavioral scenarios**. Operates **100,000+ "agentic twins"** | Use case: medication adherence drivers; twins surfaced trust/confidence/convenience as primary, barriers as confusion/refill anxiety/prior frustration | Critical caveat from CVS's own announcement: *"simulations don't replace real-world research"* (they prioritize what to test). Governance monitors tone, fairness, safety. Strongest consumer-healthcare example |
+| **EY × Evidenza** | C-suite executive research; "Synthetic CMO" feature with Sharp/Ritson/Binet/Field clones | EY CMO Toni Clayton-Hine reported **95% correlation** with EY's actual Global Brand Survey of C-suite execs. Confirmed clients: BlackRock, Microsoft, JP Morgan, Salesforce, Dentsu, ServiceNow | Self-reported correlations not externally audited; pricing ~$50K-$100K/yr |
+| **Aaru, 2024 NY Democratic primary** | ~5,000 AI agents predicting election | Within **<400 votes** of actual at ~1/10 the cost of traditional polls | Strongest *prediction-validation* in public record; weakest is that one-off election results don't prove repeatable methodology (Nate Silver's team published the critical "AI polls are fake polls" piece) |
+| **Park 1,000 People + NN/G three-study evaluation (calibration)** | Where synthetic & real agreed: directional preferences, demographic patterns, personality dimensions (Big Five 0.80) | Where they diverged: behavioral data (online courses, where synthetic claimed completion when real users hadn't), drone delivery (synthetic favorable, real users impractical), dog-food purchase intent (synthetic SD lower than human, magnitude off) | Twin-to-human correlation averaged **0.197** in Columbia mega-study |
+| **PandaDoc × Wynter** (the anti-synthetic control) | 50-person verified B2B marketing panel on PandaDoc messaging | Found "on-brand docs" was confusing/generic for the ICP, where *live human* responses caught what synthetic might have missed | 12 to 48 hour turnaround |
 | **Regulated-industry limit** | No FDA regulation specifically governs synthetic personas. CVS's pattern (never sole-basis decision-making, governance layer) is the de facto regulated-industry playbook | Pharma firms using synthetic for HCP message testing keep human IRB-approved validation pass on every consequential decision | FDA's 2024 draft guidance on AI in drug development is silent on synthetic respondents |
 
 ### Tools & Platforms, head-to-head
@@ -145,9 +112,9 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 |---|---|---|---|---|
 | **Simile** | Stanford founders (Park/Bernstein/Liang); $100M Index | Enterprise (undisclosed) | Fortune 100 longitudinal twins; CVS-style 100K-agent deployments | Newest; bandwidth limited to large accounts |
 | **Aaru** | Teen-founder team; $1B headline; Redpoint | Enterprise | Election-style large-N consumer simulations; corporate executive simulations (Lumen) | <$10M ARR; valuation ahead of revenue |
-| **Ditto / FishDog** | 300K pre-built population-true personas | $50K–$75K/yr unlimited | Self-serve consumer brand testing; Figma/Canva/Framer integrations | Now FishDog after rename |
-| **Synthetic Users** | Kwame Ferreira; UX focus | $2–$27 per interview, +$5 RAG | UX hypothesis generation; pre-research scoping | NN/G explicitly cautions against using as research replacement |
-| **Evidenza** | Lombardo + Weinberg ex-LinkedIn B2B Institute | ~$50K–$100K/yr | B2B CMO-level brand strategy; "Synthetic CMO" feature | No self-serve, no API, 72-hour turnaround |
+| **Ditto / FishDog** | 300K pre-built population-true personas | $50K-$75K/yr unlimited | Self-serve consumer brand testing; Figma/Canva/Framer integrations | Now FishDog after rename |
+| **Synthetic Users** | Kwame Ferreira; UX focus | $2-$27 per interview, +$5 RAG | UX hypothesis generation; pre-research scoping | NN/G explicitly cautions against using as research replacement |
+| **Evidenza** | Lombardo + Weinberg ex-LinkedIn B2B Institute | ~$50K-$100K/yr | B2B CMO-level brand strategy; "Synthetic CMO" feature | No self-serve, no API, 72-hour turnaround |
 | **Ask Rally** | Calibrated GenPop panel via Turing test | Mid-market | Rapid small-to-medium decision testing | Calibration is per-persona; uneven coverage |
 
 #### Embedded-in-platform
@@ -162,7 +129,7 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 
 | Platform | Method | Numbers |
 |---|---|---|
-| **Wynter** | Verified human B2B panel (saturation methodology, 12–13 responses) | 70K–80K verified B2B professionals; LinkedIn + corporate-email verified; from $798/mo, 12–48hr |
+| **Wynter** | Verified human B2B panel (saturation methodology, 12-13 responses) | 70K-80K verified B2B professionals; LinkedIn + corporate-email verified; from $798/mo, 12-48hr |
 | **PyMC Labs** | Bayesian-modeled synthetic + Semantic Similarity Rating | Custom; 90% product-ranking correlation, 85%+ distributional similarity |
 
 **Decision frame:** **Wynter** when you need real B2B humans on your ICP for high-stakes message/positioning/pricing decisions. **PyMC Labs** when you need scientifically grounded synthetic at scale and can invest in custom Bayesian validation. **Evidenza** when buying committee is C-suite Fortune 500 and you can absorb $50K+ engagements.
@@ -176,7 +143,7 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 #### Playbook A. Synthetic persona from first-party data (Claude Project build)
 
 1. Export to Markdown: 30 customer interview transcripts + last 90 days of support tickets + last 200 sales-call transcripts (Gong/Fireflies) + open-ended NPS verbatims.
-2. Cluster by JTBD using Claude (3–5 distinct jobs).
+2. Cluster by JTBD using Claude (3-5 distinct jobs).
 3. For each job, build a Claude Project with: ICP firmographics, top-3 quotes per pain dimension, top-3 trigger events, observed-language vocabulary list, list of objections actually voiced (verbatim).
 4. **System prompt:** *"You are [Persona]. Answer ONLY using language and frames from the provided transcripts. If asked something outside these transcripts, say 'I don't know' rather than inventing."* (Explicitly defends against the sycophancy problem NN/G flagged.)
 5. **Validate quarterly:** pose the same 5 questions to 3 real customers and compare. If correlation drops, refresh the corpus.
@@ -190,15 +157,15 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 - Filter to top 10 (kill bottom 80% on synthetic alone; *"front-end filter, not finish line"*)
 - Expert review (PMM + creative director) prunes 10 → 5
 - Live test 5 on Wynter (B2B) or Meta CBO-test (B2C)
-- Final 2–3 get media spend
+- Final 2-3 get media spend
 
 **Why this works:** synthetic is high-recall low-precision; live is low-recall high-precision. The funnel respects each layer's strengths.
 
 #### Playbook C. Synthetic + live in sequence
 
-- **Discover (live):** 12–15 customer interviews. Bob Moesta switch interviews, Indi Young listening sessions
-- **Hypothesize (synthetic):** Translate findings into 5–10 testable concepts; run on synthetic panel for directional ranking
-- **Validate (live):** Top 2–3 concepts go to Wynter / focus groups / live A/B
+- **Discover (live):** 12-15 customer interviews. Bob Moesta switch interviews, Indi Young listening sessions
+- **Hypothesize (synthetic):** Translate findings into 5-10 testable concepts; run on synthetic panel for directional ranking
+- **Validate (live):** Top 2-3 concepts go to Wynter / focus groups / live A/B
 - **Calibrate (continuous):** After every launch, compare synthetic prediction vs. live result; track synthetic-to-live correlation as a KPI. **If it decays past 0.7, the persona corpus is stale.**
 
 ### Cross-References to Mahmoud's Skills
@@ -211,10 +178,10 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 
 | Industry | ICP / motion difference | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | Synthetic personas built on Gong + Zendesk + interview corpus; Wynter for B2B panel validation; calibrate quarterly | Wynter ($799+/mo verified B2B); PyMC Labs for Bayesian rigor; Claude Project personas from first-party data; Synthetic Users for UX | Treating synthetic as truth — Park 1,000 People shows 85% replication ceiling, Toubia "Funhouse Mirrors" finds 0.197 average correlation. **Front-end filter only** | None |
-| **Biopharma** | Synthetic HCP/patient personas are **advisory only** — never substitute for IRB-approved research. CVS × Simile is the published pattern. EY × Evidenza for C-suite | Simile (Stanford pedigree, $100M Index); Evidenza (~$50-100K, "Synthetic CMO" with KOL clones); **real KOL advisory boards (gold standard)**; patient panels via Rare Patient Voice/Carenity | Using synthetic patient response to drive a label change, MoA messaging, or clinical claim — regulator views it as inadequate basis; payer tie-in falls apart | FDA Mar 2026 NAM draft guidance allows digital twins in trials; IRB review on patient-facing tests; HIPAA on synthetic patient cohorts built from real PHI; ABPI/PhRMA Code on HCP simulation |
-| **DTC** | Synthetic ad pre-test → 50 creatives → 10 → 5 → live Meta CBO; concept ranking before media spend | Ditto/FishDog (300K personas, $50-75K/yr); Ask Rally; Suzy for human panel; Meta Advantage+ Lift Studies for live | Trusting synthetic CTR predictions and running media — DTC results vs. synthetic correlation breaks at scale; always live-test top-3 | FTC truth-in-advertising on testing claims if marketed externally |
-| **Dev tools** | Synthetic developers are weakest area — LLMs can't simulate "I tried it, the SDK threw an error." Real DX testing on Discord/beta lists wins | Real beta programs; UserTesting.com with engineer-screen; Maze for unmoderated dev research; Synthetic Users only for hypothesis generation | Using synthetic devs to validate API ergonomics — they say what reads well, not what compiles. Will mislead DX decisions | None beyond standard |
+| **B2B SaaS** | Synthetic personas built on Gong + Zendesk + interview corpus; Wynter for B2B panel validation; calibrate quarterly | Wynter ($799+/mo verified B2B); PyMC Labs for Bayesian rigor; Claude Project personas from first-party data; Synthetic Users for UX | Treating synthetic as truth; Park 1,000 People shows 85% replication ceiling, Toubia "Funhouse Mirrors" finds 0.197 average correlation. **Front-end filter only** | None |
+| **Biopharma** | Synthetic HCP/patient personas are **advisory only**, never a substitute for IRB-approved research. CVS × Simile is the published pattern. EY × Evidenza for C-suite | Simile (Stanford pedigree, $100M Index); Evidenza (~$50-100K, "Synthetic CMO" with KOL clones); **KOL advisory boards (gold standard)**; patient panels via Rare Patient Voice/Carenity | Using synthetic patient response to drive a label change, MoA messaging, or clinical claim, which regulators view as inadequate basis; payer tie-in falls apart | FDA Mar 2026 NAM draft guidance allows digital twins in trials; IRB review on patient-facing tests; HIPAA on synthetic patient cohorts built from real PHI; ABPI/PhRMA Code on HCP simulation |
+| **DTC** | Synthetic ad pre-test, 50 creatives down to 10 down to 5, then live Meta CBO; concept ranking before media spend | Ditto/FishDog (300K personas, $50-75K/yr); Ask Rally; Suzy for human panel; Meta Advantage+ Lift Studies for live | Trusting synthetic CTR predictions and running media; DTC results vs. synthetic correlation breaks at scale; always live-test top-3 | FTC truth-in-advertising on testing claims if marketed externally |
+| **Dev tools** | Synthetic developers are the weakest area, since LLMs can't simulate "I tried it, the SDK threw an error." Real DX testing on Discord/beta lists wins | Real beta programs; UserTesting.com with engineer-screen; Maze for unmoderated dev research; Synthetic Users only for hypothesis generation | Using synthetic devs to validate API ergonomics, which gives you what reads well rather than what compiles. Will mislead DX decisions | None beyond standard |
 
 **Key insight:** Biopharma's synthetic-testing posture is uniquely **advisory only**. CVS Health's own framing is that 100K-twin simulations *prioritize what to test next*, never replace IRB-approved research. Any synthetic output that informs a clinical claim, label, or HCP message must pass through human medical review. This is the single sharpest compliance overlay across all 8 domains.
 
@@ -279,15 +246,15 @@ But the field is real and the cautions are real. The canonical critique: [Conjoi
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 7: Customer Intelligence & Synthetic Testing
+## Frequently asked questions about customer intelligence and synthetic testing
 
 ### What's the actual accuracy of synthetic personas?
 
-Park et al. (2024) Generative Agent Simulations of 1,000 People: agents replicated participants' GSS responses **85%** as accurately as participants replicated their own answers two weeks later. NOT 94% — the 94% figure widely cited online is a miscitation. Combined interview + survey agents reached 86% vs. demographic-only at 74%. Counter-data: Toubia et al. (2025) 'Funhouse Mirrors' found average twin-to-human correlation of 0.197 (≈ height vs. intelligence) and twin standard deviation lower than human in 93.9% of cases. Synthetic narrows what to test; it doesn't decide.
+Park et al. (2024) Generative Agent Simulations of 1,000 People: agents replicated participants' GSS responses **85%** as accurately as participants replicated their own answers two weeks later. NOT 94%; the 94% figure widely cited online is a miscitation. Combined interview + survey agents reached 86% vs. demographic-only at 74%. Counter-data: Toubia et al. (2025) 'Funhouse Mirrors' found average twin-to-human correlation of 0.197 (≈ height vs. intelligence) and twin standard deviation lower than human in 93.9% of cases. Synthetic narrows what to test; it doesn't decide.
 
-### Synthetic personas vs. live B2B panels — which wins?
+### Synthetic personas vs. live B2B panels: which wins?
 
-Sequence them. Synthetic (Custom Claude Project, Synthetic Users, Ask Rally) for hypothesis generation and rapid concept screening — narrow 50 ad creatives to 3 in a day. Live B2B panels (Wynter, $799+/mo, 70K-80K verified B2B professionals) for validation before consequential decisions. PyMC Labs offers Bayesian-grounded synthetic with documented validation (90% correlation on product ranking, 85%+ distributional similarity across 57 surveys, 9,300 human responses). NN/G's stance: 'synthetic users help with hypothesis generation, not validation.'
+Sequence them. Synthetic (Custom Claude Project, Synthetic Users, Ask Rally) for hypothesis generation and rapid concept screening; narrow 50 ad creatives to 3 in a day. Live B2B panels (Wynter, $799+/mo, 70K-80K verified B2B professionals) for validation before consequential decisions. PyMC Labs offers Bayesian-grounded synthetic with documented validation (90% correlation on product ranking, 85%+ distributional similarity across 57 surveys, 9,300 human responses). NN/G's stance: 'synthetic users help with hypothesis generation, not validation.'
 
 ### How does CVS Health use 100,000 synthetic twins?
 

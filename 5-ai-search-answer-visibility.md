@@ -1,121 +1,89 @@
 <!--
 seo:
-  title: AEO, GEO, LLMO: AI Search Answer Visibility in 2026 — Domain 5
-  description: Get cited in ChatGPT, Perplexity, AI Overviews. Vercel <1%→10% ChatGPT signups, Ramp 7×, Rootly 10×, Profound vs AthenaHQ comparison, llms.txt deployment patterns.
+  title: AEO, GEO, LLMO, AI Search Answer Visibility in 2026 (Domain 5)
+  description: Get cited in ChatGPT, Perplexity, AI Overviews. Vercel less than 1% to 10% ChatGPT signups, Ramp 7×, Rootly 10×, Profound vs AthenaHQ comparison, llms.txt deployment patterns.
   primary_keyword: AEO GEO AI search optimization
   secondary_keywords: [llms.txt, AI Overview citations, ChatGPT optimization, AthenaHQ vs Profound, Bing AI Performance, Wikipedia entity]
 -->
-## Domain 5: AI Search & Answer Visibility (AEO/GEO/LLMO)
+## Domain 5: AI Search & Answer Visibility
 
-> **TL;DR.** The newest standalone discipline. **Anchor stat: 38% of Google AI Overview citations come from pages ranking in Google's top 10** (down from 76% in July 2025; [Ahrefs Mar 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/)). For non-Google LLMs, ~80% of citations come from pages that don't rank in Google's top 100 ([Ahrefs Aug 2025](https://ahrefs.com/blog/ai-search-overlap/)). **Tools that win:** Profound or AthenaHQ for tracking, Bing Webmaster Tools "AI Performance" (free, Feb 2026 launch), llms.txt + llms-full.txt published. **Canonical case: Vercel** — <1% → 10% of new signups from ChatGPT in 6 months. **What changed in v3:** added 6 named cases (Ramp 7×, Rootly 10×, Grüns 23×, Popl 1,561% ROI, Vercel signups, Anthropic llms-full.txt pattern), Profound vs. AthenaHQ vs. Peec AI vs. Bluefish comparison, llms.txt deployment patterns (Anthropic two-tier / Vercel use-case-mapped / Cloudflare product-modular), Bing AI Performance launch.
+The newest standalone discipline in marketing, and the only one that didn't exist as a recognizable category three years ago. Used to be buried inside SEO. Now it's its own domain because the mechanics are structurally different and because more people are starting their search inside ChatGPT, Claude, Perplexity, or Gemini than inside Google.
 
-> *"A brand can now be surfaced, recommended, and materially influence a purchase decision in AI search without necessarily generating a click."* — Aleyda Solis, [*A 3-Layer Framework to Measure AI Presence*](https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/), Apr 23, 2026
+The work is to be cited when an AI model answers a question about your category. To do that, you have to be present in the model's training data and retrievable through whatever live web tools the model uses. The domain owns entity presence in LLMs, structured content that's easy to extract, citation-earning PR, multi-platform AI visibility tracking, schema markup, the llms.txt standard, and the corroboration signals across the wider web that LLMs rely on when deciding what to trust.
 
-> *"For a RAG-based system like Perplexity or AI Overviews, enough citations are basically all it needs to treat something as fact, regardless of whether it's actually true."* — Lily Ray, [*The AI Slop Loop*](https://lilyraynyc.substack.com/p/the-ai-slop-loop), Apr 14, 2026
+A short glossary, since the acronyms in this domain are louder than the work:
+- **SEO** is search engine optimization, the original. You optimize for Google's ranked results.
+- **AEO** is answer engine optimization. You structure content so an engine can extract it as a direct answer.
+- **GEO** is generative engine optimization. You optimize for visibility inside the long-form responses LLMs give.
+- **LLMO** is LLM optimization, which is broader than GEO and includes whether your brand is an entity inside the training data.
+- **AI SEO** is the umbrella term, and most teams treat AEO, GEO, and LLMO as overlapping disciplines under a single strategy.
 
-> *"we need to reinvent ourselves. And that reinvention I'm calling is relevance engineering."* — Mike King, [Search Engine Land SMX Advanced 2025 interview](https://searchengineland.com/mike-king-smx-advanced-2025-interview-456186), May 29, 2025
+> *"A brand can now be surfaced, recommended, and materially influence a purchase decision in AI search without necessarily generating a click."* (Aleyda Solis, [*A 3-Layer Framework to Measure AI Presence*](https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/), Apr 23, 2026)
 
-**See also:** Mahmoud's [`aeo-geo-playbook.md`](skill) for the tactical depth (query fanout, ranking factors, money-pages strategy), Mahmoud's [`mahmouds-seo-writer`](skill) for AEO content brief execution, [Domain 3 (Content)](3-content-creative-production.md) for AEO-first content briefs, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for Cision Trajaan + entity-presence building, [Domain 8 (Measurement)](8-measurement-attribution.md) for the AI-search KPI layer, [Domain 0 (AgentOps)](0-agentops.md) for output validation in AI-search content, [Domain 1 (Sensing)](1-sensing-intelligence.md) for the new "LLM-visibility intent" frontier.
+> *"For a RAG-based system like Perplexity or AI Overviews, enough citations are basically all it needs to treat something as fact, regardless of whether it's actually true."* (Lily Ray, [*The AI Slop Loop*](https://lilyraynyc.substack.com/p/the-ai-slop-loop), Apr 14, 2026)
 
-### Definition and Scope
+> *"We need to reinvent ourselves. And that reinvention I'm calling is relevance engineering."* (Mike King, [Search Engine Land SMX Advanced 2025 interview](https://searchengineland.com/mike-king-smx-advanced-2025-interview-456186), May 29, 2025)
 
-The newest standalone discipline, formerly buried inside SEO. Now its own domain because the mechanics are structurally different. Owns: entity presence in LLM training and retrieval; structured content for extractability; citation-earning PR strategy; multi-platform AI visibility tracking (ChatGPT, Claude, Perplexity, Gemini, Copilot); schema markup; llms.txt; and corroboration signals across the wider web.
+**See also:** Mahmoud's [`aeo-geo-playbook.md`](skill) for the tactical depth (query fan-out, ranking factors, money-pages strategy), Mahmoud's [`mahmouds-seo-writer`](skill) for AEO content brief execution, [Domain 3 (Content)](3-content-creative-production.md) for AEO-first content briefs, [Domain 4 (Distribution)](4-distribution-channel-operations.md) for Cision Trajaan and entity-presence building, [Domain 8 (Measurement)](8-measurement-attribution.md) for the AI-search KPI layer, [Domain 0 (AgentOps)](0-agentops.md) for output validation in AI-search content, [Domain 1 (Sensing)](1-sensing-intelligence.md) for the "LLM-visibility intent" frontier.
 
-The acronym soup:
-- **SEO**. Search Engine Optimization (the original)
-- **AEO**. Answer Engine Optimization (structuring content so engines can extract it as direct answers)
-- **GEO**. Generative Engine Optimization (visibility within LLM responses from ChatGPT, Claude, Perplexity, Gemini)
-- **LLMO**. LLM Optimization (broader than GEO; includes entity-level presence in training data)
-- **AI SEO**, umbrella term covering all of the above
+### Why this matters now
 
-Most teams treat these as overlapping disciplines under one strategy. The distinction: AEO focuses on extractable passages; GEO covers the broader generative surface; LLMO adds the entity-level training-data dimension.
+A few stats from Q1 2026 that are worth keeping in your head together. ChatGPT crossed 900 million weekly active users. Google AI Overviews now appear in 25.11% of searches ([Conductor's 2026 AEO/GEO Benchmarks Report](https://www.conductor.com/academy/aeo-geo-benchmarks-report/) analyzed 21.9 million searches across 13,770 enterprise domains). AI referrals are roughly 1.08% of total traffic on average, with ChatGPT making up 87.4% of those referrals. Category-level variance is large; Vercel reported 10% of new signups coming from ChatGPT in six months. Gartner predicted traditional search volume would drop 25% by 2026, and that's playing out in real time.
 
-### Why It Matters Now
+The single most useful data point is the citation-and-rank gap. Only 38% of Google AI Overview citations come from pages that rank in Google's top 10 for the original query, down from 76% in July 2025 ([Ahrefs, March 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/), n=863K SERPs). For non-Google LLMs (ChatGPT, Gemini, Copilot), the gap is wider: roughly 80% of citations come from pages that don't rank in Google's top 100 for the original prompt ([Ahrefs, August 2025](https://ahrefs.com/blog/ai-search-overlap/), n=15K queries). Perplexity is the exception, citing top-10 pages 28.6% of the time. Other studies report different overlaps (seoClarity Oct 2025 found 32% on a different methodology; BrightEdge 54%), so read the methodology before quoting any of them.
 
-The data is decisive: As of Q1 2026:
-- ChatGPT has surpassed 900 million weekly active users.
-- Google AI Overviews appear in 25.11% of searches ([Conductor 2026 AEO/GEO Benchmarks Report](https://www.conductor.com/academy/aeo-geo-benchmarks-report/), April 2026, analyzed 21.9M searches across 13,770 enterprise domains).
-- AI referrals are 1.08% of total traffic on average; ChatGPT = 87.4% of AI referrals (Conductor 2026). Category-level variance is large. Vercel reported 10% of new signups from ChatGPT in 6 months (developer-tool category).
-- **The citation-and-rank stat (canonical):** Only **38% of Google AI Overview citations** come from pages that rank in the top 10 for the original query, down from 76% in July 2025 ([Ahrefs, "Update: 38% of AI Overview Citations Pull From The Top 10," March 2, 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/), n=863K SERPs). The decline reflects Google's increased reliance on fan-out subqueries, not a real decline in top-10's importance. **For non-Google LLMs** (ChatGPT, Gemini, Copilot), the gap is wider: ~80% of citations come from pages that don't rank in Google's top 100 for the *original* prompt ([Ahrefs, "Only 12% of AI Cited URLs Rank in Google's Top 10," August 11, 2025](https://ahrefs.com/blog/ai-search-overlap/), n=15K queries). Perplexity is the exception (28.6% in top 10). Other studies report different overlaps (seoClarity Oct 2025 found 32% on a different methodology; BrightEdge 54%), read methodology before quoting.
-- Gartner predicted traditional search volume would drop 25% by 2026, playing out in real time.
+What that means in plain language: the page that ranks first in Google is no longer the page that gets cited in AI answers. The two systems are pulling from different signals, and the second system is now the one growing.
 
 Translation: the rules have changed. Pages that rank in Google often don't get cited by LLMs. Pages that rank nowhere on Google can still be cited heavily. Optimizing only for SEO leaves you invisible in the channel that will increasingly drive discovery.
 
 The economic case: McKinsey projects ~$750 billion in **US** revenue flowing through AI search by 2028 ([McKinsey, "New front door to the internet,"](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/new-front-door-to-the-internet-winning-in-the-age-of-ai-search) Nov 2025, note: US-only forecast, ~75% of $1T total search market). This is no longer an "experiment" line item.
 
-### Sub-Domains
+### Six pieces of work in this domain
 
-**5.1 Answer Engine Optimization (AEO)**
-- Question-led headings (H2/H3 as direct questions)
-- One-sentence answers immediately under each heading
-- Definitional paragraphs (the "what is X" pattern)
-- Schema markup (FAQ, HowTo, Article, Product)
-- Featured snippet optimization
+The work breaks into six pieces. They overlap, but they're useful to keep separate when you're deciding where to invest.
 
-**5.2 Generative Engine Optimization (GEO)**
-- Content structuring for LLM retrieval
-- Citation-earning content (statistics, original research, primary data)
-- "Quotable insights", content designed to be extractable as a quote
-- Multi-platform optimization (different LLMs cite differently)
-- llms.txt (proposed standard for LLM-readable site maps)
+**Answer engine optimization (AEO)** is the discipline of structuring your pages so an answer engine can extract a clean, direct answer. Question-led H2 and H3 headings, one-sentence answers immediately under each heading, definitional paragraphs at the top of category pages, schema markup (FAQ, HowTo, Article, Product). The same patterns that win you a featured snippet on Google also win you a citation in ChatGPT.
 
-**5.3 LLM Optimization (LLMO) / Entity Building**
-- Brand entity presence across the wider web
-- Wikipedia / Wikidata presence
-- Schema.org Organization markup
-- Cross-domain mentions and corroboration
-- Author / expert E-E-A-T signals
-- Influence over training data (limited but real)
+**Generative engine optimization (GEO)** is the broader work of getting cited inside the long-form responses LLMs give. Original research, statistics, primary data, "quotable insights" structured to be lifted cleanly out of the page, multi-platform optimization (ChatGPT, Claude, Perplexity, Gemini cite differently), and the emerging llms.txt standard, which is essentially a sitemap written for AI crawlers.
 
-**5.4 Measurement & Visibility Tracking**
-- LLM citation monitoring (which LLMs cite you, for what queries?)
-- Share of voice across AI search platforms
-- Sentiment analysis in AI responses
-- Competitive AI visibility benchmarking
+**LLM optimization or entity building** is the longest-horizon work: making sure your brand is a recognized entity across the wider web. Wikipedia and Wikidata presence, Schema.org Organization markup, cross-domain mentions, author credentials and expertise signals, influence over what ends up in the training data. You don't get this in a quarter, but the brands that have it dominate the answers.
 
-**5.5 PR-Driven Citation Building**
-- Press release distribution (PR Newswire, BusinessWire)
-- Data-driven research that earns citations
-- Industry report sponsorships
-- Earned media that feeds LLM training
+**Measurement and visibility tracking** is monitoring which LLMs cite you, for which queries, with what sentiment, and how that compares to your competitors. The vendors here are Profound, AthenaHQ, Bluefish, Peec AI, and Bing Webmaster Tools' free AI Performance dashboard.
 
-**5.6 Technical AI-SEO Foundations**
-- Server-side rendering (SSR), critical, since many AI crawlers don't execute JavaScript
-- Site speed and Core Web Vitals
-- Structured data validation
-- robots.txt and AI crawler permissions
-- llms.txt and llms-full.txt
+**PR-driven citation building** is the work of earning third-party coverage that LLMs trust: press release distribution (PR Newswire, BusinessWire), data-driven research reports, industry-report sponsorships, journalist relationships. The same earned media that fed Google's E-E-A-T scores now feeds LLM training data.
 
-### Best Practices in 2026
+**Technical AI-SEO foundations** is the unsexy plumbing: server-side rendering (so AI crawlers can read your pages even if your site is built in JavaScript), good Core Web Vitals, valid structured data, sensible robots.txt rules, an llms.txt file. Get this wrong and the rest of your AEO/GEO investment is invisible.
 
-**Stop chasing prompts; start tracking entity presence.** As one expert put it: if your brand is being cited, summarized, or referenced by AI, you're not just visible, you're trusted by the systems shaping the future of search. Track entity presence over time as the primary KPI.
+### What works in 2026
 
-**Invert your content research workflow.** Instead of starting with keyword volume, start with how the LLMs currently answer your target questions. Identify gaps, biases, or incomplete answers. Produce content that fills the void. Teams using this approach report 3x higher citation rates.
+**Stop chasing individual prompts; track entity presence.** A specific prompt result fluctuates. The bigger question is whether your brand is the entity LLMs reach for when discussing your category, and how that changes over time. That's the right primary KPI.
 
-**Make every page extractable.** Question-led H2s. One-sentence answers. Tables for comparison content. Lists for steps. Definitional paragraphs at the top. AI systems do not want vague marketing copy; they want stable, well-structured source material.
+**Invert your content research.** Instead of starting from keyword volume, start from how ChatGPT, Claude, and Perplexity currently answer your target questions. Look for gaps, biases, incomplete answers, places where they're missing the most useful piece of information. Then write content that fills the void. Teams using this approach report roughly three times the citation rate of teams using traditional keyword research.
 
-**Build corroboration across the wider web.** A page that exists only on your domain is harder to validate. Pages cited and linked to from elsewhere, third-party publications, analyst reports, podcasts, communities, get more LLM trust. This is why analyst relations + PR matter for AEO/GEO.
+**Make every page extractable.** Question-led headings. One-sentence answers. Tables for comparisons. Lists for steps. Definitional paragraphs at the top. AI systems don't want vague marketing copy; they want stable, well-structured source material that can be lifted out of the page cleanly.
 
-**Update key pages more often than you used to.** AI systems are heavily exposed to fast-moving categories. A page that hasn't been updated since 2023 looks stale and gets bypassed. Treat key pages as living documents.
+**Build corroboration across the wider web.** A page that exists only on your own domain is harder for an LLM to trust. Pages cited and linked from elsewhere (third-party publications, analyst reports, podcasts, community discussions) earn more weight in the answer. This is exactly why analyst relations and PR matter for AI search.
 
-**Don't kill SEO; expand it.** AEO is not a replacement for SEO, it's an extension. Traditional SEO is still required for being crawlable, indexed, and authoritative. AEO adds the answer-extractability layer. The most effective 2026 strategies integrate both under a unified search-visibility team with shared KPIs.
+**Update your key pages more often than you used to.** AI systems are heavily exposed to fast-moving categories. A pricing page or category page that hasn't been touched since 2023 looks stale and gets bypassed. Treat the highest-leverage pages as living documents.
 
-**Choose your distribution sources for AI training, not just for SEO.** Pages on Reddit, GitHub, YouTube, and Wikipedia have outsized influence on what LLMs know. [Profound × Reddit's 4-billion-citation analysis](https://rosssimmonds.com/blog/visibility-llms/) found Reddit accounts for 3.11% of all AI citations, 45% more than YouTube, 2× Wikipedia. Distribution strategy now includes "show up in places LLMs trust."
+**Don't replace SEO with AEO; extend it.** Traditional SEO still has to work. You still need to be crawlable, indexed, and authoritative. AEO adds an answer-extractability layer on top. The teams winning in 2026 run them under one search-visibility function with shared KPIs.
+
+**Show up in the places LLMs trust.** Reddit, GitHub, YouTube, and Wikipedia have outsized influence on what LLMs know. Profound's analysis of 4 billion AI citations found Reddit alone accounts for 3.11% of all AI citations, 45% more than YouTube and roughly twice as much as Wikipedia. Your distribution strategy now has to include "be present in those places," not just "rank on Google."
 
 ### Named Case Studies (with before/after numbers)
 
 | Brand | Tool / approach | Result | Source |
 |---|---|---|---|
-| **Ramp** | Profound — built two AEO money-pages (Accounts Payable for SMB, Accounts Payable for Large Biz) + comparison content | AI visibility **3.2% → 22.2% (7×)** in one month; 300+ citations from 2 pages; doubled overall citations vs. all prior content combined; rose from 19th to 8th most-visible fintech in Accounts Payable | [Profound case](https://www.tryprofound.com/customers/ramp-case-study) |
-| **Rootly** | AthenaHQ — competitive baseline, weekly content shipping, focus on **unbranded** evaluation prompts | Citation rate **3% → 30% (10×)**; mention rate 7.5% → 18.3%; non-branded mention lift 2.5×; equivalent media value $87K → $214K | [AthenaHQ case](https://www.athenahq.ai/case-studies/10x-citation-rate-rootly-geo-case-study) |
-| **Grüns** | AthenaHQ — pillar-and-cluster + 15 articles, programmatic scaling via Shopify integration | 60-day result: SoV **2.0% → 12.6% (6×)**; citation rate **0.3% → 7.0% (~23×)**; brand mention rate 4.0% → 25.0%; ~10,500 LLM impressions | [AthenaHQ case](https://athenahq.ai/case-studies/10-6pp-sov-gruns-ai-search-case-study) |
-| **Popl.co** | AthenaHQ — content restructured for AI extraction; multi-platform optimization | 3-month result: AI Search rank **5th → 1st**: AI visibility 10% → 28.9% (+189%); monthly citations 23 → 212 (+822%); 38.85% MoM lead growth from AI search; **ROI 1,561%, 18-day payback** | [AthenaHQ case](https://athenahq.ai/case-studies/38-mom-growth-leads-popl-ai-search-leadership) |
+| **Ramp** | Profound: built two AEO money-pages (Accounts Payable for SMB, Accounts Payable for Large Biz) + comparison content | AI visibility **3.2% to 22.2% (7×)** in one month; 300+ citations from 2 pages; doubled overall citations vs. all prior content combined; rose from 19th to 8th most-visible fintech in Accounts Payable | [Profound case](https://www.tryprofound.com/customers/ramp-case-study) |
+| **Rootly** | AthenaHQ: competitive baseline, weekly content shipping, focus on **unbranded** evaluation prompts | Citation rate **3% to 30% (10×)**; mention rate 7.5% to 18.3%; non-branded mention lift 2.5×; equivalent media value $87K to $214K | [AthenaHQ case](https://www.athenahq.ai/case-studies/10x-citation-rate-rootly-geo-case-study) |
+| **Grüns** | AthenaHQ: pillar-and-cluster + 15 articles, programmatic scaling via Shopify integration | 60-day result: SoV **2.0% to 12.6% (6×)**; citation rate **0.3% to 7.0% (~23×)**; brand mention rate 4.0% to 25.0%; ~10,500 LLM impressions | [AthenaHQ case](https://athenahq.ai/case-studies/10-6pp-sov-gruns-ai-search-case-study) |
+| **Popl.co** | AthenaHQ: content restructured for AI extraction; multi-platform optimization | 3-month result: AI Search rank **5th to 1st**: AI visibility 10% to 28.9% (+189%); monthly citations 23 to 212 (+822%); 38.85% MoM lead growth from AI search; **ROI 1,561%, 18-day payback** | [AthenaHQ case](https://athenahq.ai/case-studies/38-mom-growth-leads-popl-ai-search-leadership) |
 | **Vercel** | llms.txt + llms-full.txt via Mintlify | **<1% → 10% of new signups from ChatGPT** in 6 months | [Mintlify post](https://www.mintlify.com/blog/the-value-of-llms-txt-hype-or-real) |
 | **Anthropic** | Co-developed the llms-full.txt format with Mintlify; slim `/llms.txt` index → larger `/llms-full.txt` Markdown export of full Claude docs corpus | Two-tier pattern adopted by major dev-tools (Cursor, Coinbase, Pinecone, Windsurf, Cloudflare) | [Mintlify customer page](https://www.mintlify.com/customers/anthropic) |
 
 **Methodology caveat (worth flagging):** in several AthenaHQ case studies, ~70% of cited content was *written by AthenaHQ itself*. Profound's enterprise customers (Ramp, MongoDB, Figma) wrote their own content, which makes Profound's evidence base methodologically cleaner. Both vendors publish only positive cases. To validate vendor-reported lift, run the same brand simultaneously across Profound + AthenaHQ + a third tool for 90 days and reconcile.
 
-**Directional case studies (less rigorous, vendor-published):** Lago, 50% increase in demos from AI Search, AI Overview impressions 3% → 33%, citation rate 3.5% → 17%. Verito, 36% Share of Voice on ChatGPT in 6–8 weeks (vs. competitors 25–30× larger). AutoRFP.ai, 10× ChatGPT traffic, >30% of prospects from GenAI Search.
+**Directional case studies (less rigorous, vendor-published):** Lago, 50% increase in demos from AI Search, AI Overview impressions 3% → 33%, citation rate 3.5% → 17%. Verito, 36% Share of Voice on ChatGPT in 6-8 weeks (vs. competitors 25-30× larger). AutoRFP.ai, 10× ChatGPT traffic, >30% of prospects from GenAI Search.
 
 ### Tools & Platforms
 
@@ -123,7 +91,7 @@ The economic case: McKinsey projects ~$750 billion in **US** revenue flowing thr
 
 | Tool | Pricing | AI platforms tracked | Tracking method | Best for | Key limitation |
 |---|---|---|---|---|---|
-| **Profound** | Starter $99/mo (ChatGPT only); Growth $399/mo (3 engines); Enterprise $2K–$5K+/mo | ChatGPT, Perplexity, Google AIOs at Growth; +Claude, Gemini, Grok, Copilot at Enterprise | API + scraped hybrid (proprietary "Answer Engine Insights"); shows actual prompt **volume** | Enterprise (Target, Walmart, Figma, MongoDB, Ramp, Chime, U.S. Bank, Charlotte Tilbury) | High cost; lower-tier plans gate Claude/Gemini |
+| **Profound** | Starter $99/mo (ChatGPT only); Growth $399/mo (3 engines); Enterprise $2K-$5K+/mo | ChatGPT, Perplexity, Google AIOs at Growth; +Claude, Gemini, Grok, Copilot at Enterprise | API + scraped hybrid (proprietary "Answer Engine Insights"); shows actual prompt **volume** | Enterprise (Target, Walmart, Figma, MongoDB, Ramp, Chime, U.S. Bank, Charlotte Tilbury) | High cost; lower-tier plans gate Claude/Gemini |
 | **AthenaHQ** (formerly OtterlyAI) | $295/mo single plan with credits + Action Center | ChatGPT, Gemini, Google AIOs, Perplexity, Copilot | Scraped UI responses | Mid-market needing **content generation + tracking** in one tool; e-commerce/Shopify; published case-study leader | "Athena-authored" content credibility caveat (see Case Studies section) |
 | **Peec AI** | €89/mo starter; €199/mo+ for higher volume | ChatGPT, Perplexity, Claude, Gemini, Google AIOs | UI scraping; "Earned Media" module tracks Reddit/Wikipedia/G2 sources | Tactical product marketing; SaaS/D2C; multi-language (115+) | Single-brand focus; limited exports |
 | **Bluefish AI** | Quote-based / custom (raised $20M, 2025) | ChatGPT, Perplexity, Google AIOs, Gemini | Real-time monitoring; proprietary Impact Score + Influence Rank | Fortune 500 brand-safety + AI hallucination monitoring (Adidas, Tishman Speyer); AI Commerce module | Per-seat model; opaque tracking method |
@@ -170,10 +138,10 @@ The economic case: McKinsey projects ~$750 billion in **US** revenue flowing thr
 
 | Industry | ICP / motion difference | Tools that win | Biggest pitfall | Compliance overlay |
 |---|---|---|---|---|
-| **B2B SaaS** | ChatGPT (87% of AI referrals per Conductor), Perplexity, Google AIOs, Gemini. Vercel-style "% of new signups from ChatGPT" North Star applies | Profound or AthenaHQ for tracking; Bing Webmaster AI Performance (free); llms.txt + llms-full.txt; Reddit/G2/listicle citation building | Optimizing for keywords while ignoring grounding queries — pages that rank don't get cited (only 38% overlap with AIO) | None |
-| **Biopharma** | Scientific buyers query PubMed, Embase, Cochrane, Wikipedia, UpToDate, KOL Twitter/Bluesky — *not* ChatGPT for clinical decisions. HCPs distrust LLM answers; they verify in PubMed | **PubMed/MeSH SEO**: Wikipedia/Wikidata entity work (highest-leverage asset for biopharma); Open Pharma's open-access publishing; Google Scholar profiles for thought leaders; OpenAlex | Optimizing biopharma marketing pages for ChatGPT citations on disease state queries — generates off-label promotion exposure. LLMs hallucinate dose/MoA; you cannot let your domain be the corroboration | Off-label promotion risk on AI-generated clinical content; FDA crackdown on AI-surveilled DTC (Sept 2025) targets AI-generated health content; ICMJE authorship rules for AI co-authored papers |
-| **DTC** | Google AIOs + Pinterest visual + TikTok search are dominant; ChatGPT product recs growing. Reviews on Amazon/Trustpilot/Reddit drive LLM citations | Reddit reputation work; review velocity (Yotpo, Okendo); Pinterest SEO; GS1 product schema; Looka for product Q&A snippets | Letting Reddit complaints become the canonical AI-cited source for your brand — Profound found Reddit = 3.11% of all AI citations | FTC review authenticity rules (2023 update on undisclosed/fake reviews — $51K per violation) |
-| **Dev tools** | LLMs ARE the buyer. Cursor/Windsurf/Claude Code + GitHub Copilot pull docs into context. **llms.txt + llms-full.txt mandatory.** Anthropic, Vercel, Cloudflare patterns are canon | Mintlify (docs + llms.txt native); Anthropic two-tier llms.txt pattern; OSS examples on GitHub; Stack Overflow answers; technical YouTube | Hiding API docs behind auth, JS-rendering them, or not publishing llms-full.txt — Cursor/Claude Code can't see your product, devs pick a competitor whose docs they can | None beyond standard |
+| **B2B SaaS** | ChatGPT (87% of AI referrals per Conductor), Perplexity, Google AIOs, Gemini. Vercel-style "% of new signups from ChatGPT" North Star applies | Profound or AthenaHQ for tracking; Bing Webmaster AI Performance (free); llms.txt + llms-full.txt; Reddit/G2/listicle citation building | Optimizing for keywords while ignoring grounding queries; pages that rank don't get cited (only 38% overlap with AIO) | None |
+| **Biopharma** | Scientific buyers query PubMed, Embase, Cochrane, Wikipedia, UpToDate, KOL Twitter/Bluesky, *not* ChatGPT for clinical decisions. HCPs distrust LLM answers; they verify in PubMed | **PubMed/MeSH SEO**; Wikipedia/Wikidata entity work (highest-leverage asset for biopharma); Open Pharma's open-access publishing; Google Scholar profiles for thought leaders; OpenAlex | Optimizing biopharma marketing pages for ChatGPT citations on disease state queries, which generates off-label promotion exposure. LLMs hallucinate dose/MoA; you cannot let your domain be the corroboration | Off-label promotion risk on AI-generated clinical content; FDA crackdown on AI-surveilled DTC (Sept 2025) targets AI-generated health content; ICMJE authorship rules for AI co-authored papers |
+| **DTC** | Google AIOs + Pinterest visual + TikTok search are dominant; ChatGPT product recs growing. Reviews on Amazon/Trustpilot/Reddit drive LLM citations | Reddit reputation work; review velocity (Yotpo, Okendo); Pinterest SEO; GS1 product schema; Looka for product Q&A snippets | Letting Reddit complaints become the canonical AI-cited source for your brand; Profound found Reddit = 3.11% of all AI citations | FTC review authenticity rules (2023 update on undisclosed/fake reviews, $51K per violation) |
+| **Dev tools** | LLMs ARE the buyer. Cursor/Windsurf/Claude Code + GitHub Copilot pull docs into context. **llms.txt + llms-full.txt mandatory.** Anthropic, Vercel, Cloudflare patterns are canon | Mintlify (docs + llms.txt native); Anthropic two-tier llms.txt pattern; OSS examples on GitHub; Stack Overflow answers; technical YouTube | Hiding API docs behind auth, JS-rendering them, or not publishing llms-full.txt; Cursor/Claude Code can't see your product, so devs pick a competitor whose docs they can | None beyond standard |
 
 **Key insight:** For biopharma, AEO is *inverted*, the goal is often to *not* be cited in clinical-decision LLM contexts where you'd be making implied off-label claims. Wikipedia and PubMed are the citation universe; treat ChatGPT/Perplexity as advisory channels for non-promotional corporate content (R&D pipeline, ESG, careers) only.
 
@@ -230,7 +198,7 @@ The economic case: McKinsey projects ~$750 billion in **US** revenue flowing thr
 The OS doc and Mahmoud's existing AEO playbook complement each other. Use this routing:
 
 **Already deeply covered in `aeo-geo-playbook.md`, link, don't duplicate:**
-- Query fanout mechanics (2–5 sub-queries; 66% appear once; 84% share Google URLs)
+- Query fanout mechanics (2-5 sub-queries; 66% appear once; 84% share Google URLs)
 - API vs. scraped data gap (24% brand / 4% source overlap)
 - Top GEO ranking factors (brand associations > backlinks; YouTube; freshness; topical authority)
 - ChatGPT/Perplexity/Claude platform-specific tactics (Reddit citation rates, Wikipedia weights, money-pages 5-6× strategy)
@@ -317,7 +285,7 @@ The OS doc and Mahmoud's existing AEO playbook complement each other. Use this r
 See [research-plan.md](research-plan.md) for the master v3 changelog and v4 forward plan.
 ---
 
-## Frequently Asked Questions — Domain 5: AI Search & Answer Visibility
+## Frequently asked questions about AI search and answer visibility
 
 ### What is the difference between SEO, AEO, GEO, and LLMO?
 
@@ -325,7 +293,7 @@ SEO is Search Engine Optimization (the original, ranking pages in Google). AEO i
 
 ### What percentage of AI Overview citations come from Google's top 10?
 
-Only 38% as of March 2026, down from 76% in July 2025 (Ahrefs, n=863K SERPs). For non-Google LLMs (ChatGPT, Gemini, Copilot), the gap is wider: ~80% of citations come from pages that don't rank in Google's top 100 for the original prompt (Ahrefs, August 2025, n=15K queries). Perplexity is the exception (28.6% in top 10). The decline reflects Google's increased reliance on fan-out subqueries — ranking still matters, but the bar is fan-out coverage and topical authority, not single-keyword top-10 placement.
+Only 38% as of March 2026, down from 76% in July 2025 (Ahrefs, n=863K SERPs). For non-Google LLMs (ChatGPT, Gemini, Copilot), the gap is wider: ~80% of citations come from pages that don't rank in Google's top 100 for the original prompt (Ahrefs, August 2025, n=15K queries). Perplexity is the exception (28.6% in top 10). The decline reflects Google's increased reliance on fan-out subqueries; ranking still matters, but the bar is fan-out coverage and topical authority, not single-keyword top-10 placement.
 
 ### Should I publish llms.txt?
 
@@ -333,5 +301,5 @@ Yes, especially for content-heavy or developer-tool sites. Three deployment patt
 
 ### Which AI citation tracking tool should I use?
 
-Profound for enterprise (Target, Walmart, Figma, MongoDB, Ramp; $399/mo Growth, $2K-5K+ Enterprise; multi-engine + prompt-volume tracking). AthenaHQ for mid-market needing tracking + content generation in one tool ($295/mo flat). Peec AI for European/multi-language (€89-199/mo). HubSpot AI Search Grader for free first-touch diagnostic. Critical warning: API-based tracking misses 96% of what users see — brand overlap between API and scraped UI responses is only 24% (per Mahmoud's aeo-geo-playbook.md). Tools using UI scraping: Peec AI, AthenaHQ, SE Visible. Profound is hybrid; Bluefish is opaque.
+Profound for enterprise (Target, Walmart, Figma, MongoDB, Ramp; $399/mo Growth, $2K-5K+ Enterprise; multi-engine + prompt-volume tracking). AthenaHQ for mid-market needing tracking + content generation in one tool ($295/mo flat). Peec AI for European/multi-language (€89-199/mo). HubSpot AI Search Grader for free first-touch diagnostic. Critical warning: API-based tracking misses 96% of what users see; brand overlap between API and scraped UI responses is only 24% (per Mahmoud's aeo-geo-playbook.md). Tools using UI scraping: Peec AI, AthenaHQ, SE Visible. Profound is hybrid; Bluefish is opaque.
 
